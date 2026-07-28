@@ -104,6 +104,18 @@
 					<ContextMenu name="СкладыСтрокойКонтекстноеМеню" id="41"/>
 					<ExtendedTooltip name="СкладыСтрокойРасширеннаяПодсказка" id="42"/>
 				</InputField>
+				<InputField name="КонтрагентыСтрокой" id="43">
+					<DataPath>Список.КонтрагентыСтрокой</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагенты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="КонтрагентыСтрокойКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="КонтрагентыСтрокойРасширеннаяПодсказка" id="45"/>
+				</InputField>
 				<CheckBoxField name="Активен" id="28">
 					<DataPath>Список.Активен</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
@@ -147,6 +159,16 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Склады</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</CalculatedField>
+				<CalculatedField>
+					<dcssch:dataPath>КонтрагентыСтрокой</dcssch:dataPath>
+					<dcssch:expression/>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагенты</v8:content>
 						</v8:item>
 					</dcssch:title>
 				</CalculatedField>

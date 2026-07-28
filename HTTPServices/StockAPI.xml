@@ -145,6 +145,35 @@
 					</Method>
 				</ChildObjects>
 			</URLTemplate>
+			<URLTemplate uuid="f9a82e84-8bc2-4096-a3d4-122ebb1e3da0">
+				<Properties>
+					<Name>ШаблонURL_ГруппыКлиентов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL группы клиентов</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/counterpartiesGroups</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="01811498-9225-4b85-a95d-10d34e2ec315">
+						<Properties>
+							<Name>counterpartiesGroupsGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Counterparties groups GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>counterpartiesGroupsGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
 			<URLTemplate uuid="f8e7d6c5-b4a3-4291-8f7e-6d5c4b3a2910">
 				<Properties>
 					<Name>ШаблонURL_Заказы</Name>
@@ -327,6 +356,35 @@
 							<Comment/>
 							<HTTPMethod>GET</HTTPMethod>
 							<Handler>balancesGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="537d0ea5-3e63-43c3-8383-0dae072c34f3">
+				<Properties>
+					<Name>ШаблонURL_ОтменаЗаказа</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL отмена заказа</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(удалить)</Comment>
+					<Template>/cancellation</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="6a0f4dc6-8302-4991-8a95-8a7ebd193fea">
+						<Properties>
+							<Name>cancellationPOST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Cancellation POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment>отмена заказа заказчиком</Comment>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>cancellationPOST</Handler>
 						</Properties>
 					</Method>
 				</ChildObjects>

@@ -1900,13 +1900,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.НачальныеНастройкиПользователя</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>CommonForm.ВводСтрокиЗТ</name>
 		<right>
 			<name>View</name>

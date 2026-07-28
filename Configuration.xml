@@ -472,6 +472,7 @@
 			<Role>ОтчетPriceCheck</Role>
 			<Role>Комиссия</Role>
 			<Role>api_client</Role>
+			<Role>ПросмотрОтчетаОборотыЗарплаты</Role>
 			<CommonTemplate>ОсновнойМакетСКД</CommonTemplate>
 			<CommonTemplate>МакетПоменьшеСКД</CommonTemplate>
 			<CommonTemplate>component_body</CommonTemplate>
@@ -600,7 +601,6 @@
 			<Constant>ТокенЧатаТреков</Constant>
 			<Constant>ТокенДХЛ</Constant>
 			<Constant>ТокенФедекс</Constant>
-			<Constant>НачальныеНастройкиПользователя</Constant>
 			<Constant>ПериодичностьОповещенийИнтеграции</Constant>
 			<CommonForm>Настройка</CommonForm>
 			<CommonForm>ПечатьБезЗащиты</CommonForm>

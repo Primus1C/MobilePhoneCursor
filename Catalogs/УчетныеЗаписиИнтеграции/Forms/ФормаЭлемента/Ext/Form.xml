@@ -53,11 +53,6 @@
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 		</InputField>
-		<InputField name="ГруппаВнутреннихКлиентов" id="53">
-			<DataPath>Объект.ГруппаКонтрагентов</DataPath>
-			<ContextMenu name="ГруппаВнутреннихКлиентовКонтекстноеМеню" id="54"/>
-			<ExtendedTooltip name="ГруппаВнутреннихКлиентовРасширеннаяПодсказка" id="55"/>
-		</InputField>
 		<UsualGroup name="ГруппаТокен" id="41">
 			<Title>
 				<v8:item>
@@ -225,61 +220,151 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<Table name="Склады" id="22">
-			<Representation>List</Representation>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<DataPath>Объект.Склады</DataPath>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="СкладыКонтекстноеМеню" id="23"/>
-			<AutoCommandBar name="СкладыКоманднаяПанель" id="24"/>
-			<ExtendedTooltip name="СкладыРасширеннаяПодсказка" id="25"/>
-			<SearchStringAddition name="СкладыСтрокаПоиска" id="26">
-				<AdditionSource>
-					<Item>Склады</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="СкладыСтрокаПоискаКонтекстноеМеню" id="27"/>
-				<ExtendedTooltip name="СкладыСтрокаПоискаРасширеннаяПодсказка" id="28"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="СкладыСостояниеПросмотра" id="29">
-				<AdditionSource>
-					<Item>Склады</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="СкладыСостояниеПросмотраКонтекстноеМеню" id="30"/>
-				<ExtendedTooltip name="СкладыСостояниеПросмотраРасширеннаяПодсказка" id="31"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="СкладыУправлениеПоиском" id="32">
-				<AdditionSource>
-					<Item>Склады</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="СкладыУправлениеПоискомКонтекстноеМеню" id="33"/>
-				<ExtendedTooltip name="СкладыУправлениеПоискомРасширеннаяПодсказка" id="34"/>
-			</SearchControlAddition>
+		<Pages name="ГруппаСтраницы" id="117">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="118"/>
 			<ChildItems>
-				<LabelField name="СкладыНомерСтроки" id="35">
-					<DataPath>Объект.Склады.LineNumber</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СкладыНомерСтрокиКонтекстноеМеню" id="36"/>
-					<ExtendedTooltip name="СкладыНомерСтрокиРасширеннаяПодсказка" id="37"/>
-				</LabelField>
-				<InputField name="СкладыСклад" id="38">
-					<DataPath>Объект.Склады.Склад</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СкладыСкладКонтекстноеМеню" id="39"/>
-					<ExtendedTooltip name="СкладыСкладРасширеннаяПодсказка" id="40"/>
-				</InputField>
-				<LabelField name="СкладыСкладКод" id="90">
-					<DataPath>Объект.Склады.Склад.Code</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СкладыСкладКодКонтекстноеМеню" id="91"/>
-					<ExtendedTooltip name="СкладыСкладКодРасширеннаяПодсказка" id="92"/>
-				</LabelField>
+				<Page name="ГруппаСклады" id="119">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склады</v8:content>
+						</v8:item>
+					</Title>
+					<TitleDataPath>Объект.Склады.RowsCount</TitleDataPath>
+					<ExtendedTooltip name="ГруппаСкладыРасширеннаяПодсказка" id="120"/>
+					<ChildItems>
+						<Table name="Склады" id="22">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Склады</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СкладыКонтекстноеМеню" id="23"/>
+							<AutoCommandBar name="СкладыКоманднаяПанель" id="24"/>
+							<ExtendedTooltip name="СкладыРасширеннаяПодсказка" id="25"/>
+							<SearchStringAddition name="СкладыСтрокаПоиска" id="26">
+								<AdditionSource>
+									<Item>Склады</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СкладыСтрокаПоискаКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="СкладыСтрокаПоискаРасширеннаяПодсказка" id="28"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СкладыСостояниеПросмотра" id="29">
+								<AdditionSource>
+									<Item>Склады</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СкладыСостояниеПросмотраКонтекстноеМеню" id="30"/>
+								<ExtendedTooltip name="СкладыСостояниеПросмотраРасширеннаяПодсказка" id="31"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СкладыУправлениеПоиском" id="32">
+								<AdditionSource>
+									<Item>Склады</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СкладыУправлениеПоискомКонтекстноеМеню" id="33"/>
+								<ExtendedTooltip name="СкладыУправлениеПоискомРасширеннаяПодсказка" id="34"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СкладыНомерСтроки" id="35">
+									<DataPath>Объект.Склады.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СкладыНомерСтрокиКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="СкладыНомерСтрокиРасширеннаяПодсказка" id="37"/>
+								</LabelField>
+								<InputField name="СкладыСклад" id="38">
+									<DataPath>Объект.Склады.Склад</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СкладыСкладКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="СкладыСкладРасширеннаяПодсказка" id="40"/>
+								</InputField>
+								<LabelField name="СкладыСкладКод" id="90">
+									<DataPath>Объект.Склады.Склад.Code</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СкладыСкладКодКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="СкладыСкладКодРасширеннаяПодсказка" id="92"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаКонтрагенты" id="121">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагенты</v8:content>
+						</v8:item>
+					</Title>
+					<TitleDataPath>Объект.Контрагенты.RowsCount</TitleDataPath>
+					<ExtendedTooltip name="ГруппаКонтрагентыРасширеннаяПодсказка" id="122"/>
+					<ChildItems>
+						<Table name="Контрагенты" id="95">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Контрагенты</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КонтрагентыКонтекстноеМеню" id="96"/>
+							<AutoCommandBar name="КонтрагентыКоманднаяПанель" id="97"/>
+							<ExtendedTooltip name="КонтрагентыРасширеннаяПодсказка" id="98"/>
+							<SearchStringAddition name="КонтрагентыСтрокаПоиска" id="99">
+								<AdditionSource>
+									<Item>Контрагенты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтрагентыСтрокаПоискаКонтекстноеМеню" id="100"/>
+								<ExtendedTooltip name="КонтрагентыСтрокаПоискаРасширеннаяПодсказка" id="101"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КонтрагентыСостояниеПросмотра" id="102">
+								<AdditionSource>
+									<Item>Контрагенты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтрагентыСостояниеПросмотраКонтекстноеМеню" id="103"/>
+								<ExtendedTooltip name="КонтрагентыСостояниеПросмотраРасширеннаяПодсказка" id="104"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КонтрагентыУправлениеПоиском" id="105">
+								<AdditionSource>
+									<Item>Контрагенты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтрагентыУправлениеПоискомКонтекстноеМеню" id="106"/>
+								<ExtendedTooltip name="КонтрагентыУправлениеПоискомРасширеннаяПодсказка" id="107"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="КонтрагентыНомерСтроки" id="108">
+									<DataPath>Объект.Контрагенты.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонтрагентыНомерСтрокиКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="КонтрагентыНомерСтрокиРасширеннаяПодсказка" id="110"/>
+								</LabelField>
+								<InputField name="КонтрагентыКонтрагент" id="111">
+									<DataPath>Объект.Контрагенты.ГруппаКонтрагентов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="КонтрагентыКонтрагентКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="КонтрагентыКонтрагентРасширеннаяПодсказка" id="113"/>
+								</InputField>
+								<LabelField name="КонтрагентыКонтрагентКод" id="114">
+									<DataPath>Объект.Контрагенты.ГруппаКонтрагентов.Code</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонтрагентыКонтрагентКодКонтекстноеМеню" id="115"/>
+									<ExtendedTooltip name="КонтрагентыКонтрагентКодРасширеннаяПодсказка" id="116"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
-		</Table>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

@@ -499,6 +499,7 @@
 							<ExtendedTooltip name="ДатаПоследнегоВходаРасширеннаяПодсказка" id="352"/>
 						</InputField>
 						<CheckBoxField name="Менеджер" id="334">
+							<DataPath>1/0:892913a6-68f7-4b3e-a670-bd333aae9d29</DataPath>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="МенеджерКонтекстноеМеню" id="335"/>
 							<ExtendedTooltip name="МенеджерРасширеннаяПодсказка" id="336"/>
