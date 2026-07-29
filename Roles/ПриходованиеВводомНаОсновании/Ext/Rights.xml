@@ -25,17 +25,6 @@
 		</right>
 	</object>
 	<object>
-		<name>AccumulationRegister.ВКД_ПоступлениеСписаниеДС.Resource.Сумма</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.Треки</name>
 		<right>
 			<name>Read</name>
@@ -227,17 +216,6 @@
 		<right>
 			<name>InputByString</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.ВКД_ПоступлениеСписаниеДС.Dimension.Контрагент</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -1133,17 +1111,6 @@
 	</object>
 	<object>
 		<name>Document.ИнвойсЗакупки.Attribute.Менеджер</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.ВКД_ПоступлениеСписаниеДС.Dimension.Валюта</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -2833,61 +2800,6 @@
 		</right>
 	</object>
 	<object>
-		<name>AccumulationRegister.ВКД_ПоступлениеСписаниеДС.StandardAttribute.RecordType</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.ВКД_ПоступлениеСписаниеДС.StandardAttribute.Active</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.ВКД_ПоступлениеСписаниеДС.StandardAttribute.LineNumber</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.ВКД_ПоступлениеСписаниеДС.StandardAttribute.Recorder</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.ВКД_ПоступлениеСписаниеДС.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Constant.МестоХраненияФайлов</name>
 		<right>
 			<name>Read</name>
@@ -3850,17 +3762,6 @@
 	</object>
 	<object>
 		<name>Catalog.Фирмы.Attribute.ДобавлениеСерийВПриходеВТранзакцииНаСервере</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.ВКД_ПоступлениеСписаниеДС.Dimension.Документ</name>
 		<right>
 			<name>View</name>
 			<value>false</value>

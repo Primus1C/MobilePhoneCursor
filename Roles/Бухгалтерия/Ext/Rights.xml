@@ -3871,17 +3871,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.Фирмы.Attribute.Склад</name>
 		<right>
 			<name>View</name>
@@ -3965,25 +3954,6 @@
 		<name>Constant.Сооб_ПериодОбновленияЧата</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.ВКД_ПоступлениеСписаниеДС</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -5050,17 +5020,6 @@
 		</right>
 		<right>
 			<name>ReadDataHistory</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>

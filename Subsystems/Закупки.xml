@@ -30,7 +30,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Валюты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОдинДолгПоставщику</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОднаПредоплатаПоставщику</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.ЖурналЗакупокИПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">a4b7dea5-58d9-4994-9f30-b6680d7e09db</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходнаяНакладная</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратПоставщику</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВКД_СкидкаПоставщика</xr:Item>

@@ -2318,17 +2318,6 @@
 		</right>
 	</object>
 	<object>
-		<name>AccumulationRegister.ВКД_ПоступлениеСписаниеДС</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Report.ВКД_ТоварыВПути</name>
 		<right>
 			<name>Use</name>

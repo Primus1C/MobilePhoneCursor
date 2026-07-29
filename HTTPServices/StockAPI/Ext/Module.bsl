@@ -561,7 +561,7 @@
 	Попытка
 		ДанныеЗапроса = ПрочитатьТелоJSON(Запрос);
 		StockAPI_Утилиты.ДополнитьДанныеЗапросаПараметрамиURL(ДанныеЗапроса, Запрос,
-			//"blocked,canceled,readyToShip,employeeCode,employeePin,orderNumber,orderNo,order,incomingNumber,incomingNo,incoming");
+			//"blocked,cancelled,readyToShip,employeeCode,employeePin,orderNumber,orderNo,order,incomingNumber,incomingNo,incoming");
 			"employeeCode,employeePin,orderNumber,orderNo,order,incomingNumber,incomingNo,incoming");
 		Результат = StockAPI_Заказы.ИзменитьСтатусЗаказа(ДанныеЗапроса, КонтекстАвторизации.УчетнаяЗапись);
 		Если Результат.error <> "" Тогда
@@ -673,6 +673,7 @@
 	КонецПопытки;
 
 КонецФункции
+
 
 #Область Роутер
 

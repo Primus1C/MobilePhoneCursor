@@ -671,8 +671,6 @@
 			<Document>_СписаниеДолга</Document>
 			<Document>ВКД_СкидкаПоставщика</Document>
 			<Document>ВКД_ДополнительныеЗатраты</Document>
-			<Document>ВКД_ПлатежноеПоручениеВходящее</Document>
-			<Document>ВКД_ПлатежноеПоручениеИсходящее</Document>
 			<Document>НачислениеЗарплаты</Document>
 			<Document>КорректировкаИнвойса</Document>
 			<Document>Отправка</Document>
@@ -687,8 +685,6 @@
 			<Document>ВозвратСКомиссии</Document>
 			<Document>ОтчетКомиссионера</Document>
 			<Sequence>ПартииВалют</Sequence>
-			<DocumentJournal>ЖурналЗакупокИПродаж</DocumentJournal>
-			<DocumentJournal>Банк</DocumentJournal>
 			<Enum>ВидДокумента</Enum>
 			<Enum>СпособВыводаОтчета</Enum>
 			<Enum>Долги</Enum>
@@ -844,7 +840,6 @@
 			<AccumulationRegister>_ВзаиморасчетыСКлиентами</AccumulationRegister>
 			<AccumulationRegister>_ДенежныеСредства</AccumulationRegister>
 			<AccumulationRegister>ВКД_ОприходованиеНоменклатуры</AccumulationRegister>
-			<AccumulationRegister>ВКД_ПоступлениеСписаниеДС</AccumulationRegister>
 			<AccumulationRegister>СкорректированныеИнвойсы</AccumulationRegister>
 			<AccumulationRegister>ОтправкаИнвойсов</AccumulationRegister>
 			<AccumulationRegister>Возвраты</AccumulationRegister>

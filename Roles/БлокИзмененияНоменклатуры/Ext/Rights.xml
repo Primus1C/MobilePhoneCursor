@@ -948,13 +948,6 @@
 		</right>
 	</object>
 	<object>
-		<name>AccumulationRegister.ВКД_ПоступлениеСписаниеДС</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Constant.МестоХраненияФайлов</name>
 		<right>
 			<name>Read</name>

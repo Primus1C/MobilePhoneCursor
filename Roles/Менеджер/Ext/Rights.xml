@@ -4,17 +4,6 @@
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее.Attribute.ВидДвижения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ДвижениеДенег.TabularSection.Привязки.Attribute.Валюта2</name>
 		<right>
 			<name>View</name>
@@ -96,17 +85,6 @@
 		<right>
 			<name>SwitchToDataHistoryVersion</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее.Attribute.Валюта</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -1381,17 +1359,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее.Attribute.Касса</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.Валюты.Attribute.ЦветРГБ</name>
 		<right>
 			<name>Edit</name>
@@ -1567,17 +1534,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее.Attribute.НеУчитыватьВРасходы</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.НачислениеЗарплаты.TabularSection.Список.Attribute.КВыдачеВРублях</name>
 		<right>
 			<name>View</name>
@@ -1640,17 +1596,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее.Attribute.НеУчитыватьВДоходы</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>CommonForm.ФормаСтруктурыПодчиненности</name>
 		<right>
 			<name>View</name>
@@ -1686,39 +1631,6 @@
 		<right>
 			<name>UpdateDataHistoryVersionComment</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее.Attribute.Контрагент</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее.Attribute.Сумма</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее.Attribute.Касса</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -1804,17 +1716,6 @@
 		<name>Constant.ИспользоватьСжатие</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>DocumentJournal.Банк</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -2360,17 +2261,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее.Attribute.Валюта</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ДвижениеДенег.Attribute.Статья</name>
 		<right>
 			<name>View</name>
@@ -2437,17 +2327,6 @@
 	</object>
 	<object>
 		<name>Document.ДвижениеДенег.Attribute.Корреспонденция</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее.Attribute.Основание</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -2676,17 +2555,6 @@
 		<right>
 			<name>View</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее.Attribute.Статья</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -3552,17 +3420,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее.Attribute.ВидДвижения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document._Инвойс.Attribute.ВКД_СуммаЗакупкиСоСкидкой</name>
 		<right>
 			<name>Edit</name>
@@ -4122,17 +3979,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее.Attribute.Контрагент</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>SessionParameter.Настройка</name>
 		<right>
 			<name>Get</name>
@@ -4259,79 +4105,6 @@
 		<right>
 			<name>View</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>DocumentJournal.ЖурналЗакупокИПродаж</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>DocumentJournal.ЖурналЗакупокИПродаж.StandardAttribute.Type</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DocumentJournal.ЖурналЗакупокИПродаж.StandardAttribute.Ref</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DocumentJournal.ЖурналЗакупокИПродаж.StandardAttribute.Date</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DocumentJournal.ЖурналЗакупокИПродаж.StandardAttribute.Posted</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DocumentJournal.ЖурналЗакупокИПродаж.StandardAttribute.DeletionMark</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DocumentJournal.ЖурналЗакупокИПродаж.StandardAttribute.Number</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -4971,92 +4744,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>ReadDataHistory</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>ReadDataHistoryOfMissingData</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UpdateDataHistory</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UpdateDataHistoryOfMissingData</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UpdateDataHistorySettings</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UpdateDataHistoryVersionComment</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее.StandardAttribute.Posted</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее.StandardAttribute.Ref</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее.StandardAttribute.DeletionMark</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее.StandardAttribute.Date</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее.StandardAttribute.Number</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.Фирмы.Attribute.Склад</name>
 		<right>
 			<name>View</name>
@@ -5234,29 +4921,6 @@
 		</right>
 		<right>
 			<name>SwitchToDataHistoryVersion</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.ВКД_ПоступлениеСписаниеДС</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -5960,17 +5624,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее.Attribute.Сумма</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.Контрагенты.Attribute.ПолнНаименование</name>
 		<right>
 			<name>Edit</name>
@@ -6133,28 +5786,6 @@
 	</object>
 	<object>
 		<name>Document.ДвижениеДенег.Attribute.СубДСумма</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее.Attribute.Статья</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее.Attribute.Примечание</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -6489,17 +6120,6 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее.Attribute.Примечание</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -7034,92 +6654,6 @@
 	</object>
 	<object>
 		<name>Catalog.Пользователи.Attribute.НеВидетьЧужиеПродажиВОтчете</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>ReadDataHistory</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>ReadDataHistoryOfMissingData</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UpdateDataHistory</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UpdateDataHistoryOfMissingData</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UpdateDataHistorySettings</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UpdateDataHistoryVersionComment</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее.StandardAttribute.Posted</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее.StandardAttribute.Ref</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее.StandardAttribute.DeletionMark</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее.StandardAttribute.Date</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее.StandardAttribute.Number</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>

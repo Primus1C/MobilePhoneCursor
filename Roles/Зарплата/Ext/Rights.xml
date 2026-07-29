@@ -958,13 +958,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>SessionParameter.Валюта</name>
 		<right>
 			<name>Get</name>
@@ -1165,13 +1158,6 @@
 	</object>
 	<object>
 		<name>Constant.БазоваяВалюта</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>

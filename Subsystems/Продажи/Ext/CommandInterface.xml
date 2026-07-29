@@ -11,7 +11,7 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="DocumentJournal.ЖурналЗакупокИПродаж.StandardCommand.OpenList">
+		<Command name="0:a4b7dea5-58d9-4994-9f30-b6680d7e09db">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -66,7 +66,7 @@
 		<Command name="Document._ВозвратОтПокупателя.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="DocumentJournal.ЖурналЗакупокИПродаж.StandardCommand.OpenList">
+		<Command name="0:a4b7dea5-58d9-4994-9f30-b6680d7e09db">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Document.РасходнаяНакладная.StandardCommand.OpenList">

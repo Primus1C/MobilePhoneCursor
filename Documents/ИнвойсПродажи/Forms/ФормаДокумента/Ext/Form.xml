@@ -202,6 +202,39 @@
 					<ContextMenu name="СтатусКонтекстноеМеню" id="138"/>
 					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="139"/>
 				</InputField>
+				<UsualGroup name="ГруппаСтатусыАПИ" id="145">
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа статусы АПИ</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСтатусыАПИРасширеннаяПодсказка" id="146"/>
+					<ChildItems>
+						<CheckBoxField name="СтатусОтмененЗаказчиком" id="147">
+							<DataPath>СтатусОтмененЗаказчиком</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СтатусОтмененЗаказчикомКонтекстноеМеню" id="148"/>
+							<ExtendedTooltip name="СтатусОтмененЗаказчикомРасширеннаяПодсказка" id="149"/>
+						</CheckBoxField>
+						<CheckBoxField name="СтатусГотовКОтгрузке" id="150">
+							<DataPath>СтатусГотовКОтгрузке</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СтатусГотовКОтгрузкеКонтекстноеМеню" id="151"/>
+							<ExtendedTooltip name="СтатусГотовКОтгрузкеРасширеннаяПодсказка" id="152"/>
+						</CheckBoxField>
+						<CheckBoxField name="СтатусЗаблокирован" id="153">
+							<DataPath>СтатусЗаблокирован</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СтатусЗаблокированКонтекстноеМеню" id="154"/>
+							<ExtendedTooltip name="СтатусЗаблокированРасширеннаяПодсказка" id="155"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаФирма" id="96">
@@ -662,6 +695,39 @@
 			</Title>
 			<Type>
 				<v8:Type>cfg:EnumRef.СтатусыИнвойсаПродажи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусОтмененЗаказчиком" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>отменен заказчиком</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусГотовКОтгрузке" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>готов к отгрузке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусЗаблокирован" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>заблокирован</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>

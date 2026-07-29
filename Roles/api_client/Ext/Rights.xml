@@ -1778,6 +1778,33 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.РасходнаяНакладная</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Остатки.Method.balancesGET</name>
 		<right>
 			<name>Use</name>

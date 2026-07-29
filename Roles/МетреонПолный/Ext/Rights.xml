@@ -1993,13 +1993,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеИсходящее</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.СостоянияИнвойсов</name>
 		<right>
 			<name>Read</name>
@@ -2864,13 +2857,6 @@
 		<name>Subsystem.Справочники.Subsystem.Контрагенты</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВКД_ПлатежноеПоручениеВходящее</name>
-		<right>
-			<name>Read</name>
 			<value>true</value>
 		</right>
 	</object>
