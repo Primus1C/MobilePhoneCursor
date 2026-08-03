@@ -2348,17 +2348,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Report._ОплатыЗаПериодИсходящие</name>
-		<right>
-			<name>Use</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.Пользователи.Attribute.ИдентификаторПользователяИБ</name>
 		<right>
 			<name>View</name>
@@ -2888,17 +2877,6 @@
 		</right>
 		<right>
 			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Report.ВКД_ВзаиморасчетыСКлиентами</name>
-		<right>
-			<name>Use</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -3439,17 +3417,6 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Report._ВзаиморасчетыСКонтрагентами</name>
-		<right>
-			<name>Use</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>

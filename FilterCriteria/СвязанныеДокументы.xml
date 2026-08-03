@@ -27,7 +27,6 @@
 			</Type>
 			<UseStandardCommands>false</UseStandardCommands>
 			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаИнвойса.Attribute.Инвойс</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.Отправка.TabularSection.Инвойсы.Attribute.Инвойс</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходнаяНакладная.Attribute.ВКД_Инвойс</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document._Инвойс.Attribute.ДокументОснование</xr:Item>

@@ -159,6 +159,18 @@
 					<ContextMenu name="ВалютаКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="30"/>
 				</LabelField>
+				<CheckBoxField name="Заблокирован" id="55">
+					<DataPath>Список.Заблокирован</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗаблокированКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ЗаблокированРасширеннаяПодсказка" id="57"/>
+				</CheckBoxField>
+				<CheckBoxField name="ГотовКОтгрузке" id="52">
+					<DataPath>Список.ГотовКОтгрузке</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ГотовКОтгрузкеКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ГотовКОтгрузкеРасширеннаяПодсказка" id="54"/>
+				</CheckBoxField>
 				<CheckBoxField name="ОтмененЗакачиком" id="46">
 					<DataPath>Список.ОтмененЗакачиком</DataPath>
 					<Title>
@@ -224,12 +236,22 @@
 	СостоянияИнвойсовПродажи.Состояние КАК Состояние,
 	ДокументИнвойсПродажи.НомерВходящий КАК НомерВходящий,
 	ДокументИнвойсПродажи.РезервироватьТовар КАК РезервироватьТовар,
+	ДокументИнвойсПродажи.УчетнаяЗапись КАК УчетнаяЗапись,
 	ВЫБОР
 		КОГДА СостоянияИнвойсовПродажи.ОтмененЗакачиком ЕСТЬ NULL
 			ТОГДА ЛОЖЬ
-		ИНАЧЕ СостоянияИнвойсовПродажи.ОтмененЗакачиком = &amp;ПустаяДата
+		ИНАЧЕ СостоянияИнвойсовПродажи.ОтмененЗакачиком &lt;&gt; &amp;ПустаяДата
 	КОНЕЦ КАК ОтмененЗакачиком,
-	ДокументИнвойсПродажи.УчетнаяЗапись КАК УчетнаяЗапись
+	ВЫБОР
+		КОГДА СостоянияИнвойсовПродажи.ГотовКОтгрузке ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ СостоянияИнвойсовПродажи.ГотовКОтгрузке &lt;&gt; &amp;ПустаяДата
+	КОНЕЦ КАК ГотовКОтгрузке,
+	ВЫБОР
+		КОГДА СостоянияИнвойсовПродажи.Заблокирован ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ СостоянияИнвойсовПродажи.Заблокирован &lt;&gt; &amp;ПустаяДата
+	КОНЕЦ КАК Заблокирован
 ИЗ
 	Документ.ИнвойсПродажи КАК ДокументИнвойсПродажи
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияИнвойсовПродажи КАК СостоянияИнвойсовПродажи
@@ -355,6 +377,18 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ОтмененЗакачиком</dcssch:dataPath>
 					<dcssch:field>ОтмененЗакачиком</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаОтгрузки</dcssch:dataPath>
+					<dcssch:field>ДатаОтгрузки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Заблокирован</dcssch:dataPath>
+					<dcssch:field>Заблокирован</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ГотовКОтгрузке</dcssch:dataPath>
+					<dcssch:field>ГотовКОтгрузке</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>ПустаяДата</dcssch:name>

@@ -54,10 +54,10 @@
 		<Command name="Report.НачисленияПоСтавкамИнвестиций.Command.НачисленияПоСтавкамИнвестиций">
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
-		<Command name="Report.ВКД_ОстаткиПоБанку.StandardCommand.Open">
+		<Command name="0:2de6be19-14e4-4d7e-b95e-17ed7bd77f85">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
-		<Command name="Report._ПлатежныйКалендарь.StandardCommand.Open">
+		<Command name="0:163a3fca-61f2-486c-98e9-1156331cd640">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.Инвестиции.StandardCommand.Open">

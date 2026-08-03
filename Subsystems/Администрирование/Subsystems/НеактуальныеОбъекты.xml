@@ -29,7 +29,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document._ОжидаемоеПоступлениеДС</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗаказТовара</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.КорректировкиИнвойса</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаИнвойса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">6121dc2c-7db4-4bb0-9368-424e6733ce2a</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Регионы</xr:Item>
 			</Content>
 		</Properties>

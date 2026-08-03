@@ -50,7 +50,7 @@
 		<Command name="Document._СписаниеЗадолженности.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="Document.КорректировкаИнвойса.StandardCommand.OpenList">
+		<Command name="0:6121dc2c-7db4-4bb0-9368-424e6733ce2a">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 	</CommandsOrder>

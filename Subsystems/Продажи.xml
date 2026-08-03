@@ -28,12 +28,12 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document._ВозвратОтПокупателя</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ИнвойсПродажи</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report._ВзаиморасчетыСКонтрагентами</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.ВКД_ВзаиморасчетыСКлиентами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">faff8219-8452-4e16-92b1-927428fdec19</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">cda5c5c3-97fe-4ae3-99cf-24a4b2d864a2</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПокупателей</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОборотыТовара</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Продажи</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report._ОплатыЗаПериодВходящие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">a3f5af37-7173-4c74-921d-298937444837</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ПроверкаЦенВозвратовПокупателей</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЦеныПродажи</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ПродажиПоПериодам</xr:Item>

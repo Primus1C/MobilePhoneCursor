@@ -21,7 +21,7 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="Report._ВзаиморасчетыСКонтрагентами.StandardCommand.Open">
+		<Command name="0:faff8219-8452-4e16-92b1-927428fdec19">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -31,7 +31,7 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="Report._ОплатыЗаПериодВходящие.StandardCommand.Open">
+		<Command name="0:a3f5af37-7173-4c74-921d-298937444837">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -78,7 +78,7 @@
 		<Command name="InformationRegister.ЦеныПродажи.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="Report.ВКД_ВзаиморасчетыСКлиентами.Command.ВзаиморасчетыСКлиентамиПокупателиПоставщики">
+		<Command name="0:082d04f8-db04-4ef2-b1da-3cfa6b1feace">
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
 		<Command name="Report.ВедомостьПокупателей.Command.ВедомостьПокупатели">

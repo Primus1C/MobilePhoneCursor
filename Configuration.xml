@@ -56,7 +56,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.Разработка</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2026-06-23</Version>
+			<Version>2026-06-23 API</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -471,8 +471,9 @@
 			<Role>ОтчетКонтрольВводаДанных</Role>
 			<Role>ОтчетPriceCheck</Role>
 			<Role>Комиссия</Role>
-			<Role>api_client</Role>
 			<Role>ПросмотрОтчетаОборотыЗарплаты</Role>
+			<Role>api_web_admin</Role>
+			<Role>api_client</Role>
 			<CommonTemplate>ОсновнойМакетСКД</CommonTemplate>
 			<CommonTemplate>МакетПоменьшеСКД</CommonTemplate>
 			<CommonTemplate>component_body</CommonTemplate>
@@ -567,8 +568,6 @@
 			<CommonCommand>ВставитьИзБуфера</CommonCommand>
 			<CommonCommand>ОборотыСерии</CommonCommand>
 			<CommonCommand>СвязанныеДокументы</CommonCommand>
-			<CommonCommand>ХронологияИнвойса</CommonCommand>
-			<CommonCommand>ИзменениеСоставаИнвойса</CommonCommand>
 			<CommonCommand>Сооб_ПолныйЖурналСообщений</CommonCommand>
 			<CommonCommand>ОбщиеНастройки</CommonCommand>
 			<CommonCommand>НастройкиСообщений</CommonCommand>
@@ -672,7 +671,6 @@
 			<Document>ВКД_СкидкаПоставщика</Document>
 			<Document>ВКД_ДополнительныеЗатраты</Document>
 			<Document>НачислениеЗарплаты</Document>
-			<Document>КорректировкаИнвойса</Document>
 			<Document>Отправка</Document>
 			<Document>ОтправкаAWB</Document>
 			<Document>ОтправкаПеремещений</Document>
@@ -749,14 +747,9 @@
 			<Report>ЗаказТовара</Report>
 			<Report>ОборотыОднойСерии</Report>
 			<Report>КонсольОтчетов</Report>
-			<Report>_ПлатежныйКалендарь</Report>
-			<Report>_ВзаиморасчетыСКонтрагентами</Report>
-			<Report>_ОплатыЗаПериодВходящие</Report>
-			<Report>_ОплатыЗаПериодИсходящие</Report>
 			<Report>_Взаиморасчеты</Report>
 			<Report>ВКД_ВзаиморасчетыСКлиентами</Report>
 			<Report>ВКД_ОтчетПоПриходным</Report>
-			<Report>ВКД_ОстаткиПоБанку</Report>
 			<Report>ОборотыДенегПоБанку</Report>
 			<Report>ВзаиморасчетыСКлиентами</Report>
 			<Report>ВКД_ТоварыВПути</Report>

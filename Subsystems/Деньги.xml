@@ -28,8 +28,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОборотыРасходыДоходы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОборотыПодотчета</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОборотыЗарплаты</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report._ПлатежныйКалендарь</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.ВКД_ОстаткиПоБанку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">163a3fca-61f2-486c-98e9-1156331cd640</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">2de6be19-14e4-4d7e-b95e-17ed7bd77f85</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ДвижениеДенег</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЗарплаты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОборотыДенег</xr:Item>

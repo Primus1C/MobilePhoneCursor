@@ -632,17 +632,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Report._ПлатежныйКалендарь</name>
-		<right>
-			<name>Use</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ВозвратПоставщику.Command.ВозвратыПоставщикам</name>
 		<right>
 			<name>View</name>
@@ -2399,17 +2388,6 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.КорректировкаИнвойса</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UpdateDataHistorySettings</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>

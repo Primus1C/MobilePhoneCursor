@@ -38,9 +38,9 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.Отправка</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоставщиков</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Поставки</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report._ВзаиморасчетыСКонтрагентами</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report._ОплатыЗаПериодИсходящие</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.ВКД_ВзаиморасчетыСКлиентами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">faff8219-8452-4e16-92b1-927428fdec19</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">a0e351eb-8364-45c2-bb81-0fb54a6ff1e4</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">cda5c5c3-97fe-4ae3-99cf-24a4b2d864a2</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ВКД_ТоварыВПути</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиНаЛогистике</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиНаЛогистикеИВПути</xr:Item>

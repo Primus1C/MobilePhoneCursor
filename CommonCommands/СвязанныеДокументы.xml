@@ -38,7 +38,6 @@
 				<v8:Type>cfg:DocumentRef.ВозвратПоставщику</v8:Type>
 				<v8:Type>cfg:DocumentRef.ПриходнаяНакладная</v8:Type>
 				<v8:Type>cfg:DocumentRef.ИнвойсЗакупки</v8:Type>
-				<v8:Type>cfg:DocumentRef.КорректировкаИнвойса</v8:Type>
 				<v8:Type>cfg:DocumentRef.Отправка</v8:Type>
 				<v8:Type>cfg:DocumentRef.Перемещение</v8:Type>
 				<v8:Type>cfg:DocumentRef.ОтправкаAWB</v8:Type>

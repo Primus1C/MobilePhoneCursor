@@ -1548,13 +1548,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.КорректировкаИнвойса</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.Контрагенты</name>
 		<right>
 			<name>Read</name>

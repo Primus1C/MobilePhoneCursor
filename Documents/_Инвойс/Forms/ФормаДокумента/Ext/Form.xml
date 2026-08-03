@@ -1738,6 +1738,11 @@
 														<CommandName>Form.Command.ОбновитьСкорректированныйИнвойс</CommandName>
 														<ExtendedTooltip name="ИнвойсСкорректированныйОбновитьСкорректированныйИнвойсРасширеннаяПодсказка" id="441"/>
 													</Button>
+													<Button name="ИнвойсСкорректированныйПоказыватьЦены" id="777">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ПоказыватьЦены</CommandName>
+														<ExtendedTooltip name="ИнвойсСкорректированныйПоказыватьЦеныРасширеннаяПодсказка" id="778"/>
+													</Button>
 												</ChildItems>
 											</AutoCommandBar>
 											<ExtendedTooltip name="ИнвойсСкорректированныйРасширеннаяПодсказка" id="410"/>
@@ -1842,6 +1847,12 @@
 													<HorizontalStretch>false</HorizontalStretch>
 													<ContextMenu name="ИнвойсСкорОстатокКонтекстноеМеню" id="436"/>
 													<ExtendedTooltip name="ИнвойсСкорОстатокРасширеннаяПодсказка" id="437"/>
+												</InputField>
+												<InputField name="ИнвойсСкорректированныйЦена" id="774">
+													<DataPath>ИнвойсСкорректированный.Цена</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИнвойсСкорректированныйЦенаКонтекстноеМеню" id="775"/>
+													<ExtendedTooltip name="ИнвойсСкорректированныйЦенаРасширеннаяПодсказка" id="776"/>
 												</InputField>
 												<InputField name="ИнвойсСкорСуммаИнвойса" id="637">
 													<DataPath>ИнвойсСкорректированный.СуммаИнвойса</DataPath>
@@ -2024,7 +2035,6 @@
 														</InputField>
 														<InputField name="ПоставкиЦена" id="505">
 															<DataPath>Поставки.Цена</DataPath>
-															<Visible>false</Visible>
 															<EditMode>EnterOnInput</EditMode>
 															<ContextMenu name="ПоставкиЦенаКонтекстноеМеню" id="506"/>
 															<ExtendedTooltip name="ПоставкиЦенаРасширеннаяПодсказка" id="507"/>
@@ -2271,6 +2281,12 @@
 											<CellHyperlink>true</CellHyperlink>
 											<ContextMenu name="ЗатратыДокументКонтекстноеМеню" id="706"/>
 											<ExtendedTooltip name="ЗатратыДокументРасширеннаяПодсказка" id="707"/>
+										</InputField>
+										<InputField name="ЗатратыВидДвижения" id="779">
+											<DataPath>Затраты.ВидДвижения</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЗатратыВидДвиженияКонтекстноеМеню" id="780"/>
+											<ExtendedTooltip name="ЗатратыВидДвиженияРасширеннаяПодсказка" id="781"/>
 										</InputField>
 										<InputField name="ЗатратыСумма" id="708">
 											<DataPath>Затраты.Сумма</DataPath>
@@ -2830,6 +2846,10 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Сумма</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Sum</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
@@ -2853,6 +2873,26 @@
 							<v8:Digits>4</v8:Digits>
 							<v8:FractionDigits>0</v8:FractionDigits>
 							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Цена" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Price</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
@@ -3433,6 +3473,17 @@
 						<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
 					</Type>
 				</Column>
+				<Column name="ВидДвижения" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид движения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидДвиженияДенег</v8:Type>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="Привязки" id="20">
@@ -3529,6 +3580,17 @@
 					<v8:FractionDigits>5</v8:FractionDigits>
 					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьЦены" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать цены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
@@ -4249,6 +4311,25 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НаценкаЕстьНет</Action>
+		</Command>
+		<Command name="ПоказыватьЦены" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать цены</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show prices</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать цены</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьЦены</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

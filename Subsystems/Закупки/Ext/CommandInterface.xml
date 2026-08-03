@@ -178,7 +178,7 @@
 		<Command name="Catalog.ТоварныеГруппыПеревозчиков.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="Report.ВКД_ВзаиморасчетыСКлиентами.Command.ВзаиморасчетыСКлиентамиПокупателиПоставщики">
+		<Command name="0:082d04f8-db04-4ef2-b1da-3cfa6b1feace">
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
 		<Command name="Report.ВедомостьПоставщиков.Command.ВедомостьПоставщики">

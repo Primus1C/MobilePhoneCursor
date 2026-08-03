@@ -50,7 +50,6 @@
 				<v8:Type>cfg:DocumentRef.ПриходнаяНакладная</v8:Type>
 				<v8:Type>cfg:CatalogRef.Статьи</v8:Type>
 				<v8:Type>cfg:DocumentRef.ИнвойсЗакупки</v8:Type>
-				<v8:Type>cfg:DocumentRef.КорректировкаИнвойса</v8:Type>
 				<v8:Type>cfg:DocumentRef.Инвентаризация</v8:Type>
 				<v8:Type>cfg:DocumentRef.Отправка</v8:Type>
 				<v8:Type>cfg:DocumentRef.Перемещение</v8:Type>

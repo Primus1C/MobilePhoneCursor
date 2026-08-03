@@ -833,6 +833,10 @@
 			<value>true</value>
 		</right>
 		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
@@ -1182,6 +1186,13 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.КурсыВалют</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.КурсыВалют.StandardAttribute.Active</name>
 		<right>
 			<name>View</name>
@@ -1369,6 +1380,17 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.ДокументыКПроведению</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>SessionParameter.Настройка</name>
 		<right>
 			<name>Get</name>
@@ -1466,6 +1488,13 @@
 		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_ВозвратОтПокупателя.Method.returnPOST</name>
 		<right>
 			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриходнаяНакладная</name>
+		<right>
+			<name>Read</name>
 			<value>true</value>
 		</right>
 	</object>

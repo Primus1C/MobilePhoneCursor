@@ -19,7 +19,7 @@
 					<v8:content>Заказ товара</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment>(неактуально)</Comment>
+			<Comment>(удалить)</Comment>
 			<UseStandardCommands>false</UseStandardCommands>
 			<DefaultForm>Report.ЗаказТовара.Form.ФормаОтчета</DefaultForm>
 			<AuxiliaryForm/>
