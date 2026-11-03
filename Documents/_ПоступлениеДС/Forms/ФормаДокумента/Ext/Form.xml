@@ -33,7 +33,6 @@
 			<ExtendedTooltip name="ОжидаемоеПоступлениеДСРасширеннаяПодсказка" id="9"/>
 		</InputField>
 		<InputField name="Контрагент" id="10">
-			<DataPath>1/0:313fe990-a832-4823-982c-e2f249a9aef7</DataPath>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="КонтрагентКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="12"/>

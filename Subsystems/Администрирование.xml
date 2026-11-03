@@ -48,6 +48,9 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.НоменклатураУслугаДоставки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.НоменклатураСкидка</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВалютаУстановкиЦенПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АнализИнициаторовПерепроведения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ИзменениеСерий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаРегистров</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects>

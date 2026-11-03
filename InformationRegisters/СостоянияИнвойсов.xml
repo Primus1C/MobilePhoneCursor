@@ -325,7 +325,7 @@
 							<v8:content>Payment status</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment/>
+					<Comment>(не используется, устанавливался ранее вручную, сейчас исп. СтатусОплатыАвто)</Comment>
 					<Type>
 						<v8:Type>cfg:EnumRef.СтатусыОплаты</v8:Type>
 					</Type>

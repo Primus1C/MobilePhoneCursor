@@ -54,6 +54,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ОтчетКомиссионера</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.ОборотыОднойНоменклатуры</name>
 		<right>
 			<name>Use</name>
@@ -246,6 +253,13 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ВозвратСКомиссии</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -629,17 +643,6 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Report._ПлатежныйКалендарь</name>
-		<right>
-			<name>Use</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -1720,6 +1723,25 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.БуферСканированияДляОстатков</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ВКД_СкидкаПоставщика.Attribute.НомерИнвойса</name>
 		<right>
 			<name>View</name>
@@ -2402,17 +2424,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.КорректировкаИнвойса</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UpdateDataHistorySettings</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Subsystem.Справочники.Subsystem.Деньги</name>
 		<right>
 			<name>View</name>
@@ -2707,6 +2718,13 @@
 		</right>
 		<right>
 			<name>Set</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПередачаНаКомиссию</name>
+		<right>
+			<name>Read</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -4334,29 +4352,6 @@
 		</right>
 	</object>
 	<object>
-		<name>AccumulationRegister.ТоварыВДороге</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.НачислениеЗарплаты.Attribute.Валюта</name>
 		<right>
 			<name>View</name>
@@ -5595,6 +5590,49 @@
 		</right>
 		<right>
 			<name>SwitchToDataHistoryVersion</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Task.Задача</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Execute</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveExecute</name>
 			<value>true</value>
 		</right>
 	</object>

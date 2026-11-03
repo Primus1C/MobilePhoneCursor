@@ -121,6 +121,7 @@
 				</LabelField>
 				<LabelField name="Тэг" id="80">
 					<DataPath>Список.Тэг</DataPath>
+					<Font italic="true" kind="AutoFont"/>
 					<ContextMenu name="ТэгКонтекстноеМеню" id="81"/>
 					<ExtendedTooltip name="ТэгРасширеннаяПодсказка" id="82"/>
 				</LabelField>
@@ -146,8 +147,17 @@
 				</CheckBoxField>
 				<LabelField name="Контрагентов" id="55">
 					<DataPath>Список.Контрагентов</DataPath>
+					<Visible>false</Visible>
 					<ContextMenu name="КонтрагентовКонтекстноеМеню" id="56"/>
 					<ExtendedTooltip name="КонтрагентовРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+				<LabelField name="ГруппыКонтрагентов" id="83">
+					<DataPath>Список.ГруппыКонтрагентов</DataPath>
+					<AutoCellHeight>true</AutoCellHeight>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<MaxHeight>5</MaxHeight>
+					<ContextMenu name="ГруппыКонтрагентовКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="ГруппыКонтрагентовРасширеннаяПодсказка" id="85"/>
 				</LabelField>
 				<LabelField name="Складов" id="46">
 					<DataPath>Список.Складов</DataPath>
@@ -188,6 +198,7 @@
 				</CheckBoxField>
 				<CheckBoxField name="НеВидетьЧужиеПродажиВОтчете" id="43">
 					<DataPath>Список.НеВидетьЧужиеПродажиВОтчете</DataPath>
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -257,6 +268,7 @@
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	ВЫРАЗИТЬ("" КАК СТРОКА(200)) КАК Роли,
+	ВЫРАЗИТЬ("" КАК СТРОКА(500)) КАК ГруппыКонтрагентов,
 	Пользователи.Ссылка КАК Ссылка,
 	Пользователи.ПометкаУдаления КАК ПометкаУдаления,
 	Пользователи.Код КАК Код,
@@ -517,6 +529,16 @@
 					</dcssch:title>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ГруппыКонтрагентов</dcssch:dataPath>
+					<dcssch:field>ГруппыКонтрагентов</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группы контрагентов</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ДоступКОстаткамТоваров</dcssch:dataPath>
 					<dcssch:field>ДоступКОстаткамТоваров</dcssch:field>
 				</Field>
@@ -716,6 +738,60 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветТекста</dcscor:parameter>
 						<dcscor:value xsi:type="v8ui:Color">web:Green</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГруппыКонтрагентов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.ГруппыКонтрагентов</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.ВариантДоступаККонтрагентам</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВариантДоступа.Разрешить</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:PaleGreen</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГруппыКонтрагентов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.ГруппыКонтрагентов</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.ВариантДоступаККонтрагентам</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВариантДоступа.Запретить</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FFC7CE</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>

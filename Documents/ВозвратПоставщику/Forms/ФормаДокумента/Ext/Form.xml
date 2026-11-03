@@ -252,6 +252,13 @@
 									<ContextMenu name="ПримечаниеКонтекстноеМеню" id="29"/>
 									<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="30"/>
 								</InputField>
+								<Button name="ИзменитьПримечание" id="196">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<Width>3</Width>
+									<CommandName>Form.Command.ИзменитьПримечание</CommandName>
+									<ExtendedTooltip name="ИзменитьПримечаниеРасширеннаяПодсказка" id="197"/>
+								</Button>
 								<CheckBoxField name="Окончательно" id="31">
 									<DataPath>Объект.Окончательно</DataPath>
 									<ReadOnly>true</ReadOnly>
@@ -452,6 +459,16 @@
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.УдалитьВсе</CommandName>
 						<ExtendedTooltip name="ТоварыУдалитьВсеРасширеннаяПодсказка" id="131"/>
+					</Button>
+					<Button name="ТоварыУдалитьТоварыБезОстатка" id="198">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УдалитьТоварыБезОстатка</CommandName>
+						<ExtendedTooltip name="ТоварыУдалитьТоварыБезОстаткаРасширеннаяПодсказка" id="199"/>
+					</Button>
+					<Button name="ТоварыИзБуфераОбмена" id="194">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ИзБуфераОбмена</CommandName>
+						<ExtendedTooltip name="ТоварыИзБуфераОбменаРасширеннаяПодсказка" id="195"/>
 					</Button>
 				</ChildItems>
 			</AutoCommandBar>
@@ -1014,6 +1031,79 @@
 			</Picture>
 			<Action>ИскатьКонтрагента</Action>
 			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзБуфераОбмена" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из буфера обмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>From clipboard</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из буфера обмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>From clipboard</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзБуфераОбмена</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьПримечание" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить примечание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить примечание без перепроведения документа (в т.ч. в закрытом периоде)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Change the note without re-posting the document (including in a closed period)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьПримечание</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьТоварыБезОстатка" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить товары без остатка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete items without stock</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить строки, по которым на складе на дату документа недостаточно товара для списания</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete rows with insufficient stock in the warehouse on the document date</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьТоварыБезОстатка</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>

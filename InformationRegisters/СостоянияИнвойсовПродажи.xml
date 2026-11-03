@@ -254,11 +254,11 @@
 			</Resource>
 			<Resource uuid="82aeebba-6902-4db8-8e2e-b80f5fd588d6">
 				<Properties>
-					<Name>ОтмененЗакачиком</Name>
+					<Name>ОтмененЗаказчиком</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Отменен закачиком</v8:content>
+							<v8:content>Отменен заказчиком</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment>API</Comment>

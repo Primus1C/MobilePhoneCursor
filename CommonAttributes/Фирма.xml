@@ -65,12 +65,12 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Document.КорректировкаИнвойса</xr:Metadata>
+					<xr:Metadata>Document.ПередачаНаКомиссию</xr:Metadata>
 					<xr:Use>Use</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Document.ПередачаНаКомиссию</xr:Metadata>
+					<xr:Metadata>Document.ЗаменаПроданногоТовара</xr:Metadata>
 					<xr:Use>Use</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>

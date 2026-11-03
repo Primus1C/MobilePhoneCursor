@@ -23,13 +23,9 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document._ОплатаПоставщику</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаказТовара</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document._СписаниеЗадолженности</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">4791eabb-88a8-4150-a07c-8e177af775f0</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">f8c81bd2-e377-44a7-b947-811b0319ae18</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">b6f2a1fc-d0f3-49f7-ab2b-d51130843bf1</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document._ОжидаемоеПоступлениеДС</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗаказТовара</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.КорректировкиИнвойса</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаИнвойса</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Регионы</xr:Item>
 			</Content>
 		</Properties>

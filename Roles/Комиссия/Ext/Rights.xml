@@ -315,13 +315,6 @@
 		</right>
 	</object>
 	<object>
-		<name>AccumulationRegister.ОстаткиТовара.Resource.Резерв</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>AccumulationRegister.ОстаткиТовара.Dimension.Номенклатура</name>
 		<right>
 			<name>Edit</name>
@@ -375,6 +368,25 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.БуферСканированияДляОстатков</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>

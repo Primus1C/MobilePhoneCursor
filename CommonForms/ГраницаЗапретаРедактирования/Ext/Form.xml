@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
-	<Group>AlwaysHorizontal</Group>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
@@ -16,28 +15,54 @@
 				<CommandName>Form.StandardCommand.Write</CommandName>
 				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="10"/>
 			</Button>
+			<Button name="ФормаЖурналСобытий" id="16">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.Command.ЖурналСобытий</CommandName>
+				<ExtendedTooltip name="ФормаЖурналСобытийРасширеннаяПодсказка" id="17"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="AfterWrite">ПослеЗаписи</Event>
 	</Events>
 	<ChildItems>
-		<PictureDecoration name="Декорация1" id="4">
-			<Width>1</Width>
-			<Height>1</Height>
-			<Picture>
-				<xr:Ref>CommonPicture.Зашифрован</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<ContextMenu name="Декорация1КонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="6"/>
-		</PictureDecoration>
-		<InputField name="ДатаЗапретаРедактирования" id="1">
-			<DataPath>НаборКонстант.ДатаЗапретаРедактирования</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ДатаЗапретаРедактированияКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="ДатаЗапретаРедактированияРасширеннаяПодсказка" id="3"/>
-		</InputField>
+		<UsualGroup name="Группа1" id="11">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="12"/>
+			<ChildItems>
+				<PictureDecoration name="Декорация1" id="4">
+					<Width>1</Width>
+					<Height>1</Height>
+					<Picture>
+						<xr:Ref>CommonPicture.Зашифрован</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="6"/>
+				</PictureDecoration>
+				<InputField name="ДатаЗапретаРедактирования" id="1">
+					<DataPath>НаборКонстант.ДатаЗапретаРедактирования</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаЗапретаРедактированияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ДатаЗапретаРедактированияРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Декорация2" id="13">
+			<TextColor>style:ЦветНадписиИнфоМорской</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все документы, по указанную дату ВКЛЮЧИТЕЛЬНО,
+будут закрыты для изменений</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация2КонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="15"/>
+		</LabelDecoration>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="НаборКонстант" id="1">
@@ -48,4 +73,33 @@
 			<SavedData>true</SavedData>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ЖурналСобытий" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал событий по объекту</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Object event log</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал событий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Object event log</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.EventLog</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЖурналСобытий</Action>
+		</Command>
+	</Commands>
 </Form>

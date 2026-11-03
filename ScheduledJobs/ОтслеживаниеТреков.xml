@@ -14,7 +14,7 @@
 			<Description>Отслеживание треков</Description>
 			<Key/>
 			<Use>false</Use>
-			<Predefined>true</Predefined>
+			<Predefined>false</Predefined>
 			<RestartCountOnFailure>1</RestartCountOnFailure>
 			<RestartIntervalOnFailure>10</RestartIntervalOnFailure>
 		</Properties>

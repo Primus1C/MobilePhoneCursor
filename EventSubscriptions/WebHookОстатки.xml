@@ -11,6 +11,7 @@
 			</Synonym>
 			<Comment/>
 			<Source>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.РезервыТовара</v8:Type>
 				<v8:Type>cfg:AccumulationRegisterRecordSet.ОстаткиТовара</v8:Type>
 			</Source>
 			<Event>BeforeWrite</Event>

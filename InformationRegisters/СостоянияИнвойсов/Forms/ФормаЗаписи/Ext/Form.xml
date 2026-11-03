@@ -9,7 +9,6 @@
 			<ExtendedTooltip name="ИнвойсРасширеннаяПодсказка" id="3"/>
 		</InputField>
 		<InputField name="ИнвойсЗакупки" id="4">
-			<DataPath>1/0:908b04fc-8e85-43c0-b82f-6a1e1e50c04c</DataPath>
 			<ContextMenu name="ИнвойсЗакупкиКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="ИнвойсЗакупкиРасширеннаяПодсказка" id="6"/>
 		</InputField>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<DataProcessor uuid="9ccf969f-6292-4212-8790-f4a094b83231">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.АнализИнициаторовПерепроведения" category="Object">
+				<xr:TypeId>2a0fbc61-3b8e-4dc8-8140-6cb937e46848</xr:TypeId>
+				<xr:ValueId>f3469591-0d2d-40b5-898f-7d9869eff7bd</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.АнализИнициаторовПерепроведения" category="Manager">
+				<xr:TypeId>3d78167d-ccff-4bc9-910c-3c838854bafd</xr:TypeId>
+				<xr:ValueId>0034f172-442b-4eeb-bb96-e035256d2d90</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>АнализИнициаторовПерепроведения</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Анализ инициаторов перепроведения</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Поиск корневых документов пользовательского проведения, вызвавших каскад доп.проведения</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.АнализИнициаторовПерепроведения.Form.Форма</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>Форма</Form>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

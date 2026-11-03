@@ -67,14 +67,12 @@
 						<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 						<xr:Value name="Role.Логистика">false</xr:Value>
 						<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-						<xr:Value name="Role.Зарплата">false</xr:Value>
-						<xr:Value name="Role.Телеграм">false</xr:Value>
+						<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+						<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 						<xr:Value name="Role.МетреонПолный">false</xr:Value>
 						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-						<xr:Value name="Role.МетреонСклад">false</xr:Value>
 						<xr:Value name="Role.Разработка">false</xr:Value>
 					</UserVisible>
 					<Width>1</Width>
@@ -139,12 +137,17 @@
 				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 				<xr:Value name="Role.Логистика">false</xr:Value>
 				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 				<xr:Value name="Role.МетреонПолный">false</xr:Value>
 			</UserVisible>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ПолнНаименованиеКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="ПолнНаименованиеРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Ассортимент" id="102">
+			<DataPath>Объект.Ассортимент</DataPath>
+			<ContextMenu name="АссортиментКонтекстноеМеню" id="103"/>
+			<ExtendedTooltip name="АссортиментРасширеннаяПодсказка" id="104"/>
 		</InputField>
 		<InputField name="Примечание" id="25">
 			<DataPath>Объект.Примечание</DataPath>
@@ -197,11 +200,31 @@
 									<ContextMenu name="ПрефиксКонтекстноеМеню" id="42"/>
 									<ExtendedTooltip name="ПрефиксРасширеннаяПодсказка" id="43"/>
 								</InputField>
-								<InputField name="ВидЦены" id="47">
-									<DataPath>Объект.ВидЦены</DataPath>
-									<ContextMenu name="ВидЦеныКонтекстноеМеню" id="48"/>
-									<ExtendedTooltip name="ВидЦеныРасширеннаяПодсказка" id="49"/>
-								</InputField>
+								<UsualGroup name="ГруппаВидЦены" id="94">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа вид цены</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВидЦеныРасширеннаяПодсказка" id="95"/>
+									<ChildItems>
+										<InputField name="ВидЦены" id="47">
+											<DataPath>Объект.ВидЦены</DataPath>
+											<ContextMenu name="ВидЦеныКонтекстноеМеню" id="48"/>
+											<ExtendedTooltip name="ВидЦеныРасширеннаяПодсказка" id="49"/>
+										</InputField>
+										<LabelField name="ВидЦеныВалюта" id="96">
+											<DataPath>Объект.ВидЦены.Валюта</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ВидЦеныВалютаКонтекстноеМеню" id="97"/>
+											<ExtendedTooltip name="ВидЦеныВалютаРасширеннаяПодсказка" id="98"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
 								<InputField name="Доставка" id="44">
 									<DataPath>Объект.Доставка</DataPath>
 									<TitleLocation>Left</TitleLocation>
@@ -210,18 +233,79 @@
 									<ContextMenu name="ДоставкаКонтекстноеМеню" id="45"/>
 									<ExtendedTooltip name="ДоставкаРасширеннаяПодсказка" id="46"/>
 								</InputField>
-								<InputField name="ПроцентКомиссионногоВознаграждения" id="81">
-									<DataPath>Объект.ПроцентКомиссионногоВознаграждения</DataPath>
-									<ContextMenu name="ПроцентКомиссионногоВознагражденияКонтекстноеМеню" id="82"/>
-									<ExtendedTooltip name="ПроцентКомиссионногоВознагражденияРасширеннаяПодсказка" id="83"/>
-								</InputField>
+								<UsualGroup name="ГруппаКомиссия" id="84">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа комиссия</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомиссияРасширеннаяПодсказка" id="85"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаКомиссионер" id="92">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа комиссионер</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalSpacing>Double</HorizontalSpacing>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКомиссионерРасширеннаяПодсказка" id="93"/>
+											<ChildItems>
+												<CheckBoxField name="Комиссионер" id="86">
+													<DataPath>Объект.Комиссионер</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="КомиссионерКонтекстноеМеню" id="87"/>
+													<ExtendedTooltip name="КомиссионерРасширеннаяПодсказка" id="88"/>
+													<Events>
+														<Event name="OnChange">КомиссионерПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ПроцентКомиссионногоВознаграждения" id="81">
+													<DataPath>Объект.ПроцентКомиссионногоВознаграждения</DataPath>
+													<ContextMenu name="ПроцентКомиссионногоВознагражденияКонтекстноеМеню" id="82"/>
+													<ExtendedTooltip name="ПроцентКомиссионногоВознагражденияРасширеннаяПодсказка" id="83"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="СкладКомиссии" id="89">
+											<DataPath>Объект.СкладКомиссии</DataPath>
+											<ChoiceParameters>
+												<app:item name="Отбор.СкладКомиссии">
+													<app:value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:boolean">true</Value>
+													</app:value>
+												</app:item>
+											</ChoiceParameters>
+											<ContextMenu name="СкладКомиссииКонтекстноеМеню" id="90"/>
+											<ExtendedTooltip name="СкладКомиссииРасширеннаяПодсказка" id="91"/>
+										</InputField>
+										<InputField name="Валюта" id="99">
+											<DataPath>Объект.Валюта</DataPath>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ВалютаКонтекстноеМеню" id="100"/>
+											<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="101"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
 								<UsualGroup name="ГруппаОтсрочка" id="61">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Отсрочка</v8:content>
 										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Deferral</v8:content>
+										</v8:item>
 									</Title>
+									<HorizontalSpacing>Double</HorizontalSpacing>
 									<ThroughAlign>Use</ThroughAlign>
 									<ExtendedTooltip name="ГруппаОтсрочкаРасширеннаяПодсказка" id="62"/>
 									<ChildItems>
@@ -243,6 +327,10 @@
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Кол-во накладных</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Amount of waybills</v8:content>
 												</v8:item>
 											</Title>
 											<ChoiceButton>true</ChoiceButton>
@@ -331,7 +419,7 @@
 										<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 										<xr:Value name="Role.Логистика">false</xr:Value>
 										<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-										<xr:Value name="Role.Телеграм">false</xr:Value>
+										<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 										<xr:Value name="Role.МетреонПолный">false</xr:Value>
 									</UserVisible>
 									<EditMode>EnterOnInput</EditMode>
@@ -359,7 +447,7 @@
 										<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 										<xr:Value name="Role.Логистика">false</xr:Value>
 										<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-										<xr:Value name="Role.Телеграм">false</xr:Value>
+										<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 										<xr:Value name="Role.МетреонПолный">false</xr:Value>
 									</UserVisible>
 									<EditMode>EnterOnInput</EditMode>
@@ -387,7 +475,7 @@
 										<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 										<xr:Value name="Role.Логистика">false</xr:Value>
 										<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-										<xr:Value name="Role.Телеграм">false</xr:Value>
+										<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 										<xr:Value name="Role.МетреонПолный">false</xr:Value>
 									</UserVisible>
 									<EditMode>EnterOnInput</EditMode>
@@ -415,7 +503,7 @@
 										<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 										<xr:Value name="Role.Логистика">false</xr:Value>
 										<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-										<xr:Value name="Role.Телеграм">false</xr:Value>
+										<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 										<xr:Value name="Role.МетреонПолный">false</xr:Value>
 									</UserVisible>
 									<EditMode>EnterOnInput</EditMode>
@@ -443,7 +531,7 @@
 										<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 										<xr:Value name="Role.Логистика">false</xr:Value>
 										<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-										<xr:Value name="Role.Телеграм">false</xr:Value>
+										<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 										<xr:Value name="Role.МетреонПолный">false</xr:Value>
 									</UserVisible>
 									<ContextMenu name="EmailКонтекстноеМеню" id="32"/>
@@ -474,6 +562,11 @@
 				<Visible>
 					<xr:Common>false</xr:Common>
 				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.КредитныеДоговоры.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
 			</Item>
 		</NavigationPanel>
 	</CommandInterface>

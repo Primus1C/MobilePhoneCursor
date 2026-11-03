@@ -30,17 +30,12 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.HTTPМетод</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыЦен</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.ИнвойсПродажи</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостоянияИнвойсовПродажи</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ТестовоеОприходованиеСерийнойНоменклатуры</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПериодичностьОповещенийИнтеграции</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОчередьWebHook</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыСобытийWebHooks</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Склады</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Сотрудники</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Document._ВозвратОтПокупателя</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.ОбменFinCore</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОшибкиОбменаFinCore</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

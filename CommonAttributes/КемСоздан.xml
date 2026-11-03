@@ -50,6 +50,11 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>Document.НачислениеПроцентовПоКредитам</xr:Metadata>
+					<xr:Use>Use</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>Document.ВозвратСКомиссии</xr:Metadata>
 					<xr:Use>Use</xr:Use>
 					<xr:ConditionalSeparation/>
@@ -100,11 +105,6 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Document.КорректировкаИнвойса</xr:Metadata>
-					<xr:Use>Use</xr:Use>
-					<xr:ConditionalSeparation/>
-				</xr:Item>
-				<xr:Item>
 					<xr:Metadata>Catalog.Контрагенты</xr:Metadata>
 					<xr:Use>Use</xr:Use>
 					<xr:ConditionalSeparation/>
@@ -121,6 +121,11 @@
 				</xr:Item>
 				<xr:Item>
 					<xr:Metadata>Catalog.СпискиЭлементов</xr:Metadata>
+					<xr:Use>Use</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>Document.ЗаменаПроданногоТовара</xr:Metadata>
 					<xr:Use>Use</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>

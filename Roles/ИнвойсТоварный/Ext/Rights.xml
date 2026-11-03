@@ -251,13 +251,6 @@
 		</right>
 	</object>
 	<object>
-		<name>AccumulationRegister.ОстаткиТовара.Resource.Резерв</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>CommonAttribute.КемСоздан</name>
 		<right>
 			<name>View</name>
@@ -1057,6 +1050,17 @@
 		<name>Constant.ИспользоватьСжатие</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.БуферСканированияДляОстатков</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -2348,7 +2352,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Report._ОплатыЗаПериодИсходящие</name>
+		<name>Report.СтатусыИнвойсов</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
@@ -2471,29 +2475,6 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.ТоварыВДороге</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -3009,6 +2990,49 @@
 		</right>
 	</object>
 	<object>
+		<name>Task.Задача</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Execute</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveExecute</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonAttribute.КемСохранен</name>
 		<right>
 			<name>View</name>
@@ -3439,17 +3463,6 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Report._ВзаиморасчетыСКонтрагентами</name>
-		<right>
-			<name>Use</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>

@@ -9,34 +9,49 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ГруппаКод" id="84">
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Code</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Ассортимент" id="94">
+			<DataPath>Объект.Ассортимент</DataPath>
+			<ContextMenu name="АссортиментКонтекстноеМеню" id="95"/>
+			<ExtendedTooltip name="АссортиментРасширеннаяПодсказка" id="96"/>
+		</InputField>
+		<UsualGroup name="ГруппаКоды" id="84">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа код</v8:content>
+					<v8:content>Группа коды</v8:content>
 				</v8:item>
 			</Title>
 			<HorizontalSpacing>Double</HorizontalSpacing>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаКодРасширеннаяПодсказка" id="85"/>
+			<ExtendedTooltip name="ГруппаКодыРасширеннаяПодсказка" id="85"/>
 			<ChildItems>
-				<InputField name="Код" id="1">
-					<DataPath>Объект.Code</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Code</v8:content>
-						</v8:item>
-					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
-					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
-				</InputField>
 				<InputField name="SKU" id="81">
 					<DataPath>Объект.SKU</DataPath>
 					<ContextMenu name="SKUКонтекстноеМеню" id="82"/>
 					<ExtendedTooltip name="SKUРасширеннаяПодсказка" id="83"/>
+				</InputField>
+				<InputField name="UPC" id="86">
+					<DataPath>Объект.UPC</DataPath>
+					<ContextMenu name="UPCКонтекстноеМеню" id="87"/>
+					<ExtendedTooltip name="UPCРасширеннаяПодсказка" id="88"/>
+				</InputField>
+				<InputField name="JAN13" id="89">
+					<DataPath>Объект.JAN13</DataPath>
+					<ContextMenu name="JAN13КонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="JAN13РасширеннаяПодсказка" id="91"/>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
@@ -146,13 +161,11 @@
 						<xr:Common>true</xr:Common>
 						<xr:Value name="Role.Администратор">true</xr:Value>
 						<xr:Value name="Role.Менеджер">false</xr:Value>
-						<xr:Value name="fceaf1bd-13fa-4847-bfc5-88ebdc7fb9a5">false</xr:Value>
 						<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
 						<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
 						<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
 						<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
 						<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
-						<xr:Value name="87c7f595-f565-460b-988d-9adfa5367459">false</xr:Value>
 						<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
 						<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
 						<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
@@ -278,24 +291,6 @@
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="ГруппаТелеграм" id="60">
-			<Visible>false</Visible>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Telegram</v8:content>
-				</v8:item>
-			</Title>
-			<Behavior>Usual</Behavior>
-			<ExtendedTooltip name="ГруппаТелеграмРасширеннаяПодсказка" id="61"/>
-			<ChildItems>
-				<InputField name="НаименованиеТелеграм" id="62">
-					<DataPath>Объект.НаименованиеТелеграм</DataPath>
-					<ContextMenu name="НаименованиеТелеграмКонтекстноеМеню" id="63"/>
-					<ExtendedTooltip name="НаименованиеТелеграмРасширеннаяПодсказка" id="64"/>
-				</InputField>
-			</ChildItems>
-		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -366,14 +361,12 @@
 				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 				<xr:Value name="Role.Логистика">false</xr:Value>
 				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-				<xr:Value name="Role.Зарплата">false</xr:Value>
-				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+				<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 				<xr:Value name="Role.МетреонПолный">true</xr:Value>
 				<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-				<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 				<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-				<xr:Value name="Role.МетреонСклад">false</xr:Value>
 				<xr:Value name="Role.Разработка">true</xr:Value>
 			</Use>
 			<Action>КонструкторНаименований</Action>

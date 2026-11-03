@@ -177,24 +177,6 @@
 					<ContextMenu name="ОстатокКонтекстноеМеню" id="62"/>
 					<ExtendedTooltip name="ОстатокРасширеннаяПодсказка" id="63"/>
 				</LabelField>
-				<LabelField name="Резерв" id="64">
-					<DataPath>Список.Резерв</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Reserve</v8:content>
-						</v8:item>
-					</Title>
-					<Width>10</Width>
-					<Format>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЧРГ=</v8:content>
-						</v8:item>
-					</Format>
-					<ContextMenu name="РезервКонтекстноеМеню" id="65"/>
-					<ExtendedTooltip name="РезервРасширеннаяПодсказка" id="66"/>
-				</LabelField>
 				<LabelField name="СрокГодности" id="46">
 					<DataPath>Список.СрокГодности</DataPath>
 					<Format>
@@ -244,14 +226,14 @@
 						<xr:Value name="Role.ИнвойсТоварный">true</xr:Value>
 						<xr:Value name="Role.Логистика">true</xr:Value>
 						<xr:Value name="Role.Бухгалтерия">true</xr:Value>
-						<xr:Value name="Role.Зарплата">false</xr:Value>
-						<xr:Value name="Role.Телеграм">false</xr:Value>
+						<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+						<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 						<xr:Value name="Role.МетреонПолный">true</xr:Value>
 						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+						<xr:Value name="b5af719e-4b63-4161-89d1-44f08a361801">false</xr:Value>
 						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-						<xr:Value name="Role.МетреонСклад">false</xr:Value>
+						<xr:Value name="4f43becd-6809-470d-9624-ef63bd022db0">false</xr:Value>
 						<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
 						<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
 						<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
@@ -326,7 +308,7 @@
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>true</DynamicDataRead>
+				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	Спр.Ссылка,
 	Спр.ПометкаУдаления,
@@ -356,28 +338,12 @@
 	Спр.Предопределенный,
 	Спр.Консигнация,
 	ЕСТЬNULL(Рег.ОстатокОстаток, 0) КАК Остаток,
-	ЕСТЬNULL(Рег.РезервОстаток, 0) КАК Резерв,
+	//ЕСТЬNULL(Рег.РезервОстаток, 0) КАК Резерв, 
 	Спр.ИмяПредопределенныхДанных
 ИЗ
 	Справочник.Партии КАК Спр
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОстаткиТовара.Остатки(, {(Фирма = &amp;Фирма), (Склад В (&amp;ФильтрСклады))}) КАК Рег
 		ПО (Рег.Партия = Спр.Ссылка)</QueryText>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
-					<dcssch:field>Предопределенный</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>КемСоздан</dcssch:dataPath>
-					<dcssch:field>КемСоздан</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>ВКД_ЦенаСоСкидкой</dcssch:dataPath>
-					<dcssch:field>ВКД_ЦенаСоСкидкой</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>ВКД_ЦенаСЗатратами</dcssch:dataPath>
-					<dcssch:field>ВКД_ЦенаСЗатратами</dcssch:field>
-				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
 					<dcssch:field>ПометкаУдаления</dcssch:field>
@@ -387,20 +353,18 @@
 					<dcssch:field>Код</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>ЦенаЗакупкиВБазВалюте</dcssch:dataPath>
-					<dcssch:field>ЦенаЗакупкиВБазВалюте</dcssch:field>
+					<dcssch:dataPath>Остаток</dcssch:dataPath>
+					<dcssch:field>Остаток</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток</v8:content>
+						</v8:item>
+					</dcssch:title>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Серия</dcssch:dataPath>
-					<dcssch:field>Серия</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Ссылка</dcssch:dataPath>
-					<dcssch:field>Ссылка</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Владелец</dcssch:dataPath>
-					<dcssch:field>Владелец</dcssch:field>
+					<dcssch:dataPath>Номенклатура</dcssch:dataPath>
+					<dcssch:field>Номенклатура</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Док</dcssch:dataPath>
@@ -415,8 +379,28 @@
 					<dcssch:field>Наименование</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Партия</dcssch:dataPath>
+					<dcssch:field>Партия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Контрагент</dcssch:dataPath>
 					<dcssch:field>Контрагент</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Склад</dcssch:dataPath>
+					<dcssch:field>Склад</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Владелец</dcssch:dataPath>
+					<dcssch:field>Владелец</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Серия</dcssch:dataPath>
+					<dcssch:field>Серия</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Валюта</dcssch:dataPath>
@@ -441,6 +425,14 @@
 					<dcssch:field>ДатаПартии</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КемСоздан</dcssch:dataPath>
+					<dcssch:field>КемСоздан</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Сохранен</dcssch:dataPath>
 					<dcssch:field>Сохранен</dcssch:field>
 				</Field>
@@ -457,40 +449,16 @@
 					<dcssch:field>Консигнация</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Номенклатура</dcssch:dataPath>
-					<dcssch:field>Номенклатура</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Остаток</dcssch:dataPath>
-					<dcssch:field>Остаток</dcssch:field>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Остаток</v8:content>
-						</v8:item>
-					</dcssch:title>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Резерв</dcssch:dataPath>
-					<dcssch:field>Резерв</dcssch:field>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Резерв</v8:content>
-						</v8:item>
-					</dcssch:title>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
 					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Партия</dcssch:dataPath>
-					<dcssch:field>Партия</dcssch:field>
+					<dcssch:dataPath>ВКД_ЦенаСоСкидкой</dcssch:dataPath>
+					<dcssch:field>ВКД_ЦенаСоСкидкой</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Склад</dcssch:dataPath>
-					<dcssch:field>Склад</dcssch:field>
+					<dcssch:dataPath>ЦенаЗакупкиВБазВалюте</dcssch:dataPath>
+					<dcssch:field>ЦенаЗакупкиВБазВалюте</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>Период</dcssch:name>

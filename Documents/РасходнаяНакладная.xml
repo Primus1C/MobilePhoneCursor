@@ -211,8 +211,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.НезакрытыеДокументы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.РасходыДоходы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ОстаткиТовара</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыВДороге</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыКонсигнации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыНаКомиссии</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Долги</xr:Item>
 			</RegisterRecords>
 			<PostInPrivilegedMode>true</PostInPrivilegedMode>
@@ -1248,11 +1247,11 @@
 			</Attribute>
 			<Attribute uuid="341cd4ca-2b2b-4edf-9dc8-8927ef80f241">
 				<Properties>
-					<Name>Консигнация</Name>
+					<Name>Комиссия</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Консигнация</v8:content>
+							<v8:content>Комиссия</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
@@ -1289,6 +1288,49 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="89d4e2fa-5cb1-42b3-9499-3376a3b304e9">
+				<Properties>
+					<Name>СкладКомиссии</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад комиссии</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Warehouse</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
 			<Attribute uuid="644e6897-5f4a-460a-8c05-d7cffcabfa3d">
 				<Properties>
 					<Name>Сборщик</Name>
@@ -1297,10 +1339,57 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Сборщик</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Assembler</v8:content>
+						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
 						<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="a6626057-bd3c-43cd-a376-5faca14cc328">
+				<Properties>
+					<Name>УчетнаяЗапись</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учетная запись</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>API Account</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УчетныеЗаписиИнтеграции</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>

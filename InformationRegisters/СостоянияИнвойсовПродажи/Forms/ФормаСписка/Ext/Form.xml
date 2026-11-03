@@ -92,7 +92,7 @@
 					<ExtendedTooltip name="КемИзмененоРасширеннаяПодсказка" id="24"/>
 				</LabelField>
 				<LabelField name="ОтмененЗакачиком" id="25">
-					<DataPath>Список.ОтмененЗакачиком</DataPath>
+					<DataPath>~Список.ОтмененЗакачиком</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<ContextMenu name="ОтмененЗакачикомКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ОтмененЗакачикомРасширеннаяПодсказка" id="27"/>

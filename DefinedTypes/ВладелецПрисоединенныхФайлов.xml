@@ -17,6 +17,8 @@
 			</Synonym>
 			<Comment/>
 			<Type>
+				<v8:Type>cfg:DocumentRef.ОтправкаПеремещений</v8:Type>
+				<v8:Type>cfg:DocumentRef._Инвойс</v8:Type>
 				<v8:Type>cfg:CatalogRef.Фирмы</v8:Type>
 				<v8:Type>cfg:TaskRef.Задача</v8:Type>
 				<v8:Type>cfg:DocumentRef.ИнвойсЗакупки</v8:Type>

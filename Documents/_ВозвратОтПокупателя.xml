@@ -136,21 +136,11 @@
 					<xr:MaxValue xsi:nil="true"/>
 					<xr:ToolTip/>
 					<xr:ExtendedEdit>false</xr:ExtendedEdit>
-					<xr:Format>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ДФ=dd.MM.yyyy</v8:content>
-						</v8:item>
-					</xr:Format>
+					<xr:Format/>
 					<xr:ChoiceForm/>
 					<xr:QuickChoice>Auto</xr:QuickChoice>
 					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
-					<xr:EditFormat>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ДФ=dd.MM.yyyy</v8:content>
-						</v8:item>
-					</xr:EditFormat>
+					<xr:EditFormat/>
 					<xr:PasswordMode>false</xr:PasswordMode>
 					<xr:DataHistory>Use</xr:DataHistory>
 					<xr:MarkNegatives>false</xr:MarkNegatives>
@@ -212,12 +202,11 @@
 			<RegisterRecordsWritingOnPost>WriteSelected</RegisterRecordsWritingOnPost>
 			<SequenceFilling>AutoFill</SequenceFilling>
 			<RegisterRecords>
-				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.РезервыТовара</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Продажи</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.РасходыДоходы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ОстаткиТовара</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Деньги</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыКонсигнации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыНаКомиссии</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Долги</xr:Item>
 			</RegisterRecords>
 			<PostInPrivilegedMode>true</PostInPrivilegedMode>

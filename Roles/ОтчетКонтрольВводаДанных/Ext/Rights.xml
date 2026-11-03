@@ -51,6 +51,24 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.БуферСканированияДляОстатков</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ОтправкаПеремещений</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.ДокументыКПроведению</name>
 		<right>
 			<name>Read</name>

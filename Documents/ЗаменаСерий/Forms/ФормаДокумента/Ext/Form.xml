@@ -287,14 +287,12 @@
 						<xr:Value name="Role.ИнвойсПродажи">false</xr:Value>
 						<xr:Value name="Role.Логистика">false</xr:Value>
 						<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-						<xr:Value name="Role.Зарплата">false</xr:Value>
-						<xr:Value name="Role.Телеграм">false</xr:Value>
+						<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+						<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 						<xr:Value name="Role.МетреонПолный">false</xr:Value>
 						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-						<xr:Value name="Role.МетреонСклад">false</xr:Value>
 						<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
 						<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
 						<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
@@ -379,6 +377,11 @@
 							<ContextMenu name="ТоварыКонтекстноеМеню" id="23"/>
 							<AutoCommandBar name="ТоварыКоманднаяПанель" id="24">
 								<ChildItems>
+									<Button name="ТоварыИзБуфераОбмена" id="188">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзБуфераОбмена</CommandName>
+										<ExtendedTooltip name="ТоварыИзБуфераОбменаРасширеннаяПодсказка" id="189"/>
+									</Button>
 									<Button name="ОбщаяКомандаОстаткиНоменклатуры" id="70">
 										<Type>CommandBarButton</Type>
 										<CommandName>CommonCommand.ОстаткиНоменклатуры</CommandName>
@@ -719,6 +722,33 @@
 			</Settings>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ИзБуфераОбмена" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из буфера обмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>From clipboard</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из буфера обмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>From clipboard</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзБуфераОбмена</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
 	<CommandInterface>
 		<NavigationPanel>
 			<Item>

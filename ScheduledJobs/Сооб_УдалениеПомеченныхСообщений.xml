@@ -17,8 +17,8 @@
 			<MethodName>CommonModule.Сооб_Сервер.АдминистраторУдалениеОтмеченныхСообщений</MethodName>
 			<Description>Удаление помеченных сообщений</Description>
 			<Key>Удаление помеченных сообщений</Key>
-			<Use>true</Use>
-			<Predefined>true</Predefined>
+			<Use>false</Use>
+			<Predefined>false</Predefined>
 			<RestartCountOnFailure>3</RestartCountOnFailure>
 			<RestartIntervalOnFailure>10</RestartIntervalOnFailure>
 		</Properties>

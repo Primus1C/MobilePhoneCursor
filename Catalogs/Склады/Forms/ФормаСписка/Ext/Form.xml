@@ -111,6 +111,11 @@
 					<ContextMenu name="СкладКомиссииКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="СкладКомиссииРасширеннаяПодсказка" id="33"/>
 				</CheckBoxField>
+				<LabelField name="Ассортимент" id="37">
+					<DataPath>Список.Ассортимент</DataPath>
+					<ContextMenu name="АссортиментКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="АссортиментРасширеннаяПодсказка" id="39"/>
+				</LabelField>
 				<LabelField name="Код" id="25">
 					<DataPath>Список.Code</DataPath>
 					<Title>

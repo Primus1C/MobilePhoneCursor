@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="ФормаВыполнитьОбмен" id="40">
-				<Type>CommandBarButton</Type>
-				<DefaultButton>false</DefaultButton>
-				<CommandName>Form.Command.ВыполнитьОбмен</CommandName>
-				<ExtendedTooltip name="ФормаВыполнитьОбменРасширеннаяПодсказка" id="41"/>
-			</Button>
-		</ChildItems>
-	</AutoCommandBar>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
@@ -20,18 +16,23 @@
 			</Title>
 			<VerticalStretch>false</VerticalStretch>
 			<Group>Vertical</Group>
-			<Behavior>Usual</Behavior>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
 		</UsualGroup>
 		<Table name="Список" id="3">
 			<Representation>List</Representation>
-			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
+			<HeightInTableRows>4</HeightInTableRows>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Узлы обмена</v8:content>
+				</v8:item>
+			</Title>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -49,7 +50,23 @@
 			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
-				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ФормаОбновитьСписок" id="100">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОбновитьСписок</CommandName>
+						<ExtendedTooltip name="ФормаОбновитьСписокРасширеннаяПодсказка" id="101"/>
+					</Button>
+					<Button name="ФормаВыполнитьОбмен" id="110">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ВыполнитьОбмен</CommandName>
+						<ExtendedTooltip name="ФормаВыполнитьОбменРасширеннаяПодсказка" id="111"/>
+					</Button>
+					<Button name="ФормаИзменитьРегистрацию" id="116">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ИзменитьРегистрацию</CommandName>
+						<ExtendedTooltip name="ФормаИзменитьРегистрациюРасширеннаяПодсказка" id="117"/>
+					</Button>
+				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
 			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
@@ -76,6 +93,9 @@
 				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+			</Events>
 			<ChildItems>
 				<LabelField name="Код" id="16">
 					<DataPath>Список.Code</DataPath>
@@ -87,6 +107,215 @@
 					<DefaultItem>true</DefaultItem>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="НомерОтправленного" id="119">
+					<DataPath>Список.SentNo</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№ отправл.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомерОтправленногоКонтекстноеМеню" id="120"/>
+					<ExtendedTooltip name="НомерОтправленногоРасширеннаяПодсказка" id="121"/>
+				</LabelField>
+				<LabelField name="НомерПринятого" id="116">
+					<DataPath>Список.ReceivedNo</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№ принят.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомерПринятогоКонтекстноеМеню" id="117"/>
+					<ExtendedTooltip name="НомерПринятогоРасширеннаяПодсказка" id="118"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<LabelField name="КоличествоЗарегистрированных" id="22">
+			<DataPath>КоличествоЗарегистрированных</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="КоличествоЗарегистрированныхКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="КоличествоЗарегистрированныхРасширеннаяПодсказка" id="24"/>
+		</LabelField>
+		<Table name="ЗарегистрированныеОбъекты" id="25">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<MultipleChoice>true</MultipleChoice>
+			<DataPath>ЗарегистрированныеОбъекты</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрированные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗарегистрированныеОбъектыКонтекстноеМеню" id="26">
+				<ChildItems>
+					<Button name="ЗарегистрированныеОбъектыКонтекстноеМенюУдалитьРегистрацию" id="112">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УдалитьРегистрацию</CommandName>
+						<ExtendedTooltip name="ЗарегистрированныеОбъектыКонтекстноеМенюУдалитьРегистрациюРасширеннаяПодсказка" id="113"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="ЗарегистрированныеОбъектыКоманднаяПанель" id="27">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ЗарегистрированныеОбъектыУдалитьРегистрацию" id="114">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УдалитьРегистрацию</CommandName>
+						<ExtendedTooltip name="ЗарегистрированныеОбъектыУдалитьРегистрациюРасширеннаяПодсказка" id="115"/>
+					</Button>
+					<Button name="ЗарегистрированныеОбъектыОбновить" id="147">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОбновитьЗарегистрированные</CommandName>
+						<ExtendedTooltip name="ЗарегистрированныеОбъектыОбновитьРасширеннаяПодсказка" id="148"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ЗарегистрированныеОбъектыРасширеннаяПодсказка" id="28"/>
+			<SearchStringAddition name="ЗарегистрированныеОбъектыСтрокаПоиска" id="29">
+				<AdditionSource>
+					<Item>ЗарегистрированныеОбъекты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗарегистрированныеОбъектыСтрокаПоискаКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="ЗарегистрированныеОбъектыСтрокаПоискаРасширеннаяПодсказка" id="31"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗарегистрированныеОбъектыСостояниеПросмотра" id="32">
+				<AdditionSource>
+					<Item>ЗарегистрированныеОбъекты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗарегистрированныеОбъектыСостояниеПросмотраКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="ЗарегистрированныеОбъектыСостояниеПросмотраРасширеннаяПодсказка" id="34"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗарегистрированныеОбъектыУправлениеПоиском" id="35">
+				<AdditionSource>
+					<Item>ЗарегистрированныеОбъекты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗарегистрированныеОбъектыУправлениеПоискомКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="ЗарегистрированныеОбъектыУправлениеПоискомРасширеннаяПодсказка" id="37"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ЗарегистрированныеОбъектыВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ЗарегистрированныеОбъектыТипОбъекта" id="38">
+					<DataPath>ЗарегистрированныеОбъекты.ТипОбъекта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗарегистрированныеОбъектыТипОбъектаКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ЗарегистрированныеОбъектыТипОбъектаРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="ЗарегистрированныеОбъектыПредставление" id="41">
+					<DataPath>ЗарегистрированныеОбъекты.Представление</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗарегистрированныеОбъектыПредставлениеКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ЗарегистрированныеОбъектыПредставлениеРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ЗарегистрированныеОбъектыДатаОбъекта" id="44">
+					<DataPath>ЗарегистрированныеОбъекты.ДатаОбъекта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗарегистрированныеОбъектыДатаОбъектаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ЗарегистрированныеОбъектыДатаОбъектаРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<CheckBoxField name="ЗарегистрированныеОбъектыУдаление" id="47">
+					<DataPath>ЗарегистрированныеОбъекты.Удаление</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗарегистрированныеОбъектыУдалениеКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ЗарегистрированныеОбъектыУдалениеРасширеннаяПодсказка" id="49"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<Table name="ОшибкиОбмена" id="122">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<HeightInTableRows>6</HeightInTableRows>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<DataPath>ОшибкиОбмена</DataPath>
+			<RowPictureDataPath>ОшибкиОбмена.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки обмена</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="ОшибкиОбменаКонтекстноеМеню" id="123"/>
+			<AutoCommandBar name="ОшибкиОбменаКоманднаяПанель" id="124">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ОшибкиОбменаРасширеннаяПодсказка" id="125"/>
+			<SearchStringAddition name="ОшибкиОбменаСтрокаПоиска" id="126">
+				<AdditionSource>
+					<Item>ОшибкиОбмена</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОшибкиОбменаСтрокаПоискаКонтекстноеМеню" id="127"/>
+				<ExtendedTooltip name="ОшибкиОбменаСтрокаПоискаРасширеннаяПодсказка" id="128"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОшибкиОбменаСостояниеПросмотра" id="129">
+				<AdditionSource>
+					<Item>ОшибкиОбмена</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОшибкиОбменаСостояниеПросмотраКонтекстноеМеню" id="130"/>
+				<ExtendedTooltip name="ОшибкиОбменаСостояниеПросмотраРасширеннаяПодсказка" id="131"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОшибкиОбменаУправлениеПоиском" id="132">
+				<AdditionSource>
+					<Item>ОшибкиОбмена</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОшибкиОбменаУправлениеПоискомКонтекстноеМеню" id="133"/>
+				<ExtendedTooltip name="ОшибкиОбменаУправлениеПоискомРасширеннаяПодсказка" id="134"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ОшибкиОбменаВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ОшибкиОбменаДата" id="135">
+					<DataPath>ОшибкиОбмена.Дата</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ОшибкиОбменаДатаКонтекстноеМеню" id="136"/>
+					<ExtendedTooltip name="ОшибкиОбменаДатаРасширеннаяПодсказка" id="137"/>
+				</LabelField>
+				<LabelField name="ОшибкиОбменаGUID" id="138">
+					<DataPath>ОшибкиОбмена.GUID</DataPath>
+					<ContextMenu name="ОшибкиОбменаGUIDКонтекстноеМеню" id="139"/>
+					<ExtendedTooltip name="ОшибкиОбменаGUIDРасширеннаяПодсказка" id="140"/>
+				</LabelField>
+				<LabelField name="ОшибкиОбменаОбъект" id="141">
+					<DataPath>ОшибкиОбмена.Объект</DataPath>
+					<ContextMenu name="ОшибкиОбменаОбъектКонтекстноеМеню" id="142"/>
+					<ExtendedTooltip name="ОшибкиОбменаОбъектРасширеннаяПодсказка" id="143"/>
+				</LabelField>
+				<LabelField name="ОшибкиОбменаТекстОшибки" id="144">
+					<DataPath>ОшибкиОбмена.ТекстОшибки</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ОшибкиОбменаТекстОшибкиКонтекстноеМеню" id="145"/>
+					<ExtendedTooltip name="ОшибкиОбменаТекстОшибкиРасширеннаяПодсказка" id="146"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -104,24 +333,185 @@
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>a1b2c3d4-e5f6-4789-abcd-ef0123456789</dcsset:userSettingID>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>b2c3d4e5-f6a7-4890-bcde-f01234567890</dcsset:userSettingID>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>c3d4e5f6-a7b8-4901-cdef-012345678901</dcsset:userSettingID>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
 					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
-					<dcsset:itemsUserSettingID>d4e5f6a7-b8c9-4012-def0-123456789012</dcsset:itemsUserSettingID>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЗарегистрированныеОбъекты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрированные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ТипОбъекта" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаОбъекта" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Удаление" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удаление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="КоличествоЗарегистрированных" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество зарегистрированных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийУзелОтбора" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий узел отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ExchangePlanRef.ОбменFinCore</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОшибкиОбмена" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ОшибкиОбменаFinCore</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>9d4a7c2e-1f83-4b56-a0e9-7c3d2b1a8f65</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
 				</ListSettings>
 			</Settings>
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="ВыполнитьОбмен" id="1">
+		<Command name="ОбновитьСписок" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить список узлов и зарегистрированных изменений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьСписок</Action>
+		</Command>
+		<Command name="ВыполнитьОбмен" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -131,10 +521,73 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выгрузить порцию номенклатуры в FinCore</v8:content>
+					<v8:content>Отправить зарегистрированные изменения узла FinCore</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateInitialImage</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ВыполнитьОбмен</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ИзменитьРегистрацию" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить регистрацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать или снять регистрацию документов по виду и периоду</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьРегистрацию</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОбновитьЗарегистрированные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить список зарегистрированных объектов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьЗарегистрированные</Action>
+		</Command>
+		<Command name="УдалитьРегистрацию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять регистрацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять регистрацию выделенных объектов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьРегистрацию</Action>
 		</Command>
 	</Commands>
 </Form>

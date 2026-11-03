@@ -822,6 +822,21 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.БуферСканированияДляОстатков</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.ВесНоменклатуры</name>
 		<right>
 			<name>Use</name>
@@ -1614,6 +1629,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.СтатусыИнвойсов</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.ОдинДолгПокупателя.Command.ОдинДолгПокупателя</name>
 		<right>
 			<name>View</name>
@@ -1632,29 +1658,6 @@
 		</right>
 		<right>
 			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.ТоварыВДороге</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>

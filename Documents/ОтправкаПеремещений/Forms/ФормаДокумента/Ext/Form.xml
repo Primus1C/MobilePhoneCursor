@@ -376,6 +376,7 @@
 								</v8:item>
 							</Title>
 							<Group>AlwaysHorizontal</Group>
+							<HorizontalSpacing>Half</HorizontalSpacing>
 							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="ГруппаПримечаниеРасширеннаяПодсказка" id="74"/>
 							<ChildItems>
@@ -390,6 +391,12 @@
 									<ContextMenu name="ПримечаниеКонтекстноеМеню" id="79"/>
 									<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="80"/>
 								</InputField>
+								<Button name="ИзменитьПримечание" id="379">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<CommandName>Form.Command.ИзменитьПримечание</CommandName>
+									<ExtendedTooltip name="ИзменитьПримечаниеРасширеннаяПодсказка" id="380"/>
+								</Button>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -1838,14 +1845,12 @@
 				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 				<xr:Value name="Role.Логистика">true</xr:Value>
 				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-				<xr:Value name="Role.Зарплата">false</xr:Value>
-				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+				<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 				<xr:Value name="Role.МетреонПолный">true</xr:Value>
 				<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-				<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 				<xr:Value name="Role.МетреонЛогистика">true</xr:Value>
-				<xr:Value name="Role.МетреонСклад">false</xr:Value>
 				<xr:Value name="Role.Разработка">false</xr:Value>
 			</Use>
 			<Picture>
@@ -1896,14 +1901,12 @@
 				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 				<xr:Value name="Role.Логистика">true</xr:Value>
 				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-				<xr:Value name="Role.Зарплата">false</xr:Value>
-				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+				<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 				<xr:Value name="Role.МетреонПолный">false</xr:Value>
 				<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-				<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 				<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-				<xr:Value name="Role.МетреонСклад">false</xr:Value>
 				<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
 				<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
 				<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
@@ -1963,7 +1966,7 @@
 				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 				<xr:Value name="Role.Логистика">true</xr:Value>
 				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-				<xr:Value name="Role.Телеграм">true</xr:Value>
+				<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">true</xr:Value>
 				<xr:Value name="Role.МетреонПолный">false</xr:Value>
 			</Use>
 			<Picture>
@@ -2122,14 +2125,12 @@
 				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 				<xr:Value name="Role.Логистика">true</xr:Value>
 				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-				<xr:Value name="Role.Зарплата">false</xr:Value>
-				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+				<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 				<xr:Value name="Role.МетреонПолный">false</xr:Value>
 				<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-				<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 				<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-				<xr:Value name="Role.МетреонСклад">false</xr:Value>
 				<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
 				<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
 				<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
@@ -2167,6 +2168,30 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ВхожденияНоменклатуры</Action>
+		</Command>
+		<Command name="ИзменитьПримечание" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить примечание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить примечание без перепроведения документа (в т.ч. в закрытом периоде)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Change the note without re-posting the document (including in a closed period)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьПримечание</Action>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 	<CommandInterface>

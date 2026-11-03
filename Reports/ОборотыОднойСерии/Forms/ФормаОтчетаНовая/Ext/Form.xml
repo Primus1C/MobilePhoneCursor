@@ -43,6 +43,13 @@
 			<HorizontalStretch>false</HorizontalStretch>
 			<CommandSource>Form</CommandSource>
 			<ExtendedTooltip name="ОсновнаяКоманднаяПанельРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Button name="ХронологияДокументов" id="14">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ХронологияДокументов</CommandName>
+					<ExtendedTooltip name="ХронологияДокументовРасширеннаяПодсказка" id="15"/>
+				</Button>
+			</ChildItems>
 		</CommandBar>
 		<UsualGroup name="КомпоновщикНастроекПользовательскиеНастройки" id="3">
 			<Title>
@@ -151,4 +158,30 @@
 			</Type>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ХронологияДокументов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хронология событий по документам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Document chronology</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал регистрации по документам, выведенным в отчет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.History</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ХронологияДокументов</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
 </Form>

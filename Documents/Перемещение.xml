@@ -204,6 +204,7 @@
 			<RegisterRecordsWritingOnPost>WriteSelected</RegisterRecordsWritingOnPost>
 			<SequenceFilling>AutoFill</SequenceFilling>
 			<RegisterRecords>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.РезервыТовара</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ОстаткиТовара</xr:Item>
 			</RegisterRecords>
 			<PostInPrivilegedMode>true</PostInPrivilegedMode>

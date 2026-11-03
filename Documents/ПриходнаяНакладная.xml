@@ -74,7 +74,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЦеныЗакупки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ОстаткиТовара</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ВКД_ОприходованиеНоменклатуры</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыВДороге</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Долги</xr:Item>
 			</RegisterRecords>
 			<PostInPrivilegedMode>true</PostInPrivilegedMode>
@@ -1307,36 +1306,27 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="6c6b8b57-3970-41ae-9226-ddef77903656">
+			<Attribute uuid="d45a8e12-e365-453e-a7bc-85431cf0b71a">
 				<Properties>
-					<Name>ЕстьЗатраты_</Name>
+					<Name>УчетнаяЗапись</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Есть затраты</v8:content>
+							<v8:content>Учетная запись</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Costs</v8:content>
+							<v8:content>API Account</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>cfg:CatalogRef.УчетныеЗаписиИнтеграции</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
 					<EditFormat/>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Затраты</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Costs</v8:content>
-						</v8:item>
-					</ToolTip>
+					<ToolTip/>
 					<MarkNegatives>false</MarkNegatives>
 					<Mask/>
 					<MultiLine>false</MultiLine>

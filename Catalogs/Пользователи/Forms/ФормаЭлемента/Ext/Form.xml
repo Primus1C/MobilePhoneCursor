@@ -5,7 +5,9 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<Pages name="ГрСтраницы" id="13">
@@ -43,14 +45,12 @@
 						<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 						<xr:Value name="Role.Логистика">false</xr:Value>
 						<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-						<xr:Value name="Role.Зарплата">false</xr:Value>
-						<xr:Value name="Role.Телеграм">false</xr:Value>
+						<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+						<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 						<xr:Value name="Role.МетреонПолный">false</xr:Value>
 						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-						<xr:Value name="Role.МетреонСклад">false</xr:Value>
 						<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
 						<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
 						<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
@@ -399,14 +399,12 @@
 								<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 								<xr:Value name="Role.Логистика">false</xr:Value>
 								<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-								<xr:Value name="Role.Зарплата">false</xr:Value>
-								<xr:Value name="Role.Телеграм">false</xr:Value>
+								<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+								<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 								<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 								<xr:Value name="Role.МетреонПолный">true</xr:Value>
 								<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-								<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 								<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-								<xr:Value name="Role.МетреонСклад">false</xr:Value>
 							</UserVisible>
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="МожноСеансовКонтекстноеМеню" id="11"/>
@@ -435,14 +433,12 @@
 								<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 								<xr:Value name="Role.Логистика">false</xr:Value>
 								<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-								<xr:Value name="Role.Зарплата">false</xr:Value>
-								<xr:Value name="Role.Телеграм">false</xr:Value>
+								<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+								<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 								<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 								<xr:Value name="Role.МетреонПолный">true</xr:Value>
 								<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-								<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 								<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-								<xr:Value name="Role.МетреонСклад">false</xr:Value>
 								<xr:Value name="Role.Разработка">false</xr:Value>
 							</UserVisible>
 							<EditMode>EnterOnInput</EditMode>
@@ -473,14 +469,12 @@
 								<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 								<xr:Value name="Role.Логистика">false</xr:Value>
 								<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-								<xr:Value name="Role.Зарплата">false</xr:Value>
-								<xr:Value name="Role.Телеграм">false</xr:Value>
+								<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+								<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 								<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 								<xr:Value name="Role.МетреонПолный">true</xr:Value>
 								<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-								<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 								<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-								<xr:Value name="Role.МетреонСклад">false</xr:Value>
 								<xr:Value name="Role.Разработка">false</xr:Value>
 							</UserVisible>
 							<CheckBoxType>Auto</CheckBoxType>
@@ -499,7 +493,6 @@
 							<ExtendedTooltip name="ДатаПоследнегоВходаРасширеннаяПодсказка" id="352"/>
 						</InputField>
 						<CheckBoxField name="Менеджер" id="334">
-							<DataPath>1/0:892913a6-68f7-4b3e-a670-bd333aae9d29</DataPath>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="МенеджерКонтекстноеМеню" id="335"/>
 							<ExtendedTooltip name="МенеджерРасширеннаяПодсказка" id="336"/>
@@ -561,14 +554,12 @@
 						<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 						<xr:Value name="Role.Логистика">false</xr:Value>
 						<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-						<xr:Value name="Role.Зарплата">false</xr:Value>
-						<xr:Value name="Role.Телеграм">false</xr:Value>
+						<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+						<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 						<xr:Value name="Role.МетреонПолный">false</xr:Value>
 						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-						<xr:Value name="Role.МетреонСклад">false</xr:Value>
 						<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
 						<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
 						<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
@@ -628,14 +619,12 @@
 										<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 										<xr:Value name="Role.Логистика">false</xr:Value>
 										<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-										<xr:Value name="Role.Зарплата">false</xr:Value>
-										<xr:Value name="Role.Телеграм">false</xr:Value>
+										<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+										<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 										<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 										<xr:Value name="Role.МетреонПолный">true</xr:Value>
 										<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-										<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 										<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-										<xr:Value name="Role.МетреонСклад">false</xr:Value>
 									</UserVisible>
 									<ToolTip>
 										<v8:item>
@@ -653,6 +642,15 @@
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="РасширенныеФункцииРазработчикаКонтекстноеМеню" id="361"/>
 									<ExtendedTooltip name="РасширенныеФункцииРазработчикаРасширеннаяПодсказка" id="362"/>
+								</CheckBoxField>
+								<CheckBoxField name="ДополнительныйАссортимент" id="401">
+									<DataPath>Объект.ДополнительныйАссортимент</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДополнительныйАссортиментКонтекстноеМеню" id="402"/>
+									<ExtendedTooltip name="ДополнительныйАссортиментРасширеннаяПодсказка" id="403"/>
+									<Events>
+										<Event name="OnChange">ДополнительныйАссортиментПриИзменении</Event>
+									</Events>
 								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
@@ -1109,6 +1107,65 @@
 										</InputField>
 									</ChildItems>
 								</Page>
+								<Page name="ГрАссортимент" id="380">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ассортимент</v8:content>
+										</v8:item>
+									</Title>
+									<TitleDataPath>Объект.Ассортимент.RowsCount</TitleDataPath>
+									<ExtendedTooltip name="ГрАссортиментРасширеннаяПодсказка" id="381"/>
+									<ChildItems>
+										<Table name="Ассортимент" id="382">
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>Объект.Ассортимент</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="АссортиментКонтекстноеМеню" id="383"/>
+											<AutoCommandBar name="АссортиментКоманднаяПанель" id="384"/>
+											<ExtendedTooltip name="АссортиментРасширеннаяПодсказка" id="385"/>
+											<SearchStringAddition name="АссортиментСтрокаПоиска" id="386">
+												<AdditionSource>
+													<Item>Ассортимент</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="АссортиментСтрокаПоискаКонтекстноеМеню" id="387"/>
+												<ExtendedTooltip name="АссортиментСтрокаПоискаРасширеннаяПодсказка" id="388"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="АссортиментСостояниеПросмотра" id="389">
+												<AdditionSource>
+													<Item>Ассортимент</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="АссортиментСостояниеПросмотраКонтекстноеМеню" id="390"/>
+												<ExtendedTooltip name="АссортиментСостояниеПросмотраРасширеннаяПодсказка" id="391"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="АссортиментУправлениеПоиском" id="392">
+												<AdditionSource>
+													<Item>Ассортимент</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="АссортиментУправлениеПоискомКонтекстноеМеню" id="393"/>
+												<ExtendedTooltip name="АссортиментУправлениеПоискомРасширеннаяПодсказка" id="394"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="АссортиментНомерСтроки" id="395">
+													<DataPath>Объект.Ассортимент.LineNumber</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="АссортиментНомерСтрокиКонтекстноеМеню" id="396"/>
+													<ExtendedTooltip name="АссортиментНомерСтрокиРасширеннаяПодсказка" id="397"/>
+												</LabelField>
+												<InputField name="АссортиментАссортимент" id="398">
+													<DataPath>Объект.Ассортимент.Ассортимент</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="АссортиментАссортиментКонтекстноеМеню" id="399"/>
+													<ExtendedTooltip name="АссортиментАссортиментРасширеннаяПодсказка" id="400"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
 								<Page name="ГрДокументы" id="345">
 									<Title>
 										<v8:item>
@@ -1166,14 +1223,12 @@
 						<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 						<xr:Value name="Role.Логистика">false</xr:Value>
 						<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-						<xr:Value name="Role.Зарплата">false</xr:Value>
-						<xr:Value name="Role.Телеграм">false</xr:Value>
+						<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+						<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 						<xr:Value name="Role.МетреонПолный">false</xr:Value>
 						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-						<xr:Value name="Role.МетреонСклад">false</xr:Value>
 						<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
 						<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
 						<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
@@ -1267,6 +1322,57 @@
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="КлавиатурныйСканерШККонтекстноеМеню" id="46"/>
 							<ExtendedTooltip name="КлавиатурныйСканерШКРасширеннаяПодсказка" id="47"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="ГрЗадачи" id="366">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задачи</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.Task</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГрЗадачиРасширеннаяПодсказка" id="367"/>
+					<ChildItems>
+						<CheckBoxField name="ПостановщикЗадач" id="368">
+							<DataPath>Объект.ПостановщикЗадач</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Постановщик</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПостановщикЗадачКонтекстноеМеню" id="369"/>
+							<ExtendedTooltip name="ПостановщикЗадачРасширеннаяПодсказка" id="370"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИсполнительЗадач" id="371">
+							<DataPath>Объект.ИсполнительЗадач</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исполнитель</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИсполнительЗадачКонтекстноеМеню" id="372"/>
+							<ExtendedTooltip name="ИсполнительЗадачРасширеннаяПодсказка" id="373"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПросмотрЗадачСГрупповымДоступом" id="377">
+							<DataPath>Объект.ПросмотрЗадачСГрупповымДоступом</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПросмотрЗадачСГрупповымДоступомКонтекстноеМеню" id="378"/>
+							<ExtendedTooltip name="ПросмотрЗадачСГрупповымДоступомРасширеннаяПодсказка" id="379"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПросмотрВсехЗадач" id="374">
+							<DataPath>Объект.ПросмотрВсехЗадач</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПросмотрВсехЗадачКонтекстноеМеню" id="375"/>
+							<ExtendedTooltip name="ПросмотрВсехЗадачРасширеннаяПодсказка" id="376"/>
 						</CheckBoxField>
 					</ChildItems>
 				</Page>

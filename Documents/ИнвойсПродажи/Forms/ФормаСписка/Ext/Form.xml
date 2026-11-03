@@ -71,6 +71,9 @@
 				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
+			</Events>
 			<ChildItems>
 				<LabelField name="Дата" id="16">
 					<DataPath>Список.Дата</DataPath>
@@ -159,8 +162,20 @@
 					<ContextMenu name="ВалютаКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="30"/>
 				</LabelField>
-				<CheckBoxField name="ОтмененЗакачиком" id="46">
-					<DataPath>Список.ОтмененЗакачиком</DataPath>
+				<CheckBoxField name="Заблокирован" id="55">
+					<DataPath>Список.Заблокирован</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗаблокированКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ЗаблокированРасширеннаяПодсказка" id="57"/>
+				</CheckBoxField>
+				<CheckBoxField name="ГотовКОтгрузке" id="52">
+					<DataPath>Список.ГотовКОтгрузке</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ГотовКОтгрузкеКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ГотовКОтгрузкеРасширеннаяПодсказка" id="54"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОтмененЗаказчиком" id="46">
+					<DataPath>Список.ОтмененЗаказчиком</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -182,8 +197,8 @@
 						</v8:item>
 					</ToolTip>
 					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ОтмененЗакачикомКонтекстноеМеню" id="47"/>
-					<ExtendedTooltip name="ОтмененЗакачикомРасширеннаяПодсказка" id="48"/>
+					<ContextMenu name="ОтмененЗаказчикомКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ОтмененЗаказчикомРасширеннаяПодсказка" id="48"/>
 				</CheckBoxField>
 				<LabelField name="Состояние" id="37">
 					<DataPath>Список.Состояние</DataPath>
@@ -224,12 +239,22 @@
 	СостоянияИнвойсовПродажи.Состояние КАК Состояние,
 	ДокументИнвойсПродажи.НомерВходящий КАК НомерВходящий,
 	ДокументИнвойсПродажи.РезервироватьТовар КАК РезервироватьТовар,
+	ДокументИнвойсПродажи.УчетнаяЗапись КАК УчетнаяЗапись,
 	ВЫБОР
-		КОГДА СостоянияИнвойсовПродажи.ОтмененЗакачиком ЕСТЬ NULL
+		КОГДА СостоянияИнвойсовПродажи.ОтмененЗаказчиком ЕСТЬ NULL
 			ТОГДА ЛОЖЬ
-		ИНАЧЕ СостоянияИнвойсовПродажи.ОтмененЗакачиком = &amp;ПустаяДата
-	КОНЕЦ КАК ОтмененЗакачиком,
-	ДокументИнвойсПродажи.УчетнаяЗапись КАК УчетнаяЗапись
+		ИНАЧЕ СостоянияИнвойсовПродажи.ОтмененЗаказчиком &lt;&gt; &amp;ПустаяДата
+	КОНЕЦ КАК ОтмененЗаказчиком,
+	ВЫБОР
+		КОГДА СостоянияИнвойсовПродажи.ГотовКОтгрузке ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ СостоянияИнвойсовПродажи.ГотовКОтгрузке &lt;&gt; &amp;ПустаяДата
+	КОНЕЦ КАК ГотовКОтгрузке,
+	ВЫБОР
+		КОГДА СостоянияИнвойсовПродажи.Заблокирован ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ СостоянияИнвойсовПродажи.Заблокирован &lt;&gt; &amp;ПустаяДата
+	КОНЕЦ КАК Заблокирован
 ИЗ
 	Документ.ИнвойсПродажи КАК ДокументИнвойсПродажи
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияИнвойсовПродажи КАК СостоянияИнвойсовПродажи
@@ -356,6 +381,18 @@
 					<dcssch:dataPath>ОтмененЗакачиком</dcssch:dataPath>
 					<dcssch:field>ОтмененЗакачиком</dcssch:field>
 				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаОтгрузки</dcssch:dataPath>
+					<dcssch:field>ДатаОтгрузки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Заблокирован</dcssch:dataPath>
+					<dcssch:field>Заблокирован</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ГотовКОтгрузке</dcssch:dataPath>
+					<dcssch:field>ГотовКОтгрузке</dcssch:field>
+				</Field>
 				<Parameter>
 					<dcssch:name>ПустаяДата</dcssch:name>
 					<dcssch:title xsi:type="v8:LocalStringType">
@@ -393,4 +430,12 @@
 			</Settings>
 		</Attribute>
 	</Attributes>
+	<Parameters>
+		<Parameter name="ОтборПоПроформе">
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыИнвойса</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
 </Form>

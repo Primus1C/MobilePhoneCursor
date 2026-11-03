@@ -106,6 +106,21 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.БуферСканированияДляОстатков</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.Инвентаризация</name>
 		<right>
 			<name>Read</name>
@@ -250,6 +265,49 @@
 		<name>CommonForm.СменаПароля</name>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Task.Задача</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Execute</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveExecute</name>
 			<value>true</value>
 		</right>
 	</object>

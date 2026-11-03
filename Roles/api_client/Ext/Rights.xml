@@ -195,6 +195,14 @@
 			<value>true</value>
 		</right>
 		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
@@ -298,7 +306,22 @@
 			<value>true</value>
 		</right>
 		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ОтправкаИнвойсов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -665,6 +688,13 @@
 		</right>
 	</object>
 	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Инвойсы.Method.invoicePOST</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИнвойсЗакупки</name>
 		<right>
 			<name>Read</name>
@@ -833,6 +863,10 @@
 			<value>true</value>
 		</right>
 		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
@@ -845,6 +879,13 @@
 		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Клиенты.Method.counterpartiesPATCH</name>
+		<right>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -900,6 +941,25 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.БуферСканированияДляОстатков</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>FilterCriterion.СвязанныеДокументы</name>
 		<right>
 			<name>View</name>
@@ -921,6 +981,17 @@
 		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Цены.Method.pricePOST</name>
 		<right>
 			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister._ВзаиморасчетыСПоставщиками</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -995,6 +1066,21 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.Ассортимент</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>AccumulationRegister.Поставки</name>
 		<right>
 			<name>Read</name>
@@ -1045,7 +1131,19 @@
 			<value>true</value>
 		</right>
 		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1053,6 +1151,17 @@
 		<name>Constant.ПериодичностьОповещенийИнтеграции</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ЦеныЗакупки</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1087,6 +1196,13 @@
 		</right>
 		<right>
 			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_ВозвратЗамена.Method.replacePOST</name>
+		<right>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1142,6 +1258,13 @@
 		</right>
 	</object>
 	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_ОтменаЗаказа.Method.cancellationPOST</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Бренды.Method.brandsGET</name>
 		<right>
 			<name>Use</name>
@@ -1178,6 +1301,44 @@
 		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаменаПроданногоТовара</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.КурсыВалют</name>
+		<right>
+			<name>Read</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1255,6 +1416,17 @@
 		</right>
 	</object>
 	<object>
+		<name>SessionParameter.АПИ_ГруппаНовойНоменклатуры</name>
+		<right>
+			<name>Get</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Set</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonAttribute.Примечание</name>
 		<right>
 			<name>View</name>
@@ -1295,6 +1467,47 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.Отправка</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>ExchangePlan.ОбменFinCore</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ОтправкаПеремещений</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>AccumulationRegister.ВКД_ОприходованиеНоменклатуры</name>
 		<right>
 			<name>Read</name>
@@ -1317,6 +1530,13 @@
 		</right>
 	</object>
 	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_ГруппыТоваров.Method.goodGroupsGET</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Валюты</name>
 		<right>
 			<name>Read</name>
@@ -1331,6 +1551,13 @@
 		<name>CommonCommand.ИнтервалДень</name>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ОтправкаAWB</name>
+		<right>
+			<name>Read</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1369,6 +1596,28 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.ДокументыКПроведению</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.Возвраты</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>SessionParameter.Настройка</name>
 		<right>
 			<name>Get</name>
@@ -1376,6 +1625,20 @@
 		</right>
 		<right>
 			<name>Set</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_ПрихНакладные.Method.incomingwaybillPOST</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Товары.Method.goodsPOST</name>
+		<right>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1394,6 +1657,20 @@
 		</right>
 		<right>
 			<name>Set</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_ПрихНакладные.Method.incomingwaybillDELETE</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ВКД_ДополнительныеЗатраты</name>
+		<right>
+			<name>Read</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1420,7 +1697,21 @@
 		</right>
 	</object>
 	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Товары.Method.goodsGET</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Заказы.Method.ordersPOST</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_ПрихНакладные.Method.incomingwaybillGET</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
@@ -1470,9 +1761,98 @@
 		</right>
 	</object>
 	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_ВозвратЗамена.Method.replaceGET</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриходнаяНакладная</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarked</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Валюты.Method.currenciesGET</name>
 		<right>
 			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.СостоянияИнвойсов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1484,6 +1864,13 @@
 		</right>
 		<right>
 			<name>Set</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_ОстаткиСерииБезЦен.Method.leftoverSeriesGET</name>
+		<right>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1605,9 +1992,23 @@
 		</right>
 	</object>
 	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Инвойсы.Method.invoiceGET</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Пользователи</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_ОстаткиБезЦен.Method.leftoverGET</name>
+		<right>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1645,6 +2046,41 @@
 		</right>
 		<right>
 			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document._Инвойс</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1771,6 +2207,13 @@
 		</right>
 	</object>
 	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_ПрихНакладные.Method.incomingwaybillPUT</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Заказы.Method.ordersDELETE</name>
 		<right>
 			<name>Use</name>
@@ -1803,6 +2246,34 @@
 			<name>View</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
 	</object>
 	<object>
 		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Остатки.Method.balancesGET</name>
@@ -1833,6 +2304,17 @@
 		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.СкорректированныеИнвойсы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1871,6 +2353,13 @@
 		</right>
 		<right>
 			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_ПрихНакладные.Method.incomingwaybillPATCH</name>
+		<right>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1929,6 +2418,20 @@
 		</right>
 	</object>
 	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Поставщики.Method.sellersGET</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Инвойсы.Method.invoicePUT</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>SessionParameter.Сооб_ПериодОбновленияЧата</name>
 		<right>
 			<name>Get</name>
@@ -1936,6 +2439,21 @@
 		</right>
 		<right>
 			<name>Set</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ХранилищеФайлов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>

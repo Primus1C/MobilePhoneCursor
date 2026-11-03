@@ -262,7 +262,7 @@
 					<ChoiceForm/>
 					<LinkByType/>
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-					<DenyIncompleteValues>false</DenyIncompleteValues>
+					<DenyIncompleteValues>true</DenyIncompleteValues>
 					<Indexing>Index</Indexing>
 					<FullTextSearch>DontUse</FullTextSearch>
 					<UseInTotals>true</UseInTotals>
@@ -291,7 +291,7 @@
 					<ExtendedEdit>false</ExtendedEdit>
 					<MinValue xsi:nil="true"/>
 					<MaxValue xsi:nil="true"/>
-					<FillChecking>ShowError</FillChecking>
+					<FillChecking>DontCheck</FillChecking>
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 					<ChoiceParameterLinks/>
 					<ChoiceParameters/>
@@ -342,7 +342,7 @@
 					<ChoiceForm/>
 					<LinkByType/>
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-					<DenyIncompleteValues>false</DenyIncompleteValues>
+					<DenyIncompleteValues>true</DenyIncompleteValues>
 					<Indexing>Index</Indexing>
 					<FullTextSearch>DontUse</FullTextSearch>
 					<UseInTotals>true</UseInTotals>

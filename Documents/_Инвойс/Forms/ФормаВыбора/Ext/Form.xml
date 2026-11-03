@@ -88,13 +88,13 @@
 				<ChildItems>
 					<Button name="ФормаОбщаяКомандаХронологияИнвойса" id="76">
 						<Type>CommandBarButton</Type>
-						<CommandName>CommonCommand.ХронологияИнвойса</CommandName>
+						<CommandName>0:2fc102c5-0e38-44ce-8ed5-2abffc94b306</CommandName>
 						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
 						<ExtendedTooltip name="ФормаОбщаяКомандаХронологияИнвойсаРасширеннаяПодсказка" id="77"/>
 					</Button>
 					<Button name="ФормаОбщаяКомандаИзменениеСоставаИнвойса" id="74">
 						<Type>CommandBarButton</Type>
-						<CommandName>CommonCommand.ИзменениеСоставаИнвойса</CommandName>
+						<CommandName>0:a56e7446-caef-4650-87a6-4bffc9d5ca1f</CommandName>
 						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
 						<ExtendedTooltip name="ФормаОбщаяКомандаИзменениеСоставаИнвойсаРасширеннаяПодсказка" id="75"/>
 					</Button>
@@ -115,7 +115,7 @@
 				<ChildItems>
 					<Button name="ФормаДокументКорректировкаИнвойсаСоздатьНаОсновании" id="90">
 						<Type>CommandBarButton</Type>
-						<CommandName>Document.КорректировкаИнвойса.StandardCommand.CreateBasedOn</CommandName>
+						<CommandName>2:6121dc2c-7db4-4bb0-9368-424e6733ce2a</CommandName>
 						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
 						<ExtendedTooltip name="ФормаДокументКорректировкаИнвойсаСоздатьНаОснованииРасширеннаяПодсказка" id="91"/>
 					</Button>
@@ -714,7 +714,7 @@
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>false</DynamicDataRead>
+				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	Документ_Инвойс.Ссылка,
 	Документ_Инвойс.Номер,
@@ -1097,6 +1097,14 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ЕстьЗатраты</dcssch:dataPath>
 					<dcssch:field>ЕстьЗатраты</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КурсУстановленВручную</dcssch:dataPath>
+					<dcssch:field>КурсУстановленВручную</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Локал</dcssch:dataPath>
+					<dcssch:field>Локал</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>НачалоПериода</dcssch:name>

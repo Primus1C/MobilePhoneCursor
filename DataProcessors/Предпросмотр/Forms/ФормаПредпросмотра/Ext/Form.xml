@@ -248,14 +248,12 @@
 				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 				<xr:Value name="Role.Логистика">true</xr:Value>
 				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-				<xr:Value name="Role.Зарплата">false</xr:Value>
-				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+				<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 				<xr:Value name="Role.МетреонПолный">true</xr:Value>
 				<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-				<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 				<xr:Value name="Role.МетреонЛогистика">true</xr:Value>
-				<xr:Value name="Role.МетреонСклад">false</xr:Value>
 				<xr:Value name="Role.Разработка">false</xr:Value>
 			</Use>
 			<Picture>

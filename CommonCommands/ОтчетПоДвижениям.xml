@@ -35,23 +35,24 @@
 			<CommandParameterType>
 				<v8:Type>cfg:DocumentRef._ОплатаПоставщику</v8:Type>
 				<v8:Type>cfg:DocumentRef.ОтправкаПеремещений</v8:Type>
+				<v8:Type>cfg:DocumentRef.ЗаменаСерий</v8:Type>
 				<v8:Type>cfg:DocumentRef._Инвойс</v8:Type>
+				<v8:Type>cfg:DocumentRef.НачислениеЗарплаты</v8:Type>
 				<v8:Type>cfg:DocumentRef.ПередачаНаКомиссию</v8:Type>
 				<v8:Type>cfg:DocumentRef._ВозвратОтПокупателя</v8:Type>
 				<v8:Type>cfg:DocumentRef.ВозвратСКомиссии</v8:Type>
-				<v8:Type>cfg:DocumentRef._ОжидаемоеПоступлениеДС</v8:Type>
+				<v8:Type>cfg:DocumentRef.НачислениеПроцентовПоКредитам</v8:Type>
 				<v8:Type>cfg:DocumentRef.ОтчетКомиссионера</v8:Type>
 				<v8:Type>cfg:DocumentRef.ВозвратПоставщику</v8:Type>
 				<v8:Type>cfg:DocumentRef.ПриходнаяНакладная</v8:Type>
 				<v8:Type>cfg:DocumentRef.ИнвойсЗакупки</v8:Type>
-				<v8:Type>cfg:DocumentRef.КорректировкаИнвойса</v8:Type>
 				<v8:Type>cfg:DocumentRef.Отправка</v8:Type>
 				<v8:Type>cfg:DocumentRef.Перемещение</v8:Type>
 				<v8:Type>cfg:DocumentRef.ОтправкаAWB</v8:Type>
 				<v8:Type>cfg:DocumentRef.УстановкаЦен</v8:Type>
 				<v8:Type>cfg:DocumentRef.РасходнаяНакладная</v8:Type>
-				<v8:Type>cfg:DocumentRef._ПоступлениеДС</v8:Type>
 				<v8:Type>cfg:DocumentRef._СписаниеЗадолженности</v8:Type>
+				<v8:Type>cfg:DocumentRef.ЗаменаПроданногоТовара</v8:Type>
 				<v8:Type>cfg:DocumentRef.ДвижениеДенег</v8:Type>
 				<v8:Type>cfg:DocumentRef.ИнвойсПродажи</v8:Type>
 				<v8:Type>cfg:DocumentRef.ПереоценкаТовараНаКомиссии</v8:Type>

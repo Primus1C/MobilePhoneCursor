@@ -62,23 +62,25 @@
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
-	ДеньгиОстатки.Касса,
-	ДеньгиОстатки.Валюта,
+	ДеньгиОстатки.Касса КАК Касса,
+	ДеньгиОстатки.Валюта КАК Валюта,
 	ВЫБОР
-		КОГДА НЕ ДеньгиОстатки.Касса.ТранзитнаяКасса
+		КОГДА НЕ ДенежныеСчета.ТранзитнаяКасса
 			ТОГДА ДеньгиОстатки.ОстатокОстаток
 		ИНАЧЕ 0
 	КОНЕЦ КАК ВНаличии,
 	ВЫБОР
-		КОГДА ДеньгиОстатки.Касса.ТранзитнаяКасса
+		КОГДА ДенежныеСчета.ТранзитнаяКасса
 			ТОГДА ДеньгиОстатки.ОстатокОстаток
 		ИНАЧЕ 0
 	КОНЕЦ КАК Ожидается
 ИЗ
-	РегистрНакопления.Деньги.Остатки(
-			&amp;КонецПериода,
-			Касса.ВключатьВПлатежныйКалендарь
-				И Касса.Офис = &amp;Офис) КАК ДеньгиОстатки</query>
+	РегистрНакопления.Деньги.Остатки({(&amp;КонецПериода)}, ) КАК ДеньгиОстатки
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ДенежныеСчета КАК ДенежныеСчета
+		ПО ДеньгиОстатки.Касса = ДенежныеСчета.Ссылка
+ГДЕ
+	ДенежныеСчета.ВключатьВПлатежныйКалендарь
+	И ДенежныеСчета.Офис = &amp;Офис</query>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
 		<name>Взаиморасчеты</name>
@@ -205,7 +207,7 @@
 	//ДолгиОстаткиИОбороты.ДолгПоставщикуКонечныйОстаток 
 	0 КАК КОплате
 ИЗ
-	РегистрНакопления.Долги.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, авто, движения, Контрагент.Родитель.Офис = &amp;Офис) КАК ДолгиОстаткиИОбороты
+	РегистрНакопления.Долги.ОстаткиИОбороты({(&amp;НачалоПериода)}, {(&amp;КонецПериода)}, авто, движения, Контрагент.Родитель.Офис = &amp;Офис) КАК ДолгиОстаткиИОбороты
 ГДЕ
 	НЕ ДолгиОстаткиИОбороты.Регистратор ССЫЛКА Документ.ПриходнаяНакладная
 
@@ -278,7 +280,7 @@
 		<group>Регистратор</group>
 	</totalField>
 	<parameter>
-		<name>Период</name>
+		<name>ПериодОтчета</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
@@ -289,9 +291,7 @@
 			<v8:Type>v8:StandardPeriod</v8:Type>
 		</valueType>
 		<value xsi:type="v8:StandardPeriod">
-			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
-			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
 		</value>
 		<useRestriction>false</useRestriction>
 		<use>Always</use>
@@ -335,24 +335,6 @@
 		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
-		<name>ПериодОтчета</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Период отчета</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>v8:StandardPeriod</v8:Type>
-		</valueType>
-		<value xsi:type="v8:StandardPeriod">
-			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
-			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
-		</value>
-		<useRestriction>false</useRestriction>
-	</parameter>
-	<parameter>
 		<name>Офис</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -381,7 +363,7 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>false</useRestriction>
+		<useRestriction>true</useRestriction>
 		<expression>ТекущаяДата()</expression>
 		<availableAsField>false</availableAsField>
 	</parameter>
@@ -399,29 +381,13 @@
 			</dcsset:selection>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>НачалоПериода</dcscor:parameter>
-					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
-					<dcsset:userSettingID>92edaa3b-a560-4b58-abbc-064596d0aa6b</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>КонецПериода</dcscor:parameter>
-					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
-					<dcsset:userSettingID>a30a8c49-a0e0-4c1d-8341-164af89ffddd</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
 					<dcscor:value xsi:type="v8:StandardPeriod">
-						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
-						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
 					</dcscor:value>
 					<dcsset:userSettingID>d699bd33-1452-4155-9b28-46a5bb4ee0d7</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Офис</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:userSettingID>b85c7690-a192-46c2-8b3e-ee852b853f5a</dcsset:userSettingID>
@@ -437,6 +403,36 @@
 					</dcsset:userSettingPresentation>
 				</dcscor:item>
 			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Регистратор</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">36</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Регистратор.Примечание</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">30</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
 			<dcsset:item xsi:type="dcsset:StructureItemTable">
 				<dcsset:column>
 					<dcsset:groupItems>
@@ -577,8 +573,26 @@
 						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 					</dcsset:order>
 					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Регистратор</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Регистратор.Примечание</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Примечание</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
 				</dcsset:item>
 			</dcsset:item>
 		</dcsset:settings>

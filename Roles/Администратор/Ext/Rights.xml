@@ -318,6 +318,13 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonCommand.ПроведениеБезЗависимыхДокументов</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.ЗначенияСвойствОбъектов</name>
 		<right>
 			<name>ReadDataHistoryOfMissingData</name>
@@ -467,101 +474,6 @@
 		<name>Document._Инвойс</name>
 		<right>
 			<name>InteractiveDelete</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Task.Задача</name>
-		<right>
-			<name>Read</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Delete</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveDelete</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveDeleteMarked</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveActivate</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Execute</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveExecute</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>ReadDataHistory</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>ReadDataHistoryOfMissingData</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>UpdateDataHistory</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>UpdateDataHistoryOfMissingData</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>UpdateDataHistoryVersionComment</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>ViewDataHistory</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>EditDataHistoryVersionComment</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>

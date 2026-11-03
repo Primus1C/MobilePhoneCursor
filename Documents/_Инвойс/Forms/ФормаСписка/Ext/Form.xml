@@ -165,23 +165,17 @@
 							<UserVisible>
 								<xr:Common>true</xr:Common>
 								<xr:Value name="Role.Администратор">true</xr:Value>
-								<xr:Value name="9c664c8f-a9f0-4faa-870d-b39adbe2d0e5">false</xr:Value>
-								<xr:Value name="c228e4f7-c4a9-48d8-9409-c3263ea17c37">false</xr:Value>
 								<xr:Value name="Role.Менеджер">false</xr:Value>
 								<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
 								<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
 								<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
 								<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
 								<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
-								<xr:Value name="fceaf1bd-13fa-4847-bfc5-88ebdc7fb9a5">false</xr:Value>
-								<xr:Value name="87c7f595-f565-460b-988d-9adfa5367459">false</xr:Value>
-								<xr:Value name="bb9af999-df17-4ec4-8615-4678ef462853">false</xr:Value>
 								<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
 								<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
 								<xr:Value name="Role.ИнвойсТоварный">true</xr:Value>
 								<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
 								<xr:Value name="Role.Логистика">true</xr:Value>
-								<xr:Value name="10f320eb-a557-4bfb-adf3-e872ee0511dc">false</xr:Value>
 								<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
 								<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
 								<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
@@ -230,14 +224,12 @@
 								<xr:Value name="Role.ИнвойсТоварный">true</xr:Value>
 								<xr:Value name="Role.Логистика">true</xr:Value>
 								<xr:Value name="Role.Бухгалтерия">true</xr:Value>
-								<xr:Value name="Role.Зарплата">false</xr:Value>
-								<xr:Value name="Role.Телеграм">false</xr:Value>
+								<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+								<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 								<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 								<xr:Value name="Role.МетреонПолный">true</xr:Value>
 								<xr:Value name="Role.МетреонМенеджер">true</xr:Value>
-								<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 								<xr:Value name="Role.МетреонЛогистика">true</xr:Value>
-								<xr:Value name="Role.МетреонСклад">false</xr:Value>
 								<xr:Value name="Role.Разработка">false</xr:Value>
 							</UserVisible>
 							<Title>
@@ -349,7 +341,7 @@
 						</CheckBoxField>
 					</ChildItems>
 				</ColumnGroup>
-				<LabelField name="ВКД_СтатусДокумента" id="40">
+				<LabelField name="СтатусДокумента" id="40">
 					<DataPath>Список.Статус</DataPath>
 					<Title>
 						<v8:item>
@@ -361,11 +353,12 @@
 							<v8:content>Status</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="ВКД_СтатусДокументаКонтекстноеМеню" id="41"/>
-					<ExtendedTooltip name="ВКД_СтатусДокументаРасширеннаяПодсказка" id="42"/>
+					<ContextMenu name="СтатусДокументаКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="СтатусДокументаРасширеннаяПодсказка" id="42"/>
 				</LabelField>
 				<LabelField name="СтатусОплаты" id="83">
 					<DataPath>Список.СтатусОплаты</DataPath>
+					<Visible>false</Visible>
 					<ContextMenu name="СтатусОплатыКонтекстноеМеню" id="84"/>
 					<ExtendedTooltip name="СтатусОплатыРасширеннаяПодсказка" id="85"/>
 				</LabelField>
@@ -688,8 +681,15 @@
 		КОГДА СостоянияИнвойсов.СтатусОплаты = ЗНАЧЕНИЕ(Перечисление.СтатусыОплаты.ПустаяСсылка)
 			ТОГДА "-"
 		ИНАЧЕ ЕСТЬNULL(СостоянияИнвойсов.СтатусОплаты, "-")
-	КОНЕЦ КАК СтатусОплаты,  
-	СостоянияИнвойсов.СтатусОплатыАвто КАК СтатусОплатыАвто,  
+	КОНЕЦ КАК СтатусОплаты,
+	  
+	//СостоянияИнвойсов.СтатусОплатыАвто КАК СтатусОплатыАвто, 
+	ВЫБОР
+		КОГДА СостоянияИнвойсов.СтатусОплатыАвто = ЗНАЧЕНИЕ(перечисление.Долги.ПустаяСсылка)
+			ТОГДА СостоянияИнвойсов.СтатусОплаты
+		ИНАЧЕ СостоянияИнвойсов.СтатусОплатыАвто
+	КОНЕЦ КАК СтатусОплатыАвто,
+ 
 	СостоянияИнвойсов.СуммаОплаты КАК СуммаОплаты,
 	СостоянияИнвойсов.ДатаОплаты КАК ДатаПоследнейОплаты,
 	СостоянияИнвойсов.Курс КАК СреднКурсОплат,
@@ -1233,6 +1233,14 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>СуммаОплаты</dcssch:dataPath>
 					<dcssch:field>СуммаОплаты</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Локал</dcssch:dataPath>
+					<dcssch:field>Локал</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаИнспекции</dcssch:dataPath>
+					<dcssch:field>ДатаИнспекции</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>НачалоПериода</dcssch:name>

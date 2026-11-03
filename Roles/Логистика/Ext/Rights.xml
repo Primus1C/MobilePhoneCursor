@@ -25,6 +25,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ОтчетКомиссионера</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ПриходнаяНакладная.Attribute.ТоварУжеОплачен</name>
 		<right>
 			<name>Edit</name>
@@ -98,6 +105,13 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ВозвратСКомиссии</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -672,6 +686,17 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.БуферСканированияДляОстатков</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ПриходнаяНакладная.TabularSection.Товары.Attribute.ВКД_ЦенаСЗатратами</name>
 		<right>
 			<name>Edit</name>
@@ -1064,6 +1089,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПередачаНаКомиссию</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.СпискиЭлементов</name>
 		<right>
 			<name>Read</name>
@@ -1208,6 +1240,17 @@
 	</object>
 	<object>
 		<name>DataProcessor.БуферСканирования.Command.БуферСканирования</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.КонтрольЗатратПериода</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1626,6 +1669,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.СтатусыИнвойсов</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ПриходнаяНакладная.TabularSection.Привязки.Attribute.Сумма1</name>
 		<right>
 			<name>Edit</name>
@@ -1675,29 +1729,6 @@
 		<name>Document.ВКД_ДополнительныеЗатраты</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.ТоварыВДороге</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -2220,6 +2251,49 @@
 		<name>Document.ИнвойсЗакупки.Command.Оплатить</name>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Task.Задача</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Execute</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveExecute</name>
 			<value>true</value>
 		</right>
 	</object>

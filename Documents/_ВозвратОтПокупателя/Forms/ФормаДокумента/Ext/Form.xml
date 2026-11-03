@@ -145,11 +145,32 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
-						<InputField name="Примечание" id="58">
-							<DataPath>Объект.Примечание</DataPath>
-							<ContextMenu name="ПримечаниеКонтекстноеМеню" id="59"/>
-							<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="60"/>
-						</InputField>
+						<UsualGroup name="ГруппаПримечание" id="132">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа примечание</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПримечаниеРасширеннаяПодсказка" id="133"/>
+							<ChildItems>
+								<InputField name="Примечание" id="58">
+									<DataPath>Объект.Примечание</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ПримечаниеКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="60"/>
+								</InputField>
+								<Button name="ИзменитьПримечание" id="134">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<CommandName>Form.Command.ИзменитьПримечание</CommandName>
+									<ExtendedTooltip name="ИзменитьПримечаниеРасширеннаяПодсказка" id="135"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="ГруппаДеньги" id="103">
 							<Title>
 								<v8:item>
@@ -189,15 +210,10 @@
 									<UserVisible>
 										<xr:Common>true</xr:Common>
 										<xr:Value name="Role.Администратор">true</xr:Value>
-										<xr:Value name="9c664c8f-a9f0-4faa-870d-b39adbe2d0e5">false</xr:Value>
-										<xr:Value name="c228e4f7-c4a9-48d8-9409-c3263ea17c37">true</xr:Value>
 										<xr:Value name="Role.Менеджер">false</xr:Value>
 										<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
 										<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
-										<xr:Value name="56990d35-2905-4d1e-9aee-62991eb37c15">false</xr:Value>
 										<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
-										<xr:Value name="64d5e486-05c3-414e-978e-62c6f70c01b9">false</xr:Value>
-										<xr:Value name="1ba630a7-6387-48fe-ab4e-012f42a3f331">true</xr:Value>
 									</UserVisible>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="КассаКонтекстноеМеню" id="106"/>
@@ -322,7 +338,6 @@
 								<InputField name="Сборщик" id="129">
 									<DataPath>Объект.Сборщик</DataPath>
 									<ReadOnly>true</ReadOnly>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="СборщикКонтекстноеМеню" id="130"/>
 									<ExtendedTooltip name="СборщикРасширеннаяПодсказка" id="131"/>
 								</InputField>
@@ -353,7 +368,15 @@
 			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>Объект.Товары</DataPath>
 			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="ТоварыКонтекстноеМеню" id="14"/>
+			<ContextMenu name="ТоварыКонтекстноеМеню" id="14">
+				<ChildItems>
+					<Button name="ТоварыКонтекстноеМенюУстановитьЦену" id="136">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьЦену</CommandName>
+						<ExtendedTooltip name="ТоварыКонтекстноеМенюУстановитьЦенуРасширеннаяПодсказка" id="137"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
 			<AutoCommandBar name="ТоварыКоманднаяПанель" id="15">
 				<ChildItems>
 					<Button name="ТоварыОтчетОборотыОднойПартииОборотыПартии" id="116">
@@ -630,6 +653,58 @@
 			<Action>ИзБуфераОбмена</Action>
 			<Representation>Picture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьПримечание" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить примечание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить примечание без перепроведения документа (в т.ч. в закрытом периоде)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Change the note without re-posting the document (including in a closed period)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьПримечание</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УстановитьЦену" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить цену</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set price</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить цену текущей строки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set the current line price</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceExclamationMarkIcon</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьЦену</Action>
+			<AssociatedTableElementId xsi:type="xs:string">Товары</AssociatedTableElementId>
 		</Command>
 	</Commands>
 	<CommandInterface>

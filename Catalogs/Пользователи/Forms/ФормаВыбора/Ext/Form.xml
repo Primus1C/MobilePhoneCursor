@@ -86,6 +86,11 @@
 					<ContextMenu name="КодКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="27"/>
 				</LabelField>
+				<LabelField name="Тэг" id="37">
+					<DataPath>Список.Тэг</DataPath>
+					<ContextMenu name="ТэгКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ТэгРасширеннаяПодсказка" id="39"/>
+				</LabelField>
 				<LabelField name="ДенежныхСчетов" id="28">
 					<DataPath>Список.ДенежныхСчетов</DataPath>
 					<ContextMenu name="ДенежныхСчетовКонтекстноеМеню" id="29"/>

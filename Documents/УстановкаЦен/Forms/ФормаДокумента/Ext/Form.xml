@@ -55,6 +55,13 @@
 								<Event name="OnChange">ДатаПриИзменении</Event>
 							</Events>
 						</InputField>
+						<InputField name="УчетнаяЗапись" id="281">
+							<DataPath>Объект.УчетнаяЗапись</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="282"/>
+							<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="283"/>
+						</InputField>
 						<InputField name="КемСоздан" id="81">
 							<DataPath>Объект.КемСоздан</DataPath>
 							<ReadOnly>true</ReadOnly>
@@ -142,6 +149,12 @@
 					<ContextMenu name="ПримечаниеКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="18"/>
 				</InputField>
+				<Button name="ИзменитьПримечание" id="284">
+					<Type>UsualButton</Type>
+					<Visible>false</Visible>
+					<CommandName>Form.Command.ИзменитьПримечание</CommandName>
+					<ExtendedTooltip name="ИзменитьПримечаниеРасширеннаяПодсказка" id="285"/>
+				</Button>
 			</ChildItems>
 		</UsualGroup>
 		<Pages name="ГруппаСтраницы" id="159">
@@ -160,6 +173,7 @@
 							<v8:content>Товары</v8:content>
 						</v8:item>
 					</Title>
+					<TitleDataPath>Объект.Товаров</TitleDataPath>
 					<ExtendedTooltip name="ГруппаТоварыРасширеннаяПодсказка" id="162"/>
 					<ChildItems>
 						<Table name="Товары" id="59">
@@ -326,6 +340,13 @@
 									<ContextMenu name="ТоварыКартинкаКонтекстноеМеню" id="92"/>
 									<ExtendedTooltip name="ТоварыКартинкаРасширеннаяПодсказка" id="93"/>
 								</PictureField>
+								<CheckBoxField name="ТоварыРазрешитьПродажу" id="278">
+									<DataPath>Товары.РазрешитьПродажу</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТоварыРазрешитьПродажуКонтекстноеМеню" id="279"/>
+									<ExtendedTooltip name="ТоварыРазрешитьПродажуРасширеннаяПодсказка" id="280"/>
+								</CheckBoxField>
 								<InputField name="ТоварыОстаток" id="94">
 									<DataPath>Товары.Остаток</DataPath>
 									<ReadOnly>true</ReadOnly>
@@ -500,66 +521,82 @@
 							<Group>Vertical</Group>
 							<ExtendedTooltip name="ГруппаВидыЦенРасширеннаяПодсказка" id="200"/>
 							<ChildItems>
-								<Table name="СписокВыбранныеВидыЦен" id="180">
-									<Representation>List</Representation>
-									<CommandBarLocation>None</CommandBarLocation>
-									<Width>30</Width>
-									<HeightControlVariant>UseContentHeight</HeightControlVariant>
-									<Header>false</Header>
-									<HorizontalLines>false</HorizontalLines>
-									<VerticalLines>false</VerticalLines>
-									<AutoInsertNewRow>true</AutoInsertNewRow>
-									<HorizontalStretch>false</HorizontalStretch>
-									<DataPath>СписокВыбранныеВидыЦен</DataPath>
-									<RowPictureDataPath>СписокВыбранныеВидыЦен.Picture</RowPictureDataPath>
-									<ContextMenu name="СписокВыбранныеВидыЦенКонтекстноеМеню" id="181"/>
-									<AutoCommandBar name="СписокВыбранныеВидыЦенКоманднаяПанель" id="182"/>
-									<ExtendedTooltip name="СписокВыбранныеВидыЦенРасширеннаяПодсказка" id="183"/>
-									<SearchStringAddition name="СписокВыбранныеВидыЦенСтрокаПоиска" id="184">
+								<Table name="ВидыЦен" id="252">
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ВидыЦен</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ВидыЦенКонтекстноеМеню" id="253"/>
+									<AutoCommandBar name="ВидыЦенКоманднаяПанель" id="254">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="ВидыЦенДобавить" id="274">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ВидыЦен.StandardCommand.Add</CommandName>
+												<ExtendedTooltip name="ВидыЦенДобавитьРасширеннаяПодсказка" id="275"/>
+											</Button>
+											<Button name="ВидыЦенУдалить" id="276">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Item.ВидыЦен.StandardCommand.Delete</CommandName>
+												<ExtendedTooltip name="ВидыЦенУдалитьРасширеннаяПодсказка" id="277"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ВидыЦенРасширеннаяПодсказка" id="255"/>
+									<SearchStringAddition name="ВидыЦенСтрокаПоиска" id="256">
 										<AdditionSource>
-											<Item>СписокВыбранныеВидыЦен</Item>
+											<Item>ВидыЦен</Item>
 											<Type>SearchStringRepresentation</Type>
 										</AdditionSource>
-										<ContextMenu name="СписокВыбранныеВидыЦенСтрокаПоискаКонтекстноеМеню" id="185"/>
-										<ExtendedTooltip name="СписокВыбранныеВидыЦенСтрокаПоискаРасширеннаяПодсказка" id="186"/>
+										<ContextMenu name="ВидыЦенСтрокаПоискаКонтекстноеМеню" id="257"/>
+										<ExtendedTooltip name="ВидыЦенСтрокаПоискаРасширеннаяПодсказка" id="258"/>
 									</SearchStringAddition>
-									<ViewStatusAddition name="СписокВыбранныеВидыЦенСостояниеПросмотра" id="187">
+									<ViewStatusAddition name="ВидыЦенСостояниеПросмотра" id="259">
 										<AdditionSource>
-											<Item>СписокВыбранныеВидыЦен</Item>
+											<Item>ВидыЦен</Item>
 											<Type>ViewStatusRepresentation</Type>
 										</AdditionSource>
-										<ContextMenu name="СписокВыбранныеВидыЦенСостояниеПросмотраКонтекстноеМеню" id="188"/>
-										<ExtendedTooltip name="СписокВыбранныеВидыЦенСостояниеПросмотраРасширеннаяПодсказка" id="189"/>
+										<ContextMenu name="ВидыЦенСостояниеПросмотраКонтекстноеМеню" id="260"/>
+										<ExtendedTooltip name="ВидыЦенСостояниеПросмотраРасширеннаяПодсказка" id="261"/>
 									</ViewStatusAddition>
-									<SearchControlAddition name="СписокВыбранныеВидыЦенУправлениеПоиском" id="190">
+									<SearchControlAddition name="ВидыЦенУправлениеПоиском" id="262">
 										<AdditionSource>
-											<Item>СписокВыбранныеВидыЦен</Item>
+											<Item>ВидыЦен</Item>
 											<Type>SearchControl</Type>
 										</AdditionSource>
-										<ContextMenu name="СписокВыбранныеВидыЦенУправлениеПоискомКонтекстноеМеню" id="191"/>
-										<ExtendedTooltip name="СписокВыбранныеВидыЦенУправлениеПоискомРасширеннаяПодсказка" id="192"/>
+										<ContextMenu name="ВидыЦенУправлениеПоискомКонтекстноеМеню" id="263"/>
+										<ExtendedTooltip name="ВидыЦенУправлениеПоискомРасширеннаяПодсказка" id="264"/>
 									</SearchControlAddition>
 									<Events>
-										<Event name="BeforeAddRow">СписокТипыЦенПередНачаломДобавления</Event>
-										<Event name="BeforeDeleteRow">СписокТипыЦенПередУдалением</Event>
+										<Event name="AfterDeleteRow">ВидыЦенПослеУдаления</Event>
 									</Events>
 									<ChildItems>
-										<CheckBoxField name="СписокВидыЦенПометка" id="196">
-											<DataPath>СписокВыбранныеВидыЦен.Check</DataPath>
+										<LabelField name="ВидыЦенНомерСтроки" id="265">
+											<DataPath>Объект.ВидыЦен.LineNumber</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="СписокВидыЦенПометкаКонтекстноеМеню" id="197"/>
-											<ExtendedTooltip name="СписокВидыЦенПометкаРасширеннаяПодсказка" id="198"/>
-											<Events>
-												<Event name="OnChange">СписокТипыЦенПометкаПриИзменении</Event>
-											</Events>
-										</CheckBoxField>
-										<InputField name="СписокВидыЦенЗначение" id="193">
-											<DataPath>СписокВыбранныеВидыЦен.Value</DataPath>
+											<ContextMenu name="ВидыЦенНомерСтрокиКонтекстноеМеню" id="266"/>
+											<ExtendedTooltip name="ВидыЦенНомерСтрокиРасширеннаяПодсказка" id="267"/>
+										</LabelField>
+										<InputField name="ВидыЦенВидЦены" id="268">
+											<DataPath>Объект.ВидыЦен.ВидЦены</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-											<ContextMenu name="СписокВидыЦенЗначениеКонтекстноеМеню" id="194"/>
-											<ExtendedTooltip name="СписокВидыЦенЗначениеРасширеннаяПодсказка" id="195"/>
+											<ContextMenu name="ВидыЦенВидЦеныКонтекстноеМеню" id="269"/>
+											<ExtendedTooltip name="ВидыЦенВидЦеныРасширеннаяПодсказка" id="270"/>
+											<Events>
+												<Event name="OnChange">ВидыЦенВидЦеныПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ВидыЦенВалюта" id="271">
+											<DataPath>Объект.ВидыЦен.Валюта</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ВидыЦенВалютаКонтекстноеМеню" id="272"/>
+											<ExtendedTooltip name="ВидыЦенВалютаРасширеннаяПодсказка" id="273"/>
+											<Events>
+												<Event name="OnChange">ВидыЦенВалютаПриИзменении</Event>
+											</Events>
 										</InputField>
 									</ChildItems>
 								</Table>
@@ -692,6 +729,9 @@
 			<UseAlways>
 				<Field>Объект.RegisterRecords</Field>
 			</UseAlways>
+			<Save>
+				<Field>Объект.Товаров</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="Товары" id="2">
 			<Title>
@@ -808,9 +848,9 @@
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
-							<v8:Digits>10</v8:Digits>
+							<v8:Digits>6</v8:Digits>
 							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
@@ -822,12 +862,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>6</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-						</v8:NumberQualifiers>
+						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
 			</Columns>
@@ -995,17 +1030,6 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="СписокВыбранныеВидыЦен" id="17">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Список выбранные виды цен</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8:ValueListType</v8:Type>
-			</Type>
-		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗаполнитьПоГруппеТоваров" id="1">
@@ -1161,6 +1185,30 @@
 			</Picture>
 			<Action>ЗаполнитьПоОстаткам</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ИзменитьПримечание" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить примечание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить примечание без перепроведения документа (в т.ч. в закрытом периоде)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Change the note without re-posting the document (including in a closed period)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьПримечание</Action>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 	<CommandInterface>

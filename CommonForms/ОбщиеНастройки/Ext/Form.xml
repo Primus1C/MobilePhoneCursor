@@ -294,6 +294,32 @@
 							<ContextMenu name="ПериодичностьОповещенийИнтеграцииКонтекстноеМеню" id="84"/>
 							<ExtendedTooltip name="ПериодичностьОповещенийИнтеграцииРасширеннаяПодсказка" id="85"/>
 						</InputField>
+						<InputField name="АПИ_ГруппаНовойНоменклатуры" id="91">
+							<DataPath>НаборКонстант.АПИ_ГруппаНовойНоменклатуры</DataPath>
+							<ContextMenu name="АПИ_ГруппаНовойНоменклатурыКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="АПИ_ГруппаНовойНоменклатурыРасширеннаяПодсказка" id="93"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЗадачи" id="86">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задачи</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.Task</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаЗадачиРасширеннаяПодсказка" id="87"/>
+					<ChildItems>
+						<InputField name="ИнфоПользователейЗадач" id="88">
+							<DataPath>НаборКонстант.ИнфоПользователейЗадач</DataPath>
+							<TextColor>style:ЦветНадписиИнфоМорской</TextColor>
+							<ContextMenu name="ИнфоПользователейЗадачКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="ИнфоПользователейЗадачРасширеннаяПодсказка" id="90"/>
+						</InputField>
 					</ChildItems>
 				</Page>
 			</ChildItems>

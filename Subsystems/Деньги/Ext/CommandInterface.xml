@@ -11,6 +11,11 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
+		<Command name="Report.РасчетыПоЗаймам.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
 		<Command name="Report.Биржа.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>
@@ -48,19 +53,19 @@
 		<Command name="Report.Инвестиции.Command.Инвестиции">
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
+		<Command name="Report.РасчетыПоЗаймам.Command.РасчетыПоЗаймам">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
 		<Command name="Report.Биржа.Command.Биржа">
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
 		<Command name="Report.НачисленияПоСтавкамИнвестиций.Command.НачисленияПоСтавкамИнвестиций">
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
-		<Command name="Report.ВКД_ОстаткиПоБанку.StandardCommand.Open">
-			<CommandGroup>ActionsPanelReports</CommandGroup>
-		</Command>
-		<Command name="Report._ПлатежныйКалендарь.StandardCommand.Open">
-			<CommandGroup>ActionsPanelReports</CommandGroup>
-		</Command>
 		<Command name="Report.Инвестиции.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.РасчетыПоЗаймам.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.Биржа.StandardCommand.Open">

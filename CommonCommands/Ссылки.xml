@@ -47,7 +47,9 @@
 				<v8:Type>cfg:DocumentRef.НачислениеЗарплаты</v8:Type>
 				<v8:Type>cfg:DocumentRef.ПередачаНаКомиссию</v8:Type>
 				<v8:Type>cfg:DocumentRef._ВозвратОтПокупателя</v8:Type>
+				<v8:Type>cfg:CatalogRef.КредитныеДоговоры</v8:Type>
 				<v8:Type>cfg:DocumentRef.ВозвратСКомиссии</v8:Type>
+				<v8:Type>cfg:DocumentRef.НачислениеПроцентовПоКредитам</v8:Type>
 				<v8:Type>cfg:CatalogRef.Фирмы</v8:Type>
 				<v8:Type>cfg:CatalogRef.Счета</v8:Type>
 				<v8:Type>cfg:CatalogRef.ТоварныеГруппыПеревозчиков</v8:Type>
@@ -58,7 +60,6 @@
 				<v8:Type>cfg:DocumentRef.ПриходнаяНакладная</v8:Type>
 				<v8:Type>cfg:CatalogRef.Статьи</v8:Type>
 				<v8:Type>cfg:DocumentRef.ИнвойсЗакупки</v8:Type>
-				<v8:Type>cfg:DocumentRef.КорректировкаИнвойса</v8:Type>
 				<v8:Type>cfg:DocumentRef.Инвентаризация</v8:Type>
 				<v8:Type>cfg:DocumentRef.Отправка</v8:Type>
 				<v8:Type>cfg:DocumentRef.Перемещение</v8:Type>
@@ -70,11 +71,14 @@
 				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
 				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
 				<v8:Type>cfg:CatalogRef.Страны</v8:Type>
+				<v8:Type>cfg:CatalogRef.ВидыЦен</v8:Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиИнтеграции</v8:Type>
 				<v8:Type>cfg:DocumentRef.ДвижениеДенег</v8:Type>
 				<v8:Type>cfg:DocumentRef.ИнвойсПродажи</v8:Type>
 				<v8:Type>cfg:CatalogRef.ДенежныеСчета</v8:Type>
 				<v8:Type>cfg:DocumentRef.ПереоценкаТовараНаКомиссии</v8:Type>
 				<v8:Type>cfg:CatalogRef.НастройкиФорм</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВКД_ДополнительныеЗатраты</v8:Type>
 				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
 				<v8:Type>cfg:CatalogRef.Офисы</v8:Type>
 				<v8:Type>cfg:CatalogRef.Производители</v8:Type>

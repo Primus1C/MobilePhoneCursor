@@ -36,14 +36,14 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>ИТДБ Торговля 8.3.17.05.30 &gt; </v8:content>
+					<v8:content>ИТДБ Торговля API&gt; </v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Trade 8.3.17.05.30 &gt; </v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment>Marker TEST &gt; </Comment>
+			<Comment>Marker API TEST &gt; </Comment>
 			<NamePrefix/>
 			<ConfigurationExtensionCompatibilityMode>Version8_3_25</ConfigurationExtensionCompatibilityMode>
 			<DefaultRunMode>ManagedApplication</DefaultRunMode>
@@ -56,7 +56,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.Разработка</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2026-06-23</Version>
+			<Version>2026-06-23 API</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -263,7 +263,12 @@
 					<v8:content>primus1c@email.cz</v8:content>
 				</v8:item>
 			</VendorInformationAddress>
-			<ConfigurationInformationAddress/>
+			<ConfigurationInformationAddress>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>https://mtdocuments.vercel.app/</v8:content>
+				</v8:item>
+			</ConfigurationInformationAddress>
 			<DataLockControlMode>Managed</DataLockControlMode>
 			<ObjectAutonumerationMode>NotAutoFree</ObjectAutonumerationMode>
 			<ModalityUseMode>DontUse</ModalityUseMode>
@@ -387,6 +392,8 @@
 			<CommonPicture>Excel</CommonPicture>
 			<CommonPicture>Вкл</CommonPicture>
 			<CommonPicture>Выкл</CommonPicture>
+			<CommonPicture>КоллекцияВидыСобытийЖурналаРегистрации</CommonPicture>
+			<CommonPicture>Тег</CommonPicture>
 			<SessionParameter>Настройка</SessionParameter>
 			<SessionParameter>Пользователь</SessionParameter>
 			<SessionParameter>Администратор</SessionParameter>
@@ -414,6 +421,7 @@
 			<SessionParameter>БезусловноеПроведениеДокументов</SessionParameter>
 			<SessionParameter>ДоступныНаименованияКонтрагентов</SessionParameter>
 			<SessionParameter>ГрупповоеПерепроведениеДокументов</SessionParameter>
+			<SessionParameter>АПИ_ГруппаНовойНоменклатуры</SessionParameter>
 			<Role>Администратор</Role>
 			<Role>РазрешитьВариантыОтчетов</Role>
 			<Role>РазрешитьНастройкуСписка</Role>
@@ -435,16 +443,14 @@
 			<Role>ИнвойсЗакупки</Role>
 			<Role>ИнвойсТоварный</Role>
 			<Role>ИнвойсПродажи</Role>
+			<Role>ИнвойсПродажиПросмотр</Role>
 			<Role>Логистика</Role>
 			<Role>Бухгалтерия</Role>
-			<Role>Зарплата</Role>
-			<Role>Телеграм</Role>
+			<Role>ДокументыЗарплата</Role>
 			<Role>СверкаСПоставщиками</Role>
 			<Role>МетреонПолный</Role>
 			<Role>МетреонМенеджер</Role>
-			<Role>МетреонПеремещение</Role>
 			<Role>МетреонЛогистика</Role>
-			<Role>МетреонСклад</Role>
 			<Role>УстановкаЦенПродажи</Role>
 			<Role>ВозвратПоставщикам</Role>
 			<Role>ВозвратОтПокупателей</Role>
@@ -467,12 +473,14 @@
 			<Role>Перемещение</Role>
 			<Role>РасходныеНакладные</Role>
 			<Role>ПриходныеНакладные</Role>
+			<Role>ЗаменаПроданногоТовара</Role>
 			<Role>ЗаменаСерий</Role>
 			<Role>ОтчетКонтрольВводаДанных</Role>
 			<Role>ОтчетPriceCheck</Role>
 			<Role>Комиссия</Role>
-			<Role>api_client</Role>
 			<Role>ПросмотрОтчетаОборотыЗарплаты</Role>
+			<Role>api_web_admin</Role>
+			<Role>api_client</Role>
 			<CommonTemplate>ОсновнойМакетСКД</CommonTemplate>
 			<CommonTemplate>МакетПоменьшеСКД</CommonTemplate>
 			<CommonTemplate>component_body</CommonTemplate>
@@ -506,6 +514,7 @@
 			<CommonModule>ОбщегоНазначения</CommonModule>
 			<CommonModule>ОбщегоНазначенияПовтИсп</CommonModule>
 			<CommonModule>ОбщегоНазначенияСервер</CommonModule>
+			<CommonModule>ОбщегоНазначенияПривилегированный</CommonModule>
 			<CommonModule>СтроковыеФункцииКлиентСервер</CommonModule>
 			<CommonModule>ОбщегоНазначенияКлиент</CommonModule>
 			<CommonModule>ОбработчикиКомандКлиент</CommonModule>
@@ -520,13 +529,17 @@
 			<CommonModule>РаботаСВалютой</CommonModule>
 			<CommonModule>РаботаСИнвойсами</CommonModule>
 			<CommonModule>Комиссия</CommonModule>
+			<CommonModule>FinCoreОбмен</CommonModule>
 			<CommonModule>FinCoreОбменHTTP</CommonModule>
 			<CommonModule>StockAPI_Заказы</CommonModule>
 			<CommonModule>StockAPI_Контрагенты</CommonModule>
 			<CommonModule>StockAPI_Остатки</CommonModule>
+			<CommonModule>StockAPI_Приходные</CommonModule>
 			<CommonModule>StockAPI_Справочники</CommonModule>
+			<CommonModule>StockAPI_ПротоколПовтИсп</CommonModule>
 			<CommonModule>StockAPI_Утилиты</CommonModule>
 			<CommonModule>StockAPI_Цены</CommonModule>
+			<CommonModule>СканированиеСерий</CommonModule>
 			<CommonAttribute>КемСоздан</CommonAttribute>
 			<CommonAttribute>Создан</CommonAttribute>
 			<CommonAttribute>КемСохранен</CommonAttribute>
@@ -540,17 +553,30 @@
 			<EventSubscription>Сооб_ОбработкаПолученияФормы</EventSubscription>
 			<EventSubscription>Сооб_ЗаписьКонстант</EventSubscription>
 			<EventSubscription>ПроведениеДокументов</EventSubscription>
+			<EventSubscription>ЗапретРедактированияПоДате</EventSubscription>
+			<EventSubscription>ДатаЗапретаРедактированияПередЗаписью</EventSubscription>
+			<EventSubscription>ДатаЗапретаРедактированияПриЗаписи</EventSubscription>
+			<EventSubscription>FinCoreРегистрацияПередЗаписью</EventSubscription>
+			<EventSubscription>FinCoreРегистрацияПередЗаписьюКурсыВалют</EventSubscription>
+			<EventSubscription>FinCoreРегистрацияПриЗаписи</EventSubscription>
+			<EventSubscription>FinCoreРегистрацияПередУдалением</EventSubscription>
 			<EventSubscription>WebHookОстатки</EventSubscription>
+			<EventSubscription>WebHookБуферСканированияДляОстатков</EventSubscription>
+			<EventSubscription>НулевыеОстаткиПриЗаписиОстатков</EventSubscription>
 			<ScheduledJob>РасчетИдентификатора</ScheduledJob>
 			<ScheduledJob>Сооб_УдалениеПомеченныхСообщений</ScheduledJob>
 			<ScheduledJob>ОбменТелеграм</ScheduledJob>
-			<ScheduledJob>ОбменFinCore</ScheduledJob>
 			<ScheduledJob>ОтслеживаниеТреков</ScheduledJob>
 			<ScheduledJob>ПроведениеДокументов</ScheduledJob>
 			<ScheduledJob>WebHooksStockAPI</ScheduledJob>
+			<ScheduledJob>ОчисткаОтправленныхWebHook</ScheduledJob>
+			<ScheduledJob>ОчисткаБуфераСканированияДляОстатков</ScheduledJob>
+			<ScheduledJob>ОбменFinCore</ScheduledJob>
+			<ScheduledJob>УстановкаЦенПоНулевымОстаткам</ScheduledJob>
 			<FunctionalOption>ИспользоватьСообщения</FunctionalOption>
 			<FunctionalOption>ОстаткиТоваров</FunctionalOption>
 			<FunctionalOption>РасширенныеФункцииРазработчика</FunctionalOption>
+			<FunctionalOption>ДополнительныйАссортимент</FunctionalOption>
 			<FunctionalOptionsParameter>Пользователь</FunctionalOptionsParameter>
 			<DefinedType>ВладелецПрисоединенныхФайлов</DefinedType>
 			<DefinedType>ОбъектСообщений</DefinedType>
@@ -570,8 +596,6 @@
 			<CommonCommand>ВставитьИзБуфера</CommonCommand>
 			<CommonCommand>ОборотыСерии</CommonCommand>
 			<CommonCommand>СвязанныеДокументы</CommonCommand>
-			<CommonCommand>ХронологияИнвойса</CommonCommand>
-			<CommonCommand>ИзменениеСоставаИнвойса</CommonCommand>
 			<CommonCommand>Сооб_ПолныйЖурналСообщений</CommonCommand>
 			<CommonCommand>ОбщиеНастройки</CommonCommand>
 			<CommonCommand>НастройкиСообщений</CommonCommand>
@@ -581,7 +605,10 @@
 			<CommonCommand>СоставЗатрат</CommonCommand>
 			<CommonCommand>ЧтоНового</CommonCommand>
 			<CommonCommand>Оповещение</CommonCommand>
+			<CommonCommand>ПроведениеБезЗависимыхДокументов</CommonCommand>
+			<CommonCommand>РасходныеНакладныеКомиссии</CommonCommand>
 			<CommonCommand>РасчетыПоКомиссии</CommonCommand>
+			<CommonCommand>ЗаказыКомиссионера</CommonCommand>
 			<CommandGroup>ГруппаКомандИнвойс</CommandGroup>
 			<Constant>Настройка</Constant>
 			<Constant>Идентификатор</Constant>
@@ -605,6 +632,8 @@
 			<Constant>ТокенДХЛ</Constant>
 			<Constant>ТокенФедекс</Constant>
 			<Constant>ПериодичностьОповещенийИнтеграции</Constant>
+			<Constant>ИнфоПользователейЗадач</Constant>
+			<Constant>АПИ_ГруппаНовойНоменклатуры</Constant>
 			<CommonForm>Настройка</CommonForm>
 			<CommonForm>ПечатьБезЗащиты</CommonForm>
 			<CommonForm>ИнфоСписок</CommonForm>
@@ -658,6 +687,8 @@
 			<Catalog>ХранилищеДопИнформации</Catalog>
 			<Catalog>УчетныеЗаписиИнтеграции</Catalog>
 			<Catalog>ВидыЦен</Catalog>
+			<Catalog>КредитныеДоговоры</Catalog>
+			<Catalog>Ассортимент</Catalog>
 			<Document>ПриходнаяНакладная</Document>
 			<Document>РасходнаяНакладная</Document>
 			<Document>ДвижениеДенег</Document>
@@ -675,7 +706,6 @@
 			<Document>ВКД_СкидкаПоставщика</Document>
 			<Document>ВКД_ДополнительныеЗатраты</Document>
 			<Document>НачислениеЗарплаты</Document>
-			<Document>КорректировкаИнвойса</Document>
 			<Document>Отправка</Document>
 			<Document>ОтправкаAWB</Document>
 			<Document>ОтправкаПеремещений</Document>
@@ -683,10 +713,13 @@
 			<Document>УстановкаЦен</Document>
 			<Document>Инвентаризация</Document>
 			<Document>ЗаменаСерий</Document>
+			<Document>ЗаменаПроданногоТовара</Document>
 			<Document>ПередачаНаКомиссию</Document>
 			<Document>ПереоценкаТовараНаКомиссии</Document>
 			<Document>ВозвратСКомиссии</Document>
 			<Document>ОтчетКомиссионера</Document>
+			<Document>НачислениеПроцентовПоКредитам</Document>
+			<Document>КорректировкаРегистров</Document>
 			<Sequence>ПартииВалют</Sequence>
 			<Enum>ВидДокумента</Enum>
 			<Enum>СпособВыводаОтчета</Enum>
@@ -717,15 +750,17 @@
 			<Enum>МетдыОплаты</Enum>
 			<Enum>ПредставлениеДаты</Enum>
 			<Enum>ВидыДополнительнойИнформацииОбъектов</Enum>
-			<Enum>ВидДороги</Enum>
 			<Enum>СтилиПрограммы</Enum>
 			<Enum>РегистраторыЗатрат</Enum>
 			<Enum>ТипыНоменклатуры</Enum>
 			<Enum>ВидыОперацииЗаменаСерий</Enum>
 			<Enum>Важность</Enum>
+			<Enum>СтатусыЗадач</Enum>
 			<Enum>HTTPМетод</Enum>
 			<Enum>СтатусыИнвойсаПродажи</Enum>
 			<Enum>ТипыСобытийWebHooks</Enum>
+			<Enum>ПериодНачисления</Enum>
+			<Enum>ВидыОперацииОтчетКомиссионера</Enum>
 			<Report>КонсольЗапросов_82</Report>
 			<Report>ДвиженияДокумента</Report>
 			<Report>ОстаткиТовара</Report>
@@ -752,14 +787,9 @@
 			<Report>ЗаказТовара</Report>
 			<Report>ОборотыОднойСерии</Report>
 			<Report>КонсольОтчетов</Report>
-			<Report>_ПлатежныйКалендарь</Report>
-			<Report>_ВзаиморасчетыСКонтрагентами</Report>
-			<Report>_ОплатыЗаПериодВходящие</Report>
-			<Report>_ОплатыЗаПериодИсходящие</Report>
 			<Report>_Взаиморасчеты</Report>
 			<Report>ВКД_ВзаиморасчетыСКлиентами</Report>
 			<Report>ВКД_ОтчетПоПриходным</Report>
-			<Report>ВКД_ОстаткиПоБанку</Report>
 			<Report>ОборотыДенегПоБанку</Report>
 			<Report>ВзаиморасчетыСКлиентами</Report>
 			<Report>ВКД_ТоварыВПути</Report>
@@ -787,6 +817,7 @@
 			<Report>ЗатратыПартии</Report>
 			<Report>РеестрЗатрат</Report>
 			<Report>СоставЗатрат</Report>
+			<Report>СравнениеЦенПриходныхCOM</Report>
 			<Report>ПроверкаПриходных</Report>
 			<Report>СреднийКурс</Report>
 			<Report>КонтрольВводаДанных</Report>
@@ -795,6 +826,9 @@
 			<Report>ПартииВалют</Report>
 			<Report>ТоварВПути</Report>
 			<Report>Комиссия</Report>
+			<Report>КонтрольЗатратПериода</Report>
+			<Report>РасчетыПоЗаймам</Report>
+			<Report>СтатусыИнвойсов</Report>
 			<DataProcessor>Внимание</DataProcessor>
 			<DataProcessor>Предупреждение</DataProcessor>
 			<DataProcessor>Ошибка</DataProcessor>
@@ -811,6 +845,11 @@
 			<DataProcessor>БуферСканирования</DataProcessor>
 			<DataProcessor>ГенераторШтрихкдов</DataProcessor>
 			<DataProcessor>ТестовоеОприходованиеСерийнойНоменклатуры</DataProcessor>
+			<DataProcessor>АнализИнициаторовПерепроведения</DataProcessor>
+			<DataProcessor>ИмпортОтчетаТорговойПлощадки</DataProcessor>
+			<DataProcessor>ЗагрузкаКодовНоменклатурыИзExcel</DataProcessor>
+			<DataProcessor>ЗагрузкаНакладной</DataProcessor>
+			<DataProcessor>ИзменениеСерий</DataProcessor>
 			<InformationRegister>КурсыВалют</InformationRegister>
 			<InformationRegister>ХранилищеФайлов</InformationRegister>
 			<InformationRegister>СостоянияИнвойсов</InformationRegister>
@@ -820,6 +859,7 @@
 			<InformationRegister>ЗначенияСвойствОбъектов</InformationRegister>
 			<InformationRegister>ЦеныЗакупки</InformationRegister>
 			<InformationRegister>БуферСканирования</InformationRegister>
+			<InformationRegister>БуферСканированияДляОстатков</InformationRegister>
 			<InformationRegister>ЦеныПродажи</InformationRegister>
 			<InformationRegister>Треки</InformationRegister>
 			<InformationRegister>Затраты</InformationRegister>
@@ -827,9 +867,10 @@
 			<InformationRegister>ДокументыКПроведению</InformationRegister>
 			<InformationRegister>Замены</InformationRegister>
 			<InformationRegister>ПротоколОбменов</InformationRegister>
+			<InformationRegister>ОшибкиОбменаFinCore</InformationRegister>
 			<InformationRegister>СостоянияИнвойсовПродажи</InformationRegister>
 			<InformationRegister>ОчередьWebHook</InformationRegister>
-			<InformationRegister>ОшибкиОбменаFinCore</InformationRegister>
+			<InformationRegister>НулевыеОстатки</InformationRegister>
 			<AccumulationRegister>ОстаткиТовара</AccumulationRegister>
 			<AccumulationRegister>НезакрытыеДокументы</AccumulationRegister>
 			<AccumulationRegister>Долги</AccumulationRegister>
@@ -850,10 +891,8 @@
 			<AccumulationRegister>ПлатежныйКалендарьЗакупки</AccumulationRegister>
 			<AccumulationRegister>ПартииВалюты</AccumulationRegister>
 			<AccumulationRegister>РасчетыПоИнвойсам</AccumulationRegister>
-			<AccumulationRegister>Инвестиции</AccumulationRegister>
+			<AccumulationRegister>РасчетыПоКредитамИЗаймам</AccumulationRegister>
 			<AccumulationRegister>Биржа</AccumulationRegister>
-			<AccumulationRegister>ТоварыВДороге</AccumulationRegister>
-			<AccumulationRegister>ТоварыКонсигнации</AccumulationRegister>
 			<AccumulationRegister>ТоварыНаКомиссии</AccumulationRegister>
 			<ChartOfCharacteristicTypes>НастройкиПользователей</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ЦветаОформления</ChartOfCharacteristicTypes>

@@ -130,6 +130,13 @@
 					<ContextMenu name="ОкончательноКонтекстноеМеню" id="44"/>
 					<ExtendedTooltip name="ОкончательноРасширеннаяПодсказка" id="45"/>
 				</CheckBoxField>
+				<CheckBoxField name="Отправлено" id="46">
+					<DataPath>Список.Отправлено</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтправленоКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ОтправленоРасширеннаяПодсказка" id="48"/>
+				</CheckBoxField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -144,8 +151,50 @@
 				<Field>Список.Ключ</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Докум.Ссылка,
+	Докум.ПометкаУдаления,
+	Докум.Номер,
+	Докум.Дата,
+	Докум.Проведен,
+	Докум.Контрагент,
+	Докум.Сумма,
+	Докум.Строк,
+	Докум.Склад,
+	Докум.Куда,
+	Докум.Количество,
+	Докум.КемСоздан,
+	Докум.Создан,
+	Докум.КемСохранен,
+	Докум.Сохранен,
+	Докум.Фирма,
+	Докум.Примечание,
+	Докум.Окончательно,
+	Докум.МоментВремени,
+	НЕ ВыбранныеВОтправке.ТоварныйДокумент ЕСТЬ NULL КАК Отправлено
+ИЗ
+	Документ.Перемещение КАК Докум
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+			ВЫРАЗИТЬ(ТоварныеДокументы.ТоварныйДокумент КАК Документ.Перемещение) КАК ТоварныйДокумент
+		ИЗ
+			Документ.ОтправкаПеремещений.ТоварныеДокументы КАК ТоварныеДокументы
+		ГДЕ
+			ТоварныеДокументы.Ссылка.Проведен
+			И ТоварныеДокументы.ТоварныйДокумент ССЫЛКА Документ.Перемещение) КАК ВыбранныеВОтправке
+		ПО Докум.Ссылка = ВыбранныеВОтправке.ТоварныйДокумент
+</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Отправлено</dcssch:dataPath>
+					<dcssch:field>Отправлено</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправлено</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
 				<CalculatedField>
 					<dcssch:dataPath>Ключ</dcssch:dataPath>
 					<dcssch:expression>Номер+"##"</dcssch:expression>

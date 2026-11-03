@@ -87,6 +87,20 @@
 			<HorizontalStretch>true</HorizontalStretch>
 			<ExtendedTooltip name="ГруппаУчетРасширеннаяПодсказка" id="28"/>
 			<ChildItems>
+				<PictureDecoration name="ДекорацияПартУчет" id="38">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация парт учет</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.Constant</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияПартУчетКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ДекорацияПартУчетРасширеннаяПодсказка" id="40"/>
+				</PictureDecoration>
 				<CheckBoxField name="ВестиПартионныйУчет" id="29">
 					<DataPath>Объект.ВестиПартионныйУчет</DataPath>
 					<ToolTip>
@@ -99,6 +113,9 @@
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ВестиПартионныйУчетКонтекстноеМеню" id="30"/>
 					<ExtendedTooltip name="ВестиПартионныйУчетРасширеннаяПодсказка" id="31"/>
+					<Events>
+						<Event name="OnChange">ВестиПартионныйУчетПриИзменении</Event>
+					</Events>
 				</CheckBoxField>
 				<InputField name="НачалоПартионногоУчета" id="35">
 					<DataPath>Объект.НачалоПартионногоУчета</DataPath>

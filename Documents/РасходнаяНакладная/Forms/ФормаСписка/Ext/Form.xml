@@ -188,6 +188,7 @@
 			</SearchControlAddition>
 			<Events>
 				<Event name="Selection">СписокВыбор</Event>
+				<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
 			</Events>
 			<ChildItems>
 				<LabelField name="Дата" id="22">
@@ -895,14 +896,12 @@
 				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 				<xr:Value name="Role.Логистика">false</xr:Value>
 				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-				<xr:Value name="Role.Зарплата">false</xr:Value>
-				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+				<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 				<xr:Value name="Role.МетреонПолный">false</xr:Value>
 				<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-				<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 				<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-				<xr:Value name="Role.МетреонСклад">false</xr:Value>
 				<xr:Value name="Role.Разработка">true</xr:Value>
 			</Use>
 			<Action>Служба</Action>
@@ -931,6 +930,14 @@
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
+	<Parameters>
+		<Parameter name="ОтборПоКомиссии">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
 	<CommandInterface>
 		<CommandBar>
 			<Item>

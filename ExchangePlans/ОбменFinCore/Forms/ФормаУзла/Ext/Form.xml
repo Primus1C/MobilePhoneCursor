@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаВыполнитьОбмен" id="10">
 				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.ВыполнитьОбмен</CommandName>
 				<ExtendedTooltip name="ФормаВыполнитьОбменРасширеннаяПодсказка" id="11"/>
 			</Button>
@@ -23,6 +24,60 @@
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 		</InputField>
+		<UsualGroup name="ГруппаДоступ" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступ</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаДоступРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<InputField name="Адрес" id="14">
+					<DataPath>Объект.Адрес</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="АдресКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="Пользователь" id="17">
+					<DataPath>Объект.Пользователь</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПользовательКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="Пароль" id="20">
+					<DataPath>Объект.Пароль</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПарольКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="22"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСообщения" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаСообщенияРасширеннаяПодсказка" id="24"/>
+			<ChildItems>
+				<InputField name="НомерОтправленного" id="25">
+					<DataPath>Объект.SentNo</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НомерОтправленногоКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="НомерОтправленногоРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="НомерПринятого" id="28">
+					<DataPath>Объект.ReceivedNo</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НомерПринятогоКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="НомерПринятогоРасширеннаяПодсказка" id="30"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -44,7 +99,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выгрузить порцию номенклатуры в FinCore</v8:content>
+					<v8:content>Отправить зарегистрированные изменения узла FinCore</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ВыполнитьОбмен</Action>

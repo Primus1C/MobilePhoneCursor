@@ -182,7 +182,9 @@
 				</xr:StandardAttribute>
 			</StandardAttributes>
 			<Characteristics/>
-			<BasedOn/>
+			<BasedOn>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходнаяНакладная</xr:Item>
+			</BasedOn>
 			<InputByString>
 				<xr:Field>Document.ВозвратПоставщику.StandardAttribute.Number</xr:Field>
 			</InputByString>

@@ -22,12 +22,12 @@
 			<Comment/>
 			<Type>
 				<v8:Type>cfg:DocumentRef._Инвойс</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПередачаНаКомиссию</v8:Type>
 				<v8:Type>cfg:DocumentRef.ИнвойсЗакупки</v8:Type>
 				<v8:Type>cfg:DocumentRef.ИнвойсПродажи</v8:Type>
 			</Type>
 			<UseStandardCommands>false</UseStandardCommands>
 			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаИнвойса.Attribute.Инвойс</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.Отправка.TabularSection.Инвойсы.Attribute.Инвойс</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходнаяНакладная.Attribute.ВКД_Инвойс</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document._Инвойс.Attribute.ДокументОснование</xr:Item>
@@ -38,6 +38,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВКД_СкидкаПоставщика.TabularSection.Документы.Attribute.Документ</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтправкаAWB.TabularSection.Инвойсы.Attribute.Инвойс</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ДвижениеДенег.TabularSection.Инвойсы.Attribute.Инвойс</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетКомиссионера.Attribute.ДокументОснование</xr:Item>
 			</Content>
 			<DefaultForm/>
 			<AuxiliaryForm/>

@@ -28,8 +28,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОборотыРасходыДоходы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОборотыПодотчета</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОборотыЗарплаты</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report._ПлатежныйКалендарь</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.ВКД_ОстаткиПоБанку</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ДвижениеДенег</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЗарплаты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОборотыДенег</xr:Item>
@@ -41,6 +39,9 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.РеестрЗатрат</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.СоставЗатрат</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Sequence.ПартииВалют</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КонтрольЗатратПериода</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПроцентовПоКредитам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РасчетыПоЗаймам</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

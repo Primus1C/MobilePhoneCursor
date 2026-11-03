@@ -107,30 +107,31 @@
 			<Group>Vertical</Group>
 			<ExtendedTooltip name="ГруппаЗапросРасширеннаяПодсказка" id="38"/>
 			<ChildItems>
-				<InputField name="ЗаголовокЗапроса" id="28">
-					<DataPath>ТекстЗаголовки</DataPath>
+				<HTMLDocumentField name="ЗаголовокЗапроса" id="28">
+					<DataPath>HTMLТекстЗаголовки</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<TitleLocation>Left</TitleLocation>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<MultiLine>true</MultiLine>
+					<Height>4</Height>
 					<ContextMenu name="ЗаголовокЗапросаКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ЗаголовокЗапросаРасширеннаяПодсказка" id="30"/>
-				</InputField>
-				<InputField name="ТекстТелоЗапроса" id="31">
-					<DataPath>ТекстТелоЗапроса</DataPath>
+				</HTMLDocumentField>
+				<HTMLDocumentField name="ТекстТелоЗапроса" id="31">
+					<DataPath>HTMLТекстТелоЗапроса</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текст запроса</v8:content>
+							<v8:content>Тело запроса</v8:content>
 						</v8:item>
 					</Title>
 					<TitleLocation>Left</TitleLocation>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<MultiLine>true</MultiLine>
+					<Height>8</Height>
 					<ContextMenu name="ТекстТелоЗапросаКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="ТекстТелоЗапросаРасширеннаяПодсказка" id="33"/>
-				</InputField>
-				<InputField name="ТекстТелоОтвета" id="34">
-					<DataPath>ТекстТелоОтвета</DataPath>
+				</HTMLDocumentField>
+				<HTMLDocumentField name="ТекстТелоОтвета" id="34">
+					<DataPath>HTMLТекстТелоОтвета</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -138,11 +139,10 @@
 						</v8:item>
 					</Title>
 					<TitleLocation>Left</TitleLocation>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<MultiLine>true</MultiLine>
+					<Height>8</Height>
 					<ContextMenu name="ТекстТелоОтветаКонтекстноеМеню" id="35"/>
 					<ExtendedTooltip name="ТекстТелоОтветаРасширеннаяПодсказка" id="36"/>
-				</InputField>
+				</HTMLDocumentField>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -154,7 +154,7 @@
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
 		</Attribute>
-		<Attribute name="ТекстЗаголовки" id="2">
+		<Attribute name="HTMLТекстЗаголовки" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -169,7 +169,13 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ТекстТелоЗапроса" id="3">
+		<Attribute name="HTMLТекстТелоЗапроса" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тело запроса</v8:content>
+				</v8:item>
+			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
@@ -178,11 +184,11 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ТекстТелоОтвета" id="4">
+		<Attribute name="HTMLТекстТелоОтвета" id="5">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Текст тело ответа</v8:content>
+					<v8:content>Текст ответа</v8:content>
 				</v8:item>
 			</Title>
 			<Type>

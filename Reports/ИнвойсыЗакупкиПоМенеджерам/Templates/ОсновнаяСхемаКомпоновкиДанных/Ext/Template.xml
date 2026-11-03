@@ -9,6 +9,22 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Менеджер</dataPath>
 			<field>Менеджер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менеджер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МенеджерПредставление</dataPath>
+			<field>МенеджерПредставление</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менеджер</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Инвойс</dataPath>
@@ -17,6 +33,17 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Инвойс</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>гоИмяДок(Инвойс)</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоИнвойсов</dataPath>
+			<field>КоличествоИнвойсов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол-во инвойсов</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -31,34 +58,89 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Количество</dataPath>
-			<field>Количество</field>
+			<dataPath>КоличествоПозицийВИнвойсе</dataPath>
+			<field>КоличествоПозицийВИнвойсе</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Количество</v8:content>
+					<v8:content>Кол-во позиций</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаИнвойса</dataPath>
+			<field>ДатаИнвойса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
-		<query>ВЫБРАТЬ
-	ИнвойсЗакупки.Ссылка КАК Инвойс,
-	ИнвойсЗакупки.Менеджер КАК Менеджер,
-	ИнвойсЗакупки.СуммаОплатыВВалютеИнвойса КАК Сумма,
-	1 КАК Количество
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Инв.Ссылка КАК Инвойс,
+	ЕСТЬNULL(Инв.ДокументОснование.Менеджер, ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка)) КАК Менеджер,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(Инв.ДокументОснование.Менеджер, ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка)) = ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка)
+			ТОГДА "Менеджер не указан"
+		ИНАЧЕ Инв.ДокументОснование.Менеджер.Наименование
+	КОНЕЦ КАК МенеджерПредставление,
+	Инв.Дата КАК ДатаИнвойса,
+	Инв.Контрагент КАК Контрагент,
+	Инв.Сумма КАК Сумма,
+	1 КАК КоличествоИнвойсов,
+	Инв.ВКД_Количество КАК КоличествоПозицийВИнвойсе
 ИЗ
-	Документ.ИнвойсЗакупки КАК ИнвойсЗакупки
+	Документ._Инвойс КАК Инв
 ГДЕ
-	ИнвойсЗакупки.Проведен
-	И ИнвойсЗакупки.Дата МЕЖДУ &amp;ДатаНач И &amp;ДатаКон</query>
+	Инв.Проведен
+	И Инв.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацииИнвойс.Товар)
+	И (&amp;ДатаНач = ДАТАВРЕМЯ(1, 1, 1)
+			ИЛИ Инв.Дата &gt;= НАЧАЛОПЕРИОДА(&amp;ДатаНач, ДЕНЬ))
+	И (&amp;ДатаКон = ДАТАВРЕМЯ(1, 1, 1)
+			ИЛИ Инв.Дата &lt;= КОНЕЦПЕРИОДА(&amp;ДатаКон, ДЕНЬ))</query>
 	</dataSet>
+	<totalField>
+		<dataPath>КоличествоИнвойсов</dataPath>
+		<expression>Сумма(КоличествоИнвойсов)</expression>
+	</totalField>
 	<totalField>
 		<dataPath>Сумма</dataPath>
 		<expression>Сумма(Сумма)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>Количество</dataPath>
-		<expression>Сумма(Количество)</expression>
+		<dataPath>КоличествоПозицийВИнвойсе</dataPath>
+		<expression>Сумма(КоличествоПозицийВИнвойсе)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДатаИнвойса</dataPath>
+		<expression>Максимум(ДатаИнвойса)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Контрагент</dataPath>
+		<expression>Максимум(Контрагент)</expression>
 	</totalField>
 	<parameter>
 		<name>ДатаКон</name>
@@ -101,7 +183,7 @@
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Период</v8:content>
+				<v8:content>Период (по дате инвойса)</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -121,12 +203,38 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Инвойс</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоИнвойсов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Сумма</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Количество</dcsset:field>
+					<dcsset:field>КоличествоПозицийВИнвойсе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаИнвойса</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Контрагент</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Менеджер</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>f3a8c2e1-4b5d-4e6f-9a0b-1c2d3e4f5a6b</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Менеджер</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
@@ -148,7 +256,7 @@
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>Менеджер</dcsset:field>
+						<dcsset:field>МенеджерПредставление</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -159,7 +267,18 @@
 					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 				</dcsset:order>
 				<dcsset:selection>
-					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>МенеджерПредставление</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоИнвойсов</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Сумма</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоПозицийВИнвойсе</dcsset:field>
+					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:item xsi:type="dcsset:StructureItemGroup">
 					<dcsset:groupItems>
@@ -172,10 +291,34 @@
 						</dcsset:item>
 					</dcsset:groupItems>
 					<dcsset:order>
-						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаИнвойса</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Инвойс</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
 					</dcsset:order>
 					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Инвойс</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоИнвойсов</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоПозицийВИнвойсе</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ДатаИнвойса</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+						</dcsset:item>
 					</dcsset:selection>
 				</dcsset:item>
 			</dcsset:item>

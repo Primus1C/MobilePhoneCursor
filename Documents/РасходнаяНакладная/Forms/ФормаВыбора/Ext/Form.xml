@@ -123,6 +123,13 @@
 					<ContextMenu name="КемСозданКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="КемСозданРасширеннаяПодсказка" id="39"/>
 				</LabelField>
+				<CheckBoxField name="Отправлено" id="43">
+					<DataPath>Список.Отправлено</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтправленоКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ОтправленоРасширеннаяПодсказка" id="45"/>
+				</CheckBoxField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -158,9 +165,9 @@
 	Докум.КемСохранен КАК КемСохранен,
 	Докум.Сохранен КАК Сохранен,
 	Докум.Фирма КАК Фирма,
-	выразить (Докум.Примечание как строка(100)) КАК Примечание,
+	Докум.Примечание КАК Примечание,
 	Докум.Окончательно КАК Окончательно,
-	Докум.МоментВремени КАК МоментВремени,
+	//Докум.МоментВремени КАК МоментВремени,
 	ВЫБОР
 		КОГДА ЕСТЬNULL(Рег.ДолгПокупателяОстаток, 0) &lt;= 0
 			ТОГДА ""
@@ -185,17 +192,36 @@
 	КОНЕЦ КАК Состояние,
 	Докум.ПроцентПлюс КАК ПроцентПлюс,
 	Докум.ПроцентМинус КАК ПроцентМинус,
-	Докум.Количество КАК Количество
+	Докум.Количество КАК Количество,
+	НЕ ВыбранныеВОтправке.ТоварныйДокумент ЕСТЬ NULL КАК Отправлено
 ИЗ
 	Документ.РасходнаяНакладная КАК Докум
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Долги.Остатки КАК Рег
 		ПО Докум.Ссылка = Рег.Док
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+			ВЫРАЗИТЬ(ТоварныеДокументы.ТоварныйДокумент КАК Документ.РасходнаяНакладная) КАК ТоварныйДокумент
+		ИЗ
+			Документ.ОтправкаПеремещений.ТоварныеДокументы КАК ТоварныеДокументы
+		ГДЕ
+			ТоварныеДокументы.Ссылка.Проведен
+			И ТоварныеДокументы.ТоварныйДокумент ССЫЛКА Документ.РасходнаяНакладная) КАК ВыбранныеВОтправке
+		ПО Докум.Ссылка = ВыбранныеВОтправке.ТоварныйДокумент
 ГДЕ
 	ВЫБОР
 			КОГДА &amp;Граница = НЕОПРЕДЕЛЕНО
 				ТОГДА ИСТИНА
 			ИНАЧЕ Докум.Дата &gt; &amp;Граница
 		КОНЕЦ</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Отправлено</dcssch:dataPath>
+					<dcssch:field>Отправлено</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправлено</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Примечание</dcssch:dataPath>
 					<dcssch:field>Примечание</dcssch:field>
@@ -381,6 +407,20 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Консигнация</dcssch:dataPath>
 					<dcssch:field>Консигнация</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сборщик</dcssch:dataPath>
+					<dcssch:field>Сборщик</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТоварныйДокумент</dcssch:dataPath>
+					<dcssch:field>ТоварныйДокумент</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товарный документ</v8:content>
+						</v8:item>
+					</dcssch:title>
 				</Field>
 				<CalculatedField>
 					<dcssch:dataPath>Ключ</dcssch:dataPath>

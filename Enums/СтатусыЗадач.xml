@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Enum uuid="b7e4c91a-2d5f-4a8e-9c3b-1f6d0e8a47c2">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.СтатусыЗадач" category="Ref">
+				<xr:TypeId>c1d2e3f4-a5b6-4789-8c0d-1e2f3a4b5c6d</xr:TypeId>
+				<xr:ValueId>d2e3f4a5-b6c7-4890-9d1e-2f3a4b5c6d7e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.СтатусыЗадач" category="Manager">
+				<xr:TypeId>e3f4a5b6-c7d8-4901-ae2f-3a4b5c6d7e8f</xr:TypeId>
+				<xr:ValueId>f4a5b6c7-d8e9-4012-bf3a-4b5c6d7e8f90</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.СтатусыЗадач" category="List">
+				<xr:TypeId>a5b6c7d8-e9f0-4123-c04b-5c6d7e8f9012</xr:TypeId>
+				<xr:ValueId>b6c7d8e9-f0a1-4234-d15c-6d7e8f901234</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СтатусыЗадач</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статусы задач</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="1a2b3c4d-5e6f-7081-92a3-b4c5d6e7f809">
+				<Properties>
+					<Name>Новая</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новая</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2b3c4d5e-6f70-8192-a3b4-c5d6e7f8091a">
+				<Properties>
+					<Name>ВРаботе</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В работе</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3c4d5e6f-7081-92a3-b4c5-d6e7f8091a2b">
+				<Properties>
+					<Name>ТребуетУточнения</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Требует уточнения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4d5e6f70-8192-a3b4-c5d6-e7f8091a2b3c">
+				<Properties>
+					<Name>Выполнена</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнена</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e5c574e4-a50f-408c-94ea-1b5d4bd426c2">
+				<Properties>
+					<Name>Закрыта</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Закрыта (принята заказчиком)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

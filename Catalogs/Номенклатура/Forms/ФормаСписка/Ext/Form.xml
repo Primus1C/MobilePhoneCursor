@@ -92,6 +92,23 @@
 						<Event name="OnChange">ПроцентВесТарыПриИзменении</Event>
 					</Events>
 				</InputField>
+				<LabelDecoration name="Декорация2" id="124">
+					<Width>8</Width>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="125"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="126"/>
+				</LabelDecoration>
+				<InputField name="Ассортимент" id="121">
+					<DataPath>Ассортимент</DataPath>
+					<ChoiceButton>false</ChoiceButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="АссортиментКонтекстноеМеню" id="122"/>
+					<ExtendedTooltip name="АссортиментРасширеннаяПодсказка" id="123"/>
+					<Events>
+						<Event name="OnChange">АссортиментПриИзменении</Event>
+					</Events>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ДеревоИСписок" id="1">
@@ -280,14 +297,14 @@
 								<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 								<xr:Value name="Role.Логистика">false</xr:Value>
 								<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-								<xr:Value name="Role.Зарплата">false</xr:Value>
-								<xr:Value name="Role.Телеграм">false</xr:Value>
+								<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+								<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 								<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 								<xr:Value name="Role.МетреонПолный">false</xr:Value>
 								<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-								<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+								<xr:Value name="b5af719e-4b63-4161-89d1-44f08a361801">false</xr:Value>
 								<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-								<xr:Value name="Role.МетреонСклад">false</xr:Value>
+								<xr:Value name="4f43becd-6809-470d-9624-ef63bd022db0">false</xr:Value>
 								<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
 								<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
 								<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
@@ -320,11 +337,6 @@
 							<ContextMenu name="ОстатокКонтекстноеМеню" id="61"/>
 							<ExtendedTooltip name="ОстатокРасширеннаяПодсказка" id="62"/>
 						</LabelField>
-						<LabelField name="Описание" id="102">
-							<DataPath>Список.Описание</DataPath>
-							<ContextMenu name="ОписаниеКонтекстноеМеню" id="103"/>
-							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="104"/>
-						</LabelField>
 						<LabelField name="Резерв" id="63">
 							<DataPath>Список.Резерв</DataPath>
 							<Title>
@@ -338,6 +350,11 @@
 							<Width>10</Width>
 							<ContextMenu name="РезервКонтекстноеМеню" id="64"/>
 							<ExtendedTooltip name="РезервРасширеннаяПодсказка" id="65"/>
+						</LabelField>
+						<LabelField name="Описание" id="102">
+							<DataPath>Список.Описание</DataPath>
+							<ContextMenu name="ОписаниеКонтекстноеМеню" id="103"/>
+							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="104"/>
 						</LabelField>
 						<LabelField name="Производитель" id="54">
 							<DataPath>Список.Производитель</DataPath>
@@ -423,6 +440,35 @@
 							<ContextMenu name="КодКонтекстноеМеню" id="52"/>
 							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="53"/>
 						</LabelField>
+						<LabelField name="SKU" id="112">
+							<DataPath>Список.SKU</DataPath>
+							<ContextMenu name="SKUКонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="SKUРасширеннаяПодсказка" id="114"/>
+						</LabelField>
+						<LabelField name="JAN13" id="109">
+							<DataPath>Список.JAN13</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="JAN13КонтекстноеМеню" id="110"/>
+							<ExtendedTooltip name="JAN13РасширеннаяПодсказка" id="111"/>
+						</LabelField>
+						<LabelField name="UPC" id="115">
+							<DataPath>Список.UPC</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="UPCКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="UPCРасширеннаяПодсказка" id="117"/>
+						</LabelField>
+						<CheckBoxField name="ЭтоГруппа" id="118">
+							<DataPath>Список.ЭтоГруппа</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр.</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЭтоГруппаКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ЭтоГруппаРасширеннаяПодсказка" id="120"/>
+						</CheckBoxField>
 					</ChildItems>
 				</Table>
 			</ChildItems>
@@ -495,6 +541,9 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
+				<Field>Список.JAN13</Field>
+				<Field>Список.SKU</Field>
+				<Field>Список.UPC</Field>
 				<Field>Список.ВыводитьИзАссортимента</Field>
 				<Field>Список.Услуги</Field>
 				<Field>Список.Флаг</Field>
@@ -515,7 +564,7 @@
 	Спр.Услуги КАК Услуги,
 	Спр.ЗапретОтгрузки КАК ЗапретОтгрузки,
 	Спр.Описание КАК Описание,
-	ЕСТЬNULL(Остатки.ОстатокОстаток, 0) КАК Остаток,
+	ЕСТЬNULL(Остатки.ОстатокОстаток, 0) - ЕСТЬNULL(Буфер.Количество, 0) КАК Остаток,
 	ЕСТЬNULL(Резервы.КоличествоОстаток, 0) КАК Резерв,
 	Спр.Вес КАК Вес,
 	Спр.Вес + Спр.Вес * &amp;ПроцентВес / 100 КАК Брутто,
@@ -523,7 +572,9 @@
 		И НЕ Спр.ЭтоГруппа КАК Блок,
 	Спецификации.ЗначениеСвойства.Наименование КАК Флаг,
 	Спр.ВыводитьИзАссортимента КАК ВыводитьИзАссортимента,
-	Спр.SKU КАК SKU
+	Спр.SKU КАК SKU,
+	Спр.UPC КАК UPC,
+	Спр.JAN13 КАК JAN13
 ИЗ
 	Справочник.Номенклатура КАК Спр
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОстаткиТовара.Остатки(, {(Фирма = &amp;Фирма), (Склад В (&amp;ФильтрСклады))}) КАК Остатки
@@ -537,7 +588,18 @@
 			ЗначенияСвойствОбъектов.Свойство.Наименование = "Спецификация") КАК Спецификации
 		ПО Спр.Ссылка = Спецификации.Объект
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.РезервыТовара.Остатки(, {(Фирма = &amp;Фирма), (Склад В (&amp;ФильтрСклады))}) КАК Резервы
-		ПО Спр.Ссылка = Резервы.Номенклатура</QueryText>
+		ПО Спр.Ссылка = Резервы.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			БуферСканирования.Номенклатура КАК Номенклатура,
+			СУММА(БуферСканирования.Количество) КАК Количество
+		ИЗ
+			РегистрСведений.БуферСканированияДляОстатков КАК БуферСканирования
+		{ГДЕ
+			БуферСканирования.Фирма = &amp;Фирма,
+			БуферСканирования.Склад В (&amp;ФильтрСклады)}
+		СГРУППИРОВАТЬ ПО
+			БуферСканирования.Номенклатура) КАК Буфер
+		ПО Спр.Ссылка = Буфер.Номенклатура</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Ссылка</dcssch:dataPath>
 					<dcssch:field>Ссылка</dcssch:field>
@@ -730,6 +792,14 @@
 					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
 					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
 				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>UPC</dcssch:dataPath>
+					<dcssch:field>UPC</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>JAN13</dcssch:dataPath>
+					<dcssch:field>JAN13</dcssch:field>
+				</Field>
 				<Parameter>
 					<dcssch:name>Период</dcssch:name>
 					<dcssch:title xsi:type="v8:LocalStringType">
@@ -917,6 +987,20 @@
 			<Save>
 				<Field>ПроцентВесТары</Field>
 			</Save>
+		</Attribute>
+		<Attribute name="Ассортимент" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ассортимент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Ассортимент</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ДополнительныйАссортимент</Item>
+			</FunctionalOptions>
 		</Attribute>
 	</Attributes>
 	<Commands>

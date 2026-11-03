@@ -160,28 +160,17 @@
 							<UserVisible>
 								<xr:Common>true</xr:Common>
 								<xr:Value name="Role.Администратор">true</xr:Value>
-								<xr:Value name="9c664c8f-a9f0-4faa-870d-b39adbe2d0e5">false</xr:Value>
-								<xr:Value name="c228e4f7-c4a9-48d8-9409-c3263ea17c37">false</xr:Value>
 								<xr:Value name="Role.Менеджер">false</xr:Value>
 								<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
 								<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
-								<xr:Value name="56990d35-2905-4d1e-9aee-62991eb37c15">false</xr:Value>
 								<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
-								<xr:Value name="64d5e486-05c3-414e-978e-62c6f70c01b9">false</xr:Value>
-								<xr:Value name="1ba630a7-6387-48fe-ab4e-012f42a3f331">false</xr:Value>
 								<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
 								<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
-								<xr:Value name="bc611636-bbe3-43e0-8aa0-6ee263723833">false</xr:Value>
-								<xr:Value name="cb322f70-a19f-47da-8eeb-36adfe8bf3ca">false</xr:Value>
-								<xr:Value name="fceaf1bd-13fa-4847-bfc5-88ebdc7fb9a5">false</xr:Value>
-								<xr:Value name="87c7f595-f565-460b-988d-9adfa5367459">false</xr:Value>
-								<xr:Value name="bb9af999-df17-4ec4-8615-4678ef462853">false</xr:Value>
 								<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
 								<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
 								<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 								<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
 								<xr:Value name="Role.Логистика">false</xr:Value>
-								<xr:Value name="10f320eb-a557-4bfb-adf3-e872ee0511dc">false</xr:Value>
 								<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">true</xr:Value>
 							</UserVisible>
 							<TitleLocation>None</TitleLocation>

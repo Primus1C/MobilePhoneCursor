@@ -127,8 +127,8 @@
 								<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
 								<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
 								<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
-								<xr:Value name="Role.Зарплата">false</xr:Value>
-								<xr:Value name="Role.Телеграм">false</xr:Value>
+								<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+								<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 								<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
 								<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
 								<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
@@ -235,14 +235,12 @@
 								<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 								<xr:Value name="Role.Логистика">false</xr:Value>
 								<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-								<xr:Value name="Role.Зарплата">false</xr:Value>
-								<xr:Value name="Role.Телеграм">false</xr:Value>
+								<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+								<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 								<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 								<xr:Value name="Role.МетреонПолный">false</xr:Value>
 								<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-								<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
 								<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-								<xr:Value name="Role.МетреонСклад">false</xr:Value>
 								<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
 								<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
 								<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
@@ -346,14 +344,12 @@
 						<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 						<xr:Value name="Role.Логистика">false</xr:Value>
 						<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-						<xr:Value name="Role.Зарплата">false</xr:Value>
-						<xr:Value name="Role.Телеграм">false</xr:Value>
+						<xr:Value name="Role.ДокументыЗарплата">false</xr:Value>
+						<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
 						<xr:Value name="Role.МетреонПолный">true</xr:Value>
 						<xr:Value name="Role.МетреонМенеджер">true</xr:Value>
-						<xr:Value name="Role.МетреонПеремещение">true</xr:Value>
 						<xr:Value name="Role.МетреонЛогистика">true</xr:Value>
-						<xr:Value name="Role.МетреонСклад">true</xr:Value>
 					</UserVisible>
 					<ContextMenu name="ЛокальныйСтатусКонтекстноеМеню" id="105"/>
 					<ExtendedTooltip name="ЛокальныйСтатусРасширеннаяПодсказка" id="106"/>
@@ -625,23 +621,26 @@
 			ТОГДА 0
 		ИНАЧЕ 1
 	КОНЕЦ КАК КоличествоСообщений,
-	//СостоянияИнвойсов.Статус,  
+
 	выбор 
 		когда СостоянияИнвойсов.Статус = Значение(Перечисление.СтатусыИнвойса.ПустаяСсылка) Тогда "-" 
 		иначе ЕСТЬNULL(СостоянияИнвойсов.Статус, "-") 
 	конец КАК Статус,
 
-	//СостоянияИнвойсов.СтатусИнспекции,
 	выбор 
 		когда СостоянияИнвойсов.СтатусИнспекции = Значение(Перечисление.СтатусыИнспекции.ПустаяСсылка) Тогда "-" 
 		иначе ЕСТЬNULL(СостоянияИнвойсов.СтатусИнспекции, "-") 
 	конец КАК СтатусИнспекции,
 	
-	//СостоянияИнвойсов.СтатусОплаты,   
-	выбор 
-		когда СостоянияИнвойсов.СтатусОплаты = Значение(Перечисление.СтатусыОплаты.ПустаяСсылка) Тогда "-" 
-		иначе ЕСТЬNULL(СостоянияИнвойсов.СтатусОплаты, "-") 
-	конец КАК СтатусОплаты,
+	//выбор 
+	//	когда СостоянияИнвойсов.СтатусОплаты = Значение(Перечисление.СтатусыОплаты.ПустаяСсылка) Тогда "-" 
+	//	иначе ЕСТЬNULL(СостоянияИнвойсов.СтатусОплаты, "-") 
+	//конец КАК СтатусОплаты,
+	ВЫБОР
+		КОГДА СостоянияИнвойсов.СтатусОплатыАвто = ЗНАЧЕНИЕ(перечисление.Долги.ПустаяСсылка)
+			ТОГДА СостоянияИнвойсов.СтатусОплаты
+		ИНАЧЕ СостоянияИнвойсов.СтатусОплатыАвто
+	КОНЕЦ КАК СтатусОплаты,
 	
 	СостоянияИнвойсов.Состояние КАК Состояние,
 	
@@ -970,6 +969,10 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>МетодОплаты</dcssch:dataPath>
 					<dcssch:field>МетодОплаты</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Счет</dcssch:dataPath>
+					<dcssch:field>Счет</dcssch:field>
 				</Field>
 				<MainTable>Document.ИнвойсЗакупки</MainTable>
 				<ListSettings>

@@ -22,13 +22,13 @@
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыНоменклатуры</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КодыПроизводителей</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">526a29d2-299a-48a7-a06d-3741dfdbd62f</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Производители</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОборотыСерии</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПричиныВозврата</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ГруппыПодбораНоменклатуры</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ВесНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Ассортимент</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

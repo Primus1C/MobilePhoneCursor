@@ -186,6 +186,13 @@
 									<ContextMenu name="ПримечаниеКонтекстноеМеню" id="14"/>
 									<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="15"/>
 								</InputField>
+								<Button name="ИзменитьПримечание" id="129">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<Width>3</Width>
+									<CommandName>Form.Command.ИзменитьПримечание</CommandName>
+									<ExtendedTooltip name="ИзменитьПримечаниеРасширеннаяПодсказка" id="130"/>
+								</Button>
 								<LabelDecoration name="Декорация1" id="94">
 									<Width>2</Width>
 									<ContextMenu name="Декорация1КонтекстноеМеню" id="95"/>
@@ -713,6 +720,30 @@
 			<Action>Установить</Action>
 			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьПримечание" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить примечание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить примечание без перепроведения документа (в т.ч. в закрытом периоде)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Change the note without re-posting the document (including in a closed period)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьПримечание</Action>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 	<CommandInterface>

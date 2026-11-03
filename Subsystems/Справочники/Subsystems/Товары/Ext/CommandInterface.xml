@@ -19,12 +19,6 @@
 				<xr:Value name="Role.Менеджер">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="0:526a29d2-299a-48a7-a06d-3741dfdbd62f">
-			<Visibility>
-				<xr:Common>true</xr:Common>
-				<xr:Value name="Role.Менеджер">false</xr:Value>
-			</Visibility>
-		</Command>
 		<Command name="Catalog.ВидыНоменклатуры.StandardCommand.Create">
 			<Visibility>
 				<xr:Common>false</xr:Common>
@@ -38,12 +32,6 @@
 			</Visibility>
 		</Command>
 		<Command name="Catalog.Производители.StandardCommand.Create">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-				<xr:Value name="Role.Менеджер">false</xr:Value>
-			</Visibility>
-		</Command>
-		<Command name="1:526a29d2-299a-48a7-a06d-3741dfdbd62f">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 				<xr:Value name="Role.Менеджер">false</xr:Value>
@@ -63,9 +51,6 @@
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Catalog.Производители.StandardCommand.OpenList">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-		</Command>
-		<Command name="0:526a29d2-299a-48a7-a06d-3741dfdbd62f">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="CommonCommand.ОборотыСерии">

@@ -1,7 +1,122 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСоздать" id="65">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Item.Список.StandardCommand.Create</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="66"/>
+			</Button>
+			<Button name="ФормаИзменить" id="67">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Item.Список.StandardCommand.Change</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаИзменитьРасширеннаяПодсказка" id="68"/>
+			</Button>
+			<Button name="ФормаОбновить" id="63">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Item.Список.StandardCommand.Refresh</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="64"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
+		<UsualGroup name="ГруппаФильтрыСтатусов" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статусы</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<HorizontalSpacing>OneAndHalf</HorizontalSpacing>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФильтрыСтатусовРасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<CheckBoxField name="ФильтрСтатусНовая" id="45">
+					<DataPath>ФильтрСтатусНовая</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФильтрСтатусНоваяКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ФильтрСтатусНоваяРасширеннаяПодсказка" id="47"/>
+					<Events>
+						<Event name="OnChange">ФильтрСтатусПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ФильтрСтатусВРаботе" id="48">
+					<DataPath>ФильтрСтатусВРаботе</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФильтрСтатусВРаботеКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ФильтрСтатусВРаботеРасширеннаяПодсказка" id="50"/>
+					<Events>
+						<Event name="OnChange">ФильтрСтатусПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ФильтрСтатусТребуетУточнения" id="51">
+					<DataPath>ФильтрСтатусТребуетУточнения</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФильтрСтатусТребуетУточненияКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ФильтрСтатусТребуетУточненияРасширеннаяПодсказка" id="53"/>
+					<Events>
+						<Event name="OnChange">ФильтрСтатусПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ФильтрСтатусВыполнена" id="54">
+					<DataPath>ФильтрСтатусВыполнена</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФильтрСтатусВыполненаКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ФильтрСтатусВыполненаРасширеннаяПодсказка" id="56"/>
+					<Events>
+						<Event name="OnChange">ФильтрСтатусПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ФильтрСтатусЗакрыта" id="57">
+					<DataPath>ФильтрСтатусЗакрыта</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФильтрСтатусЗакрытаКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ФильтрСтатусЗакрытаРасширеннаяПодсказка" id="59"/>
+					<Events>
+						<Event name="OnChange">ФильтрСтатусПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<PictureDecoration name="ДекорацияКартинка" id="69">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Инфо</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияКартинкаКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="ДекорацияКартинкаРасширеннаяПодсказка" id="71"/>
+				</PictureDecoration>
+				<LabelDecoration name="ДекорацияИнфо" id="60">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<TextColor>style:ЦветНадписиИнфоМорской</TextColor>
+					<ContextMenu name="ДекорацияИнфоКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ДекорацияИнфоРасширеннаяПодсказка" id="62"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
 				<v8:item>
@@ -81,6 +196,10 @@
 				</LabelField>
 				<LabelField name="Тэги" id="31">
 					<DataPath>Список.Тэги</DataPath>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.Тег</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
 					<ContextMenu name="ТэгиКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="ТэгиРасширеннаяПодсказка" id="33"/>
 				</LabelField>
@@ -88,6 +207,23 @@
 					<DataPath>Список.Date</DataPath>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<CheckBoxField name="ГрупповойДоступ" id="40">
+					<DataPath>Список.ГрупповойДоступ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Груп.доступ.</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ГрупповойДоступКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ГрупповойДоступРасширеннаяПодсказка" id="42"/>
+				</CheckBoxField>
+				<LabelField name="Статус" id="37">
+					<DataPath>Список.Статус</DataPath>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="39"/>
 				</LabelField>
 				<CheckBoxField name="Выполнена" id="25">
 					<DataPath>Список.Executed</DataPath>
@@ -140,7 +276,7 @@
 							<dcsset:appearance>
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:parameter>ЦветФона</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#CCFFCC</dcscor:value>
+									<dcscor:value xsi:type="v8ui:Color">#E6FFE4</dcscor:value>
 								</dcscor:item>
 							</dcsset:appearance>
 						</dcsset:item>
@@ -151,6 +287,9 @@
 								</dcsset:item>
 								<dcsset:item>
 									<dcsset:field>Автор</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Приоритет</dcsset:field>
 								</dcsset:item>
 							</dcsset:selection>
 							<dcsset:filter>
@@ -175,6 +314,9 @@
 								<dcsset:item>
 									<dcsset:field>Автор</dcsset:field>
 								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Приоритет</dcsset:field>
+								</dcsset:item>
 							</dcsset:selection>
 							<dcsset:filter>
 								<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -186,7 +328,7 @@
 							<dcsset:appearance>
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:parameter>ЦветТекста</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#707070</dcscor:value>
+									<dcscor:value xsi:type="v8ui:Color">#848484</dcscor:value>
 								</dcscor:item>
 							</dcsset:appearance>
 						</dcsset:item>
@@ -197,6 +339,76 @@
 					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
 				</ListSettings>
 			</Settings>
+		</Attribute>
+		<Attribute name="ФильтрСтатусНовая" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новая</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФильтрСтатусНовая</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФильтрСтатусВРаботе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В работе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФильтрСтатусВРаботе</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФильтрСтатусТребуетУточнения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требует уточнения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФильтрСтатусТребуетУточнения</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФильтрСтатусВыполнена" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФильтрСтатусВыполнена</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФильтрСтатусЗакрыта" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФильтрСтатусЗакрыта</Field>
+			</Save>
 		</Attribute>
 	</Attributes>
 </Form>

@@ -123,11 +123,19 @@
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
-						<InputField name="Склад" id="10">
+						<InputField name="СкладКомиссии" id="10">
 							<DataPath>Объект.СкладКомиссии</DataPath>
 							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="СкладКонтекстноеМеню" id="11"/>
-							<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="12"/>
+							<ChoiceParameters>
+								<app:item name="Отбор.СкладКомиссии">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:boolean">true</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="СкладКомиссииКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="СкладКомиссииРасширеннаяПодсказка" id="12"/>
 						</InputField>
 						<InputField name="Контрагент" id="7">
 							<DataPath>Объект.Контрагент</DataPath>
@@ -135,12 +143,32 @@
 							<ContextMenu name="КонтрагентКонтекстноеМеню" id="8"/>
 							<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="9"/>
 						</InputField>
-						<InputField name="Примечание" id="25">
-							<DataPath>Объект.Примечание</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="ПримечаниеКонтекстноеМеню" id="26"/>
-							<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="27"/>
-						</InputField>
+						<UsualGroup name="ГруппаПримечание" id="127">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа примечание</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПримечаниеРасширеннаяПодсказка" id="128"/>
+							<ChildItems>
+								<InputField name="Примечание" id="25">
+									<DataPath>Объект.Примечание</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПримечаниеКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="27"/>
+								</InputField>
+								<Button name="ИзменитьПримечание" id="129">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<CommandName>Form.Command.ИзменитьПримечание</CommandName>
+									<ExtendedTooltip name="ИзменитьПримечаниеРасширеннаяПодсказка" id="130"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаДополнительно" id="73">
@@ -572,6 +600,30 @@
 			</ToolTip>
 			<Action>ИзБуфераОбмена</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьПримечание" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить примечание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить примечание без перепроведения документа (в т.ч. в закрытом периоде)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Change the note without re-posting the document (including in a closed period)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьПримечание</Action>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 	<CommandInterface>

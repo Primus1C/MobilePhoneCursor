@@ -20,7 +20,7 @@
 				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
 				<xr:Value name="Role.Логистика">false</xr:Value>
 				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="cd86a3ea-efcd-4f03-b352-9873161e34fe">false</xr:Value>
 				<xr:Value name="Role.МетреонПолный">false</xr:Value>
 				<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
 				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>

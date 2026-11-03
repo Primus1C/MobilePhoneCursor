@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<CommandsOrder>
+		<Command name="0:a7c3e91f-4b2d-4e18-9f6a-2d8c1b5e7044">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="0:7f3c9e21-4a6b-4d8e-b192-c5e0d8a47f16">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelImportant</Group>
+		<Group>NavigationPanelOrdinary</Group>
+		<Group>NavigationPanelSeeAlso</Group>
+	</GroupsOrder>
+</CommandInterface>

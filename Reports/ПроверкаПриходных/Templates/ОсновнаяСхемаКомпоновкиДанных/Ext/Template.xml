@@ -145,6 +145,10 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ДокИнвойс.Ссылка КАК Инвойс,
@@ -152,12 +156,15 @@
 	ДокИнвойс.Контрагент КАК Поставщик,
 	ДокИнвойс.ВКД_НомерИнвойсаПоставщика КАК НомерИнвойсаПоставщика,
 	ДокИнвойс.ВКД_ДатаИнвойсаПоставщика КАК ДатаИнвойсаПоставщика,
-	//ДокИнвойс.СуммаВВалютеИнвойса КАК Сумма,
 	ДокИнвойс.Сумма КАК Сумма,
 	СостоянияИнвойсов.Статус КАК Статус,
-	СостоянияИнвойсов.СтатусОплаты КАК СтатусОплаты,
-	Оприход.КоличествоОстаток КАК КоличествоПолучено,
-	Оприход.СуммаОстаток КАК СуммаПолучено
+	ВЫБОР
+		КОГДА СостоянияИнвойсов.СтатусОплатыАвто = ЗНАЧЕНИЕ(перечисление.Долги.ПустаяСсылка)
+			ТОГДА СостоянияИнвойсов.СтатусОплаты
+		ИНАЧЕ СостоянияИнвойсов.СтатусОплатыАвто
+	КОНЕЦ КАК СтатусОплаты,
+	ЕСТЬNULL(Оприход.КоличествоОстаток, 0) КАК КоличествоПолучено,
+	ЕСТЬNULL(Оприход.СуммаОстаток, 0) КАК СуммаПолучено
 ИЗ
 	Документ._Инвойс КАК ДокИнвойс
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияИнвойсов КАК СостоянияИнвойсов
@@ -175,9 +182,28 @@
 ГДЕ
 	ДокИнвойс.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
 	И НЕ ДокИнвойс.ТолькоУслуги
-	И НЕ ДокИнвойс.ПометкаУдаления 
-	</query>
+	И НЕ ДокИнвойс.ПометкаУдаления</query>
 	</dataSet>
+	<calculatedField>
+		<dataPath>РазницаКоличество</dataPath>
+		<expression>Количество-количествоПолучено</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Разница количество</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>РазницаСумма</dataPath>
+		<expression>окр(Сумма,2)-окр(СуммаПолучено,2)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Разница сумма</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
 	<totalField>
 		<dataPath>Количество</dataPath>
 		<expression>Сумма(Количество)</expression>
@@ -201,6 +227,14 @@
 	<totalField>
 		<dataPath>СтатусОплаты</dataPath>
 		<expression>Максимум(СтатусОплаты)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазницаКоличество</dataPath>
+		<expression>Сумма(РазницаКоличество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазницаСумма</dataPath>
+		<expression>Сумма(РазницаСумма)</expression>
 	</totalField>
 	<parameter>
 		<name>ДатаНачала</name>
@@ -347,6 +381,84 @@
 					<dcsset:userSettingID>598749f4-3727-4197-85c5-00a9a054e2ff</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СуммаПолучено</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">РазницаСумма</dcsset:left>
+								<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Статус</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыИнвойса.Прибыл</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#FFE1E6</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Количество</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>КоличествоПолучено</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">РазницаКоличество</dcsset:left>
+								<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Статус</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыИнвойса.Прибыл</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#FFE1E6</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>МакетОформления</dcscor:parameter>

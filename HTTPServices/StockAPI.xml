@@ -73,6 +73,49 @@
 					</Method>
 				</ChildObjects>
 			</URLTemplate>
+			<URLTemplate uuid="d1e307ae-771f-4a8d-9479-b2835d98dad5">
+				<Properties>
+					<Name>ШаблонURL_ВозвратЗамена</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL возврат замена</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/replace</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="b522e531-dbb2-4dd7-9975-f5b90c65b145">
+						<Properties>
+							<Name>replaceGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Replace GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>replaceGET</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="62452282-5068-4218-baa6-83be4d81cbf4">
+						<Properties>
+							<Name>replacePOST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Replace POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>replacePOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
 			<URLTemplate uuid="720045b1-85e2-4fd6-8455-a2cdbc30e1c2">
 				<Properties>
 					<Name>ШаблонURL_ВозвратОтПокупателя</Name>
@@ -259,6 +302,63 @@
 					</Method>
 				</ChildObjects>
 			</URLTemplate>
+			<URLTemplate uuid="a38885a5-a8c0-4868-9ce9-65a499723b27">
+				<Properties>
+					<Name>ШаблонURL_Инвойсы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL инвойсы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/invoices</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="c7fe52bd-8560-46bc-aefb-1cc81b665a81">
+						<Properties>
+							<Name>invoiceGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Invoice GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>invoiceGET</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="32aa582d-64de-40d0-a9ef-05763cbb3ac6">
+						<Properties>
+							<Name>invoicePOST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Invoice POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>invoicePOST</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="fd35eae7-bad4-4acf-86ec-b379a0f47b00">
+						<Properties>
+							<Name>invoicePUT</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Invoice PUT</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PUT</HTTPMethod>
+							<Handler>invoicePUT</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
 			<URLTemplate uuid="b1c2d3e4-f5a6-4789-abcd-ef0123456701">
 				<Properties>
 					<Name>ШаблонURL_Клиенты</Name>
@@ -298,6 +398,20 @@
 							<Comment/>
 							<HTTPMethod>POST</HTTPMethod>
 							<Handler>counterpartiesPOST</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="400c5b55-4663-476a-83b5-287e1537f6b2">
+						<Properties>
+							<Name>counterpartiesPATCH</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Counterparties PATCH</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PATCH</HTTPMethod>
+							<Handler>counterpartiesPATCH</Handler>
 						</Properties>
 					</Method>
 				</ChildObjects>
@@ -360,6 +474,64 @@
 					</Method>
 				</ChildObjects>
 			</URLTemplate>
+			<URLTemplate uuid="d7d15386-0878-4c2b-bc40-57769c18d584">
+				<Properties>
+					<Name>ШаблонURL_ОстаткиБезЦен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL остатки без цен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/leftover</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="ca79e152-aa50-4a8d-8798-0866246bca5c">
+						<Properties>
+							<Name>leftoverGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Leftover GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>leftoverGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="60ac4847-149b-4c5c-85ca-0467d217ee37">
+				<Properties>
+					<Name>ШаблонURL_ОстаткиСерииБезЦен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL остатки серии без цен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/leftoverSeries</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="b9d5bf18-d2b0-4200-9d3c-555482df0f39">
+						<Properties>
+							<Name>leftoverSeriesGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Leftover series GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>leftoverSeriesGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
 			<URLTemplate uuid="537d0ea5-3e63-43c3-8383-0dae072c34f3">
 				<Properties>
 					<Name>ШаблонURL_ОтменаЗаказа</Name>
@@ -385,6 +557,120 @@
 							<Comment>отмена заказа заказчиком</Comment>
 							<HTTPMethod>POST</HTTPMethod>
 							<Handler>cancellationPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="3e29eec9-6a2a-4319-a556-5c0ec77d8d0f">
+				<Properties>
+					<Name>ШаблонURL_Поставщики</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL поставщики</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/sellers</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="fcbd6b14-8ff1-4fc2-9f33-a099161b61be">
+						<Properties>
+							<Name>sellersGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Sellers GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>sellersGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="4c9cf94f-0a5b-4cc9-b6b2-778f189d38ab">
+				<Properties>
+					<Name>ШаблонURL_ПрихНакладные</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL прих накладные</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/incomingwaybills</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="9bae17bf-ca25-46d6-b336-b8b44fc783aa">
+						<Properties>
+							<Name>incomingwaybillPOST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Incomingwaybill POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>incomingwaybillPOST</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="aa780ccc-1bfb-4297-a129-951d394b73ff">
+						<Properties>
+							<Name>incomingwaybillGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Incomingwaybill GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>incomingwaybillGET</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="e1f2a3b4-c5d6-4789-a012-3456789abcde">
+						<Properties>
+							<Name>incomingwaybillPUT</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Incomingwaybill PUT</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PUT</HTTPMethod>
+							<Handler>incomingwaybillPUT</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="f2a3b4c5-d6e7-4890-b123-456789abcdef">
+						<Properties>
+							<Name>incomingwaybillPATCH</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Incomingwaybill PATCH</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PATCH</HTTPMethod>
+							<Handler>incomingwaybillPATCH</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="a498fee8-b563-4e89-9449-d1531a90b444">
+						<Properties>
+							<Name>incomingwaybillDELETE</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Incomingwaybill DELETE</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>DELETE</HTTPMethod>
+							<Handler>incomingwaybillDELETE</Handler>
 						</Properties>
 					</Method>
 				</ChildObjects>
@@ -558,6 +844,78 @@
 							<Comment/>
 							<HTTPMethod>POST</HTTPMethod>
 							<Handler>statusPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="7c3e9a14-2b58-4d61-9e70-a1b2c3d4e5f6">
+				<Properties>
+					<Name>ШаблонURL_ГруппыТоваров</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL группы товаров</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/goodGroups</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="8d4f0b25-3c69-4e72-af81-b2c3d4e5f607">
+						<Properties>
+							<Name>goodGroupsGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Good groups GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>goodGroupsGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="2269379b-6813-4993-9d31-111914911e04">
+				<Properties>
+					<Name>ШаблонURL_Товары</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL товары</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/goods</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="a92e5092-40c6-40c9-8e52-5d3f2461f0c6">
+						<Properties>
+							<Name>goodsGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Goods GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>goodsGET</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="9e501c36-4d7a-4f83-b092-c3d4e5f60718">
+						<Properties>
+							<Name>goodsPOST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Goods POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>goodsPOST</Handler>
 						</Properties>
 					</Method>
 				</ChildObjects>

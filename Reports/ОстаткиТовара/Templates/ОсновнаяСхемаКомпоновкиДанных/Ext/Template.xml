@@ -52,34 +52,6 @@
 			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>РезервОстаток</dataPath>
-			<field>РезервОстаток</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Резерв</v8:content>
-				</v8:item>
-			</title>
-			<appearance>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-					<dcscor:value xsi:type="v8ui:HorizontalAlign">Right</dcscor:value>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Формат</dcscor:parameter>
-					<dcscor:value xsi:type="xs:string"/>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
-					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
-					<dcscor:value xsi:type="xs:decimal">8</dcscor:value>
-				</dcscor:item>
-			</appearance>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Склад</dataPath>
 			<field>Склад</field>
 			<title xsi:type="v8:LocalStringType">
@@ -176,12 +148,97 @@
 	//		ТОГДА NULL
 	//	ИНАЧЕ ОНО.Партия.ЦенаЗакупки
 	//КОНЕЦ КАК ЦенаЗакупки,
-	ОНО.ОстатокОстаток КАК ОстатокОстаток,
-	ОНО.РезервОстаток КАК РезервОстаток 
+	ОНО.ОстатокОстаток КАК ОстатокОстаток
 {выбрать Партия}	
 ИЗ
 	РегистрНакопления.ОстаткиТовара.Остатки(, Номенклатура.ТипНоменклатуры = Значение(Перечисление.ТипыНоменклатуры.Товар) {(Номенклатура = &amp;Товар)}) КАК ОНО</query>
 	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Резервы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Фирма</dataPath>
+			<field>Фирма</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РезервОстаток</dataPath>
+			<field>РезервОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Резерв</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Right</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">8</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Рез.Фирма КАК Фирма,
+	Рез.Склад КАК Склад,
+	Рез.Номенклатура КАК Номенклатура,
+	СУММА(Рез.КоличествоОстаток) КАК РезервОстаток
+ИЗ
+	РегистрНакопления.РезервыТовара.Остатки(, {(Номенклатура = &amp;Товар)}) КАК Рез
+
+СГРУППИРОВАТЬ ПО
+	Рез.Фирма,
+	Рез.Склад,
+	Рез.Номенклатура</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>Резервы</destinationDataSet>
+		<sourceExpression>Фирма</sourceExpression>
+		<destinationExpression>Фирма</destinationExpression>
+		<required>false</required>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>Резервы</destinationDataSet>
+		<sourceExpression>Склад</sourceExpression>
+		<destinationExpression>Склад</destinationExpression>
+		<required>false</required>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>Резервы</destinationDataSet>
+		<sourceExpression>Номенклатура</sourceExpression>
+		<destinationExpression>Номенклатура</destinationExpression>
+		<required>false</required>
+	</dataSetLink>
 	<calculatedField>
 		<dataPath>ЭтаФирма</dataPath>
 		<expression>Фирма = гоФирма()</expression>
@@ -215,6 +272,10 @@
 	<totalField>
 		<dataPath>РезервОстаток</dataPath>
 		<expression>Сумма(РезервОстаток)</expression>
+		<group/>
+		<group>Склад</group>
+		<group>Номенклатура</group>
+		<group>Номенклатура Иерархия</group>
 	</totalField>
 	<parameter>
 		<name>Период</name>
@@ -325,6 +386,27 @@
 					<dcsset:userSettingID>04cd3ea6-cbd9-4f67-99a3-f3f3287d3430</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>РезервОстаток</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Партия</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>МакетОформления</dcscor:parameter>
@@ -416,6 +498,27 @@
 					<dcsset:userSettingID>450dc736-fb75-4e8a-9b90-fa93ae39bb86</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>РезервОстаток</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Партия</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>МакетОформления</dcscor:parameter>
@@ -519,9 +622,6 @@
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>ОстатокОстаток</dcsset:field>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>РезервОстаток</dcsset:field>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>Партия.Серия</dcsset:field>
@@ -626,6 +726,27 @@
 					<dcsset:userSettingID>450dc736-fb75-4e8a-9b90-fa93ae39bb86</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>РезервОстаток</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Партия</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>МакетОформления</dcscor:parameter>
@@ -729,9 +850,6 @@
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>ОстатокОстаток</dcsset:field>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>РезервОстаток</dcsset:field>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>Партия.Серия</dcsset:field>

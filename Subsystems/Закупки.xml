@@ -30,16 +30,14 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Валюты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОдинДолгПоставщику</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОднаПредоплатаПоставщику</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">a4b7dea5-58d9-4994-9f30-b6680d7e09db</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходнаяНакладная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗагрузкаНакладной</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратПоставщику</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВКД_СкидкаПоставщика</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВКД_ДополнительныеЗатраты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.Отправка</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоставщиков</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Поставки</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report._ВзаиморасчетыСКонтрагентами</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report._ОплатыЗаПериодИсходящие</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ВКД_ВзаиморасчетыСКлиентами</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ВКД_ТоварыВПути</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиНаЛогистике</xr:Item>
@@ -68,6 +66,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаменаСерий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.PriceCheck</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ТоварВПути</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СтатусыИнвойсов</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

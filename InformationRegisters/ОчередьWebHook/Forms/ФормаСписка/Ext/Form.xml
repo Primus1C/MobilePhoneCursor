@@ -1,6 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ОтправитьПринудительно" id="57">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтправитьПринудительно</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ОтправитьПринудительноРасширеннаяПодсказка" id="58"/>
+			</Button>
+			<Button name="ФормаОбновить" id="55">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Refresh</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="56"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<ChildItems>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
@@ -18,6 +33,7 @@
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
+			<MultipleChoice>true</MultipleChoice>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
@@ -98,6 +114,11 @@
 					<ContextMenu name="ВидЦеныКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ВидЦеныРасширеннаяПодсказка" id="30"/>
 				</LabelField>
+				<LabelField name="Валюта" id="52">
+					<DataPath>Список.Валюта</DataPath>
+					<ContextMenu name="ВалютаКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="54"/>
+				</LabelField>
 				<LabelField name="Заказ" id="31">
 					<DataPath>Список.Заказ</DataPath>
 					<DefaultItem>true</DefaultItem>
@@ -113,6 +134,12 @@
 				<LabelField name="КоличествоПопыток" id="37">
 					<DataPath>Список.КоличествоПопыток</DataPath>
 					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кол-во попыток</v8:content>
+						</v8:item>
+					</Title>
 					<ContextMenu name="КоличествоПопытокКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="КоличествоПопытокРасширеннаяПодсказка" id="39"/>
 				</LabelField>
@@ -229,4 +256,27 @@
 			</Settings>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ОтправитьПринудительно" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить принудительно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Force send</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принудительно отправить выделенные записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Use>
+				<xr:Common>false</xr:Common>
+			</Use>
+		</Command>
+	</Commands>
 </Form>

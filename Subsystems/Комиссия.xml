@@ -26,6 +26,9 @@
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыНаКомиссии</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.РасчетыПоКомиссии</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Комиссия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ИмпортОтчетаТорговойПлощадки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.РасходныеНакладныеКомиссии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ЗаказыКомиссионера</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

@@ -38,6 +38,12 @@
 						<CommandName>Form.StandardCommand.SetDateInterval</CommandName>
 						<ExtendedTooltip name="ФормаУстановитьИнтервалРасширеннаяПодсказка" id="119"/>
 					</Button>
+					<Button name="ФормаОбщаяКомандаПроведениеБезЗависимыхДокументов" id="161">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.ПроведениеБезЗависимыхДокументов</CommandName>
+						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+						<ExtendedTooltip name="ФормаОбщаяКомандаПроведениеБезЗависимыхДокументовРасширеннаяПодсказка" id="162"/>
+					</Button>
 					<Button name="ФормаОбновить" id="132">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.StandardCommand.Refresh</CommandName>
@@ -220,17 +226,53 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаКассаРасширеннаяПодсказка" id="100"/>
 					<ChildItems>
-						<InputField name="ФильтрДСчет" id="96">
-							<DataPath>ФильтрДСчет</DataPath>
-							<Width>27</Width>
-							<HorizontalStretch>false</HorizontalStretch>
-							<OpenButton>false</OpenButton>
-							<ContextMenu name="ФильтрДСчетКонтекстноеМеню" id="97"/>
-							<ExtendedTooltip name="ФильтрДСчетРасширеннаяПодсказка" id="98"/>
-							<Events>
-								<Event name="OnChange">ФильтрДСчетПриИзменении</Event>
-							</Events>
-						</InputField>
+						<UsualGroup name="ГруппаФильтрКасса" id="156">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа фильтр касса</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<HorizontalSpacing>Half</HorizontalSpacing>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФильтрКассаРасширеннаяПодсказка" id="157"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияПартУчетДСчет" id="153">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация парт учет д счет</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Партионный учет</v8:content>
+										</v8:item>
+									</ToolTip>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Picture>
+										<xr:Ref>StdPicture.Constant</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ДекорацияПартУчетДСчетКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="ДекорацияПартУчетДСчетРасширеннаяПодсказка" id="155"/>
+								</PictureDecoration>
+								<InputField name="ФильтрДСчет" id="96">
+									<DataPath>ФильтрДСчет</DataPath>
+									<Width>27</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<OpenButton>false</OpenButton>
+									<ContextMenu name="ФильтрДСчетКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="ФильтрДСчетРасширеннаяПодсказка" id="98"/>
+									<Events>
+										<Event name="OnChange">ФильтрДСчетПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 						<Button name="ОбновитьОстатки" id="101">
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.ОбновитьОстатки</CommandName>
@@ -244,6 +286,21 @@
 							<ContextMenu name="ОстаткиПоСчетуКонтекстноеМеню" id="104"/>
 							<ExtendedTooltip name="ОстаткиПоСчетуРасширеннаяПодсказка" id="105"/>
 						</LabelField>
+						<LabelField name="ГраницаСсылка" id="158">
+							<DataPath>ГраницаСсылка</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ГраницаСсылкаКонтекстноеМеню" id="159"/>
+							<ExtendedTooltip name="ГраницаСсылкаРасширеннаяПодсказка" id="160"/>
+							<Events>
+								<Event name="Click">ГраницаСсылкаНажатие</Event>
+							</Events>
+						</LabelField>
+						<Button name="ПроблемныйДокументПоследовательности" id="163">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПроблемныйДокументПоследовательности</CommandName>
+							<ExtendedTooltip name="ПроблемныйДокументПоследовательностиРасширеннаяПодсказка" id="164"/>
+						</Button>
 						<LabelDecoration name="ДекорацияОстаткиПоСчету" id="148">
 							<Visible>false</Visible>
 							<Title formatted="true"/>
@@ -903,6 +960,17 @@
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ГраницаСсылка" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Граница ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -968,6 +1036,21 @@
 			</Picture>
 			<Action>ОтчетПартииВалюты</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПроблемныйДокументПоследовательности" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проблемный док.</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проблемный документ последовательности</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроблемныйДокументПоследовательности</Action>
 		</Command>
 	</Commands>
 </Form>

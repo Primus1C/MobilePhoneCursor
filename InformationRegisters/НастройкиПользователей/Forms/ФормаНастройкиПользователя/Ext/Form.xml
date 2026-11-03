@@ -5,8 +5,8 @@
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаШапка" id="35">

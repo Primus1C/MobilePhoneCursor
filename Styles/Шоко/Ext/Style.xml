@@ -7,13 +7,13 @@
 		<Color>#7F3A0E</Color>
 	</Item>
 	<Item name="NavigationColor">
-		<Color>#17110D</Color>
+		<Color>#2B2019</Color>
 	</Item>
 	<Item name="AuxiliaryNavigationColor">
 		<Color>#542409</Color>
 	</Item>
 	<Item name="ImportantColor">
-		<Color>#0B282A</Color>
+		<Color>#A54B12</Color>
 	</Item>
 	<Item name="StyleItem.ЦветФонаДополнительнойСтрокиТаблицы">
 		<Color>#148A88</Color>

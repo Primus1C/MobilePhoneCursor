@@ -249,6 +249,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.РасчетыПоЗаймам.Command.РасчетыПоЗаймам</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>ChartOfCharacteristicTypes.ДополнительныеСвойства</name>
 		<right>
 			<name>Read</name>
@@ -514,6 +521,29 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.БуферСканированияДляОстатков</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>DataProcessor.ЦеныПоставщиков</name>
 		<right>
 			<name>Use</name>
@@ -613,6 +643,92 @@
 		</right>
 	</object>
 	<object>
+		<name>DataProcessor.ИзменениеСерий</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаменаПроданногоТовара</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarked</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonCommand.СменитьПароль</name>
 		<right>
 			<name>View</name>
@@ -639,6 +755,13 @@
 	</object>
 	<object>
 		<name>Report.Инвестиции.Command.Инвестиции</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonCommand.ПроведениеБезЗависимыхДокументов</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -719,6 +842,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.РасчетыПоЗаймам</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonCommand.ЧтоНового</name>
 		<right>
 			<name>View</name>
@@ -727,6 +861,39 @@
 	</object>
 	<object>
 		<name>Report.КонсольЗапросов_82.Command.КонсольЗапросов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.АнализИнициаторовПерепроведения</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.СтатусыИнвойсов</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ЗагрузкаКодовНоменклатурыИзExcel</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -828,6 +995,104 @@
 		</right>
 		<right>
 			<name>SwitchToDataHistoryVersion</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.КорректировкаРегистров</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarked</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistorySettings</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ИмпортОтчетаТорговойПлощадки</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1204,6 +1469,17 @@
 	</object>
 	<object>
 		<name>Document.ИнвойсПродажи.Command.УстановитьСтатус</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ЗагрузкаНакладной</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>

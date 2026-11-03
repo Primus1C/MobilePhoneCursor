@@ -793,6 +793,268 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
+			<TabularSection uuid="b5aa47de-6dd4-4063-9e5c-7b9b0ead6270">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.УчетныеЗаписиИнтеграции.ИдентификацияСотрудников" category="TabularSection">
+						<xr:TypeId>71b35c32-fe75-41eb-8c85-b62a1201ff70</xr:TypeId>
+						<xr:ValueId>c0b4a366-9010-4bcc-9451-a0e14ea61543</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.УчетныеЗаписиИнтеграции.ИдентификацияСотрудников" category="TabularSectionRow">
+						<xr:TypeId>afee0e63-8532-49d4-a9de-440b3871a580</xr:TypeId>
+						<xr:ValueId>0361a0dc-e9bf-48e3-9152-cdecba42bc3d</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ИдентификацияСотрудников</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификация сотрудников</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<ToolTip/>
+					<FillChecking>DontCheck</FillChecking>
+					<Use>ForItem</Use>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="ece08f68-6072-44eb-a8c8-ef5e93005a59">
+						<Properties>
+							<Name>ИмяМетода</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Имя метода</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>50</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+							<Indexing>DontIndex</Indexing>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="4b1fe356-5374-48f1-ad7a-d1ba45701dd3">
+						<Properties>
+							<Name>ОбязательныйСотрудник</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обязательный сотрудник</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+							<Indexing>DontIndex</Indexing>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="2cc74f17-2850-4fad-98d9-6b434d2e9025">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.УчетныеЗаписиИнтеграции.Контрагенты" category="TabularSection">
+						<xr:TypeId>ced533e5-cf19-4eb2-9284-f032206de3f9</xr:TypeId>
+						<xr:ValueId>670c2f6a-ddbd-4a32-9609-ac4681981c11</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.УчетныеЗаписиИнтеграции.Контрагенты" category="TabularSectionRow">
+						<xr:TypeId>9f635e90-bb06-4b52-9f23-a8a5393b2729</xr:TypeId>
+						<xr:ValueId>d3124c15-c5ab-489a-894a-3bec68dcdf8b</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>Контрагенты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагенты</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<ToolTip/>
+					<FillChecking>DontCheck</FillChecking>
+					<Use>ForItem</Use>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="70c19d9b-2f0c-417d-aa2a-c3111d3a53f0">
+						<Properties>
+							<Name>ГруппаКонтрагентов</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа контрагентов</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+							<Indexing>DontIndex</Indexing>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="ca7f811b-aa13-4aaf-bd8e-f34401b6a5e0">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.УчетныеЗаписиИнтеграции.Поставщики" category="TabularSection">
+						<xr:TypeId>61cfcf73-57d8-4eb0-8ed9-8f3446aa61ec</xr:TypeId>
+						<xr:ValueId>f1ab2da7-f841-425f-aeaf-99b32ab56587</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.УчетныеЗаписиИнтеграции.Поставщики" category="TabularSectionRow">
+						<xr:TypeId>1bf85ea4-1df2-464c-86e1-41804384d9f1</xr:TypeId>
+						<xr:ValueId>c626a21e-9b30-4d38-a0d9-8cb440a9087f</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>Поставщики</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставщики</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<ToolTip/>
+					<FillChecking>DontCheck</FillChecking>
+					<StandardAttributes>
+						<xr:StandardAttribute name="LineNumber">
+							<xr:LinkByType/>
+							<xr:FillChecking>DontCheck</xr:FillChecking>
+							<xr:MultiLine>false</xr:MultiLine>
+							<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+							<xr:CreateOnInput>Auto</xr:CreateOnInput>
+							<xr:TypeReductionMode>TransformValues</xr:TypeReductionMode>
+							<xr:MaxValue xsi:nil="true"/>
+							<xr:ToolTip/>
+							<xr:ExtendedEdit>false</xr:ExtendedEdit>
+							<xr:Format/>
+							<xr:ChoiceForm/>
+							<xr:QuickChoice>Auto</xr:QuickChoice>
+							<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+							<xr:EditFormat/>
+							<xr:PasswordMode>false</xr:PasswordMode>
+							<xr:DataHistory>Use</xr:DataHistory>
+							<xr:MarkNegatives>false</xr:MarkNegatives>
+							<xr:MinValue xsi:nil="true"/>
+							<xr:Synonym/>
+							<xr:Comment/>
+							<xr:FullTextSearch>Use</xr:FullTextSearch>
+							<xr:ChoiceParameterLinks/>
+							<xr:FillValue xsi:nil="true"/>
+							<xr:Mask/>
+							<xr:ChoiceParameters/>
+						</xr:StandardAttribute>
+					</StandardAttributes>
+					<Use>ForItem</Use>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="0b83566a-354d-4fb7-8acb-76c6d24f3dee">
+						<Properties>
+							<Name>ГруппаКонтрагентов</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа контрагентов</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+							<Indexing>DontIndex</Indexing>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 			<TabularSection uuid="8b51cb6b-2203-4f76-80b8-7dd410079eb0">
 				<InternalInfo>
 					<xr:GeneratedType name="CatalogTabularSection.УчетныеЗаписиИнтеграции.Склады" category="TabularSection">
@@ -872,70 +1134,6 @@
 							<MaxValue xsi:nil="true"/>
 							<FillChecking>DontCheck</FillChecking>
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-							<ChoiceParameterLinks/>
-							<ChoiceParameters/>
-							<QuickChoice>Auto</QuickChoice>
-							<CreateOnInput>Auto</CreateOnInput>
-							<ChoiceForm/>
-							<LinkByType/>
-							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-							<Indexing>DontIndex</Indexing>
-							<FullTextSearch>Use</FullTextSearch>
-							<DataHistory>Use</DataHistory>
-						</Properties>
-					</Attribute>
-				</ChildObjects>
-			</TabularSection>
-			<TabularSection uuid="2cc74f17-2850-4fad-98d9-6b434d2e9025">
-				<InternalInfo>
-					<xr:GeneratedType name="CatalogTabularSection.УчетныеЗаписиИнтеграции.Контрагенты" category="TabularSection">
-						<xr:TypeId>ced533e5-cf19-4eb2-9284-f032206de3f9</xr:TypeId>
-						<xr:ValueId>670c2f6a-ddbd-4a32-9609-ac4681981c11</xr:ValueId>
-					</xr:GeneratedType>
-					<xr:GeneratedType name="CatalogTabularSectionRow.УчетныеЗаписиИнтеграции.Контрагенты" category="TabularSectionRow">
-						<xr:TypeId>9f635e90-bb06-4b52-9f23-a8a5393b2729</xr:TypeId>
-						<xr:ValueId>d3124c15-c5ab-489a-894a-3bec68dcdf8b</xr:ValueId>
-					</xr:GeneratedType>
-				</InternalInfo>
-				<Properties>
-					<Name>Контрагенты</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Контрагенты</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<ToolTip/>
-					<FillChecking>DontCheck</FillChecking>
-					<Use>ForItem</Use>
-				</Properties>
-				<ChildObjects>
-					<Attribute uuid="70c19d9b-2f0c-417d-aa2a-c3111d3a53f0">
-						<Properties>
-							<Name>ГруппаКонтрагентов</Name>
-							<Synonym>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа контрагентов</v8:content>
-								</v8:item>
-							</Synonym>
-							<Comment/>
-							<Type>
-								<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
-							</Type>
-							<PasswordMode>false</PasswordMode>
-							<Format/>
-							<EditFormat/>
-							<ToolTip/>
-							<MarkNegatives>false</MarkNegatives>
-							<Mask/>
-							<MultiLine>false</MultiLine>
-							<ExtendedEdit>false</ExtendedEdit>
-							<MinValue xsi:nil="true"/>
-							<MaxValue xsi:nil="true"/>
-							<FillChecking>DontCheck</FillChecking>
-							<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
 							<ChoiceParameterLinks/>
 							<ChoiceParameters/>
 							<QuickChoice>Auto</QuickChoice>

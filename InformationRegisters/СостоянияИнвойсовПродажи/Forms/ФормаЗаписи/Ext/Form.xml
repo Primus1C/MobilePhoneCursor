@@ -5,31 +5,26 @@
 	<ChildItems>
 		<InputField name="ИнвойсПродажи" id="1">
 			<DataPath>Запись.ИнвойсПродажи</DataPath>
-			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ContextMenu name="ИнвойсПродажиКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="ИнвойсПродажиРасширеннаяПодсказка" id="3"/>
 		</InputField>
 		<InputField name="Состояние" id="4">
 			<DataPath>Запись.Состояние</DataPath>
-			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ContextMenu name="СостояниеКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="6"/>
 		</InputField>
 		<InputField name="КемИзменено" id="7">
 			<DataPath>Запись.КемИзменено</DataPath>
-			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ContextMenu name="КемИзмененоКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="КемИзмененоРасширеннаяПодсказка" id="9"/>
 		</InputField>
 		<InputField name="Инициатор" id="13">
 			<DataPath>Запись.Инициатор</DataPath>
-			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ContextMenu name="ИнициаторКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ИнициаторРасширеннаяПодсказка" id="15"/>
 		</InputField>
 		<InputField name="Зарегистрировано" id="16">
 			<DataPath>Запись.Зарегистрировано</DataPath>
-			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ContextMenu name="ЗарегистрированоКонтекстноеМеню" id="17"/>
 			<ExtendedTooltip name="ЗарегистрированоРасширеннаяПодсказка" id="18"/>
 		</InputField>
@@ -50,20 +45,17 @@
 			<ExtendedTooltip name="ГруппаАПИРасширеннаяПодсказка" id="20"/>
 			<ChildItems>
 				<InputField name="ОтмененЗакачиком" id="10">
-					<DataPath>Запись.ОтмененЗакачиком</DataPath>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<DataPath>Запись.ОтмененЗаказчиком</DataPath>
 					<ContextMenu name="ОтмененЗакачикомКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="ОтмененЗакачикомРасширеннаяПодсказка" id="12"/>
 				</InputField>
 				<InputField name="Отгружен" id="21">
 					<DataPath>Запись.ГотовКОтгрузке</DataPath>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ОтгруженКонтекстноеМеню" id="22"/>
 					<ExtendedTooltip name="ОтгруженРасширеннаяПодсказка" id="23"/>
 				</InputField>
 				<InputField name="Заблокирован" id="24">
 					<DataPath>Запись.Заблокирован</DataPath>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ЗаблокированКонтекстноеМеню" id="25"/>
 					<ExtendedTooltip name="ЗаблокированРасширеннаяПодсказка" id="26"/>
 				</InputField>

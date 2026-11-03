@@ -54,6 +54,11 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>Document.НачислениеПроцентовПоКредитам</xr:Metadata>
+					<xr:Use>Use</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>Document.ВозвратСКомиссии</xr:Metadata>
 					<xr:Use>Use</xr:Use>
 					<xr:ConditionalSeparation/>
@@ -74,17 +79,17 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Document.КорректировкаИнвойса</xr:Metadata>
-					<xr:Use>Use</xr:Use>
-					<xr:ConditionalSeparation/>
-				</xr:Item>
-				<xr:Item>
 					<xr:Metadata>Document.Инвентаризация</xr:Metadata>
 					<xr:Use>Use</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
 					<xr:Metadata>Document.ПередачаНаКомиссию</xr:Metadata>
+					<xr:Use>Use</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>Document.ЗаменаПроданногоТовара</xr:Metadata>
 					<xr:Use>Use</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -125,6 +130,11 @@
 				</xr:Item>
 				<xr:Item>
 					<xr:Metadata>Document.ПриходнаяНакладная</xr:Metadata>
+					<xr:Use>Use</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>Catalog.КредитныеДоговоры</xr:Metadata>
 					<xr:Use>Use</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -178,7 +188,7 @@
 			<UsersSeparation>DontUse</UsersSeparation>
 			<AuthenticationSeparation>DontUse</AuthenticationSeparation>
 			<ConfigurationExtensionsSeparation>Separate</ConfigurationExtensionsSeparation>
-			<Indexing>DontIndex</Indexing>
+			<Indexing>Index</Indexing>
 			<FullTextSearch>Use</FullTextSearch>
 			<DataHistory>Use</DataHistory>
 		</Properties>

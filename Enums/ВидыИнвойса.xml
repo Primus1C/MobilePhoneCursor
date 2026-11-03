@@ -142,6 +142,22 @@
 					<Comment/>
 				</Properties>
 			</EnumValue>
+			<EnumValue uuid="26b2f5a2-9aa2-4042-ad72-6823a9379c02">
+				<Properties>
+					<Name>ЗаказКомиссионера</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ комиссионера</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Consignment order</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
 		</ChildObjects>
 	</Enum>
 </MetaDataObject>

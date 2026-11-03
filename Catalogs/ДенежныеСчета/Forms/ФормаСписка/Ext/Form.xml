@@ -19,8 +19,10 @@
 			<ExtendedTooltip name="ДеревоИСписокРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
 				<Table name="Дерево" id="5">
+					<Representation>Tree</Representation>
 					<CommandBarLocation>None</CommandBarLocation>
 					<Width>25</Width>
+					<InitialTreeView>ExpandTopLevel</InitialTreeView>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
 					<DataPath>Дерево</DataPath>
@@ -32,11 +34,11 @@
 						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
 						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
 					</Period>
-					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
 					<RestoreCurrentRow>false</RestoreCurrentRow>
 					<TopLevelParent xsi:nil="true"/>
 					<ShowRoot>true</ShowRoot>
-					<AllowRootChoice>false</AllowRootChoice>
+					<AllowRootChoice>true</AllowRootChoice>
 					<UpdateOnDataChange>Auto</UpdateOnDataChange>
 					<UserSettingsGroup>ДеревоКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
 					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
@@ -94,7 +96,7 @@
 						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
 						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
 					</Period>
-					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceFoldersAndItems>FoldersAndItems</ChoiceFoldersAndItems>
 					<RestoreCurrentRow>false</RestoreCurrentRow>
 					<TopLevelParent xsi:nil="true"/>
 					<ShowRoot>false</ShowRoot>
