@@ -754,6 +754,13 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonForm.ОповещениеПользователей</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.Инвестиции.Command.Инвестиции</name>
 		<right>
 			<name>View</name>

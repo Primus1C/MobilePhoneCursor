@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Сообщение всем пользователям</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Message for all users</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОтправить" id="31">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Отправить</CommandName>
+				<ExtendedTooltip name="ФормаОтправитьРасширеннаяПодсказка" id="32"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="33">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="34"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Шаблоны" id="1">
+			<Representation>List</Representation>
+			<HeightInTableRows>6</HeightInTableRows>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Шаблоны</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ШаблоныКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ШаблоныКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ШаблоныВыбрать" id="21">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Выбрать</CommandName>
+						<ExtendedTooltip name="ШаблоныВыбратьРасширеннаяПодсказка" id="22"/>
+					</Button>
+					<Button name="ШаблоныСохранитьВСписок" id="23">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СохранитьВСписок</CommandName>
+						<ExtendedTooltip name="ШаблоныСохранитьВСписокРасширеннаяПодсказка" id="24"/>
+					</Button>
+					<Button name="ШаблоныУдалитьИзСписка" id="25">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УдалитьИзСписка</CommandName>
+						<ExtendedTooltip name="ШаблоныУдалитьИзСпискаРасширеннаяПодсказка" id="26"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ШаблоныРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ШаблоныСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Шаблоны</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ШаблоныСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ШаблоныСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ШаблоныСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>Шаблоны</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ШаблоныСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ШаблоныСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ШаблоныУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>Шаблоны</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ШаблоныУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ШаблоныУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ШаблоныВыбор</Event>
+				<Event name="OnChange">ШаблоныПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ШаблоныТекст" id="14">
+					<DataPath>Шаблоны.Текст</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoCellHeight>true</AutoCellHeight>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="ШаблоныТекстКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ШаблоныТекстРасширеннаяПодсказка" id="16"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<TextDocumentField name="ТекстСообщения" id="17">
+			<DataPath>ТекстСообщения</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<Height>5</Height>
+			<ContextMenu name="ТекстСообщенияКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ТекстСообщенияРасширеннаяПодсказка" id="19"/>
+		</TextDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Шаблоны" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранённые сообщения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Saved messages</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Текст" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Text</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекстСообщения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Message</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выбрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Select</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подставить текст выбранного сообщения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выбрать</Action>
+		</Command>
+		<Command name="СохранитьВСписок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить в список</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save to list</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СохранитьВСписок</Action>
+		</Command>
+		<Command name="УдалитьИзСписка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьИзСписка</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Отправить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Отправить</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -40,11 +40,11 @@
 		<ChildObjects>
 			<EnumValue uuid="10b3af94-f74d-49c8-ba4a-b83e1b13494a">
 				<Properties>
-					<Name>DEL</Name>
+					<Name>DELETE</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>DEL</v8:content>
+							<v8:content>DELETE</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>

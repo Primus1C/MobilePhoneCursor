@@ -682,6 +682,7 @@ status "Canceled", no shipment</v8:content>
 				<InputField name="ТоварыНоменклатура" id="32">
 					<DataPath>Объект.Товары.Номенклатура</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 					<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="33"/>
 					<ExtendedTooltip name="ТоварыНоменклатураРасширеннаяПодсказка" id="34"/>
 				</InputField>

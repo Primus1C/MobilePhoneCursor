@@ -654,6 +654,7 @@
 			<CommonForm>ФормаСтруктурыПодчиненности</CommonForm>
 			<CommonForm>ОбщиеНастройки</CommonForm>
 			<CommonForm>НастройкиСообщений</CommonForm>
+			<CommonForm>ОповещениеПользователей</CommonForm>
 			<CommonForm>СменаПароля</CommonForm>
 			<CommonForm>ГраницаЗапретаРедактирования</CommonForm>
 			<CommonForm>ФормаРазличийВерсийИсторииДанных</CommonForm>
