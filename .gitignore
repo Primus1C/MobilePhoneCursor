@@ -7,6 +7,9 @@
 *.tmp
 *.bak
 
+# Documentation (Obsidian / Markdown)
+docs/
+
 # IDE and OS
 .idea/
 .vscode/
