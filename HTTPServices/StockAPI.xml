@@ -949,6 +949,35 @@
 					</Method>
 				</ChildObjects>
 			</URLTemplate>
+			<URLTemplate uuid="fa5b0a6b-60c1-4efe-a3ca-6a9f3863631f">
+				<Properties>
+					<Name>ШаблонURL_ОтправкиAWB</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL отправки AWB</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/awbshipment</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="5435fdf8-678f-4a8b-9239-9b498e85ec25">
+						<Properties>
+							<Name>awbshipmentGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Awbshipment GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>awbshipmentGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
 		</ChildObjects>
 	</HTTPService>
 </MetaDataObject>

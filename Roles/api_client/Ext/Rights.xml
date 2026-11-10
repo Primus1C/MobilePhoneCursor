@@ -1114,6 +1114,13 @@
 		</right>
 	</object>
 	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_ОтправкиAWB.Method.awbshipmentGET</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.Настройка</name>
 		<right>
 			<name>Read</name>
