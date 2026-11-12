@@ -315,6 +315,20 @@
 					<Template>/invoices</Template>
 				</Properties>
 				<ChildObjects>
+					<Method uuid="1c8e4f27-9b6a-4d53-a812-7e5c0f3d91b4">
+						<Properties>
+							<Name>invoiceDELETE</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Invoice DELETE</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>DELETE</HTTPMethod>
+							<Handler>invoiceDELETE</Handler>
+						</Properties>
+					</Method>
 					<Method uuid="c7fe52bd-8560-46bc-aefb-1cc81b665a81">
 						<Properties>
 							<Name>invoiceGET</Name>

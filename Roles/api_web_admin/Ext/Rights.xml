@@ -304,6 +304,13 @@
 		</right>
 	</object>
 	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Инвойсы.Method.invoiceDELETE</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>SessionParameter.ВариантДоступаККонтрагентамРазрешить</name>
 		<right>
 			<name>Get</name>
